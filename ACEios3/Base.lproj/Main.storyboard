@@ -24,6 +24,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57B-rX-9eE">
                                 <rect key="frame" x="71" y="20" width="233" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="CjP-Iw-rPk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -32,28 +35,81 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l0h-CP-EO7">
                                 <rect key="frame" x="80" y="83" width="214" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="ZGX-ej-wQs"/>
-                                </constraints>
                                 <segments>
                                     <segment title="Blog"/>
                                     <segment title="News"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V0R-Tg-ZAX">
+                                <rect key="frame" x="0.0" y="152" width="375" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="blogCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="blogCell" rowHeight="70" id="zRn-gN-o2T" customClass="BlogTableViewCell" customModule="ACEios3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRn-gN-o2T" id="nCQ-HF-735">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-1T-jkd">
+                                                    <rect key="frame" x="81" y="8" width="203" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpq-a9-lNn">
+                                                    <rect key="frame" x="81" y="37" width="286" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace_logo_color_whitetext_PNG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ntb-zS-ubB">
+                                                    <rect key="frame" x="8" y="8" width="56" height="53"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="56" id="HTv-Bb-LTm"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ntb-zS-ubB" firstAttribute="bottom" secondItem="nCQ-HF-735" secondAttribute="bottomMargin" id="7pO-xl-KGU"/>
+                                                <constraint firstItem="uZB-1T-jkd" firstAttribute="leading" secondItem="lpq-a9-lNn" secondAttribute="leading" id="An2-LO-BuC"/>
+                                                <constraint firstItem="uZB-1T-jkd" firstAttribute="leading" secondItem="Ntb-zS-ubB" secondAttribute="trailing" constant="17" id="JZn-E7-3pb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uZB-1T-jkd" secondAttribute="trailing" constant="83" id="PvS-WL-MDJ"/>
+                                                <constraint firstItem="Ntb-zS-ubB" firstAttribute="leading" secondItem="nCQ-HF-735" secondAttribute="leadingMargin" id="RUD-kg-rew"/>
+                                                <constraint firstItem="Ntb-zS-ubB" firstAttribute="top" secondItem="nCQ-HF-735" secondAttribute="topMargin" id="S7W-7M-Ad3"/>
+                                                <constraint firstItem="lpq-a9-lNn" firstAttribute="top" secondItem="uZB-1T-jkd" secondAttribute="bottom" constant="8" symbolic="YES" id="SgP-DF-fCU"/>
+                                                <constraint firstItem="Ntb-zS-ubB" firstAttribute="top" secondItem="uZB-1T-jkd" secondAttribute="top" id="hNI-JS-QNI"/>
+                                                <constraint firstItem="lpq-a9-lNn" firstAttribute="trailing" secondItem="nCQ-HF-735" secondAttribute="trailingMargin" id="pfy-9L-nfK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="lpq-a9-lNn" id="0mY-Ol-yJg"/>
+                                            <outlet property="blogImage" destination="Ntb-zS-ubB" id="bW0-yh-fzm"/>
+                                            <outlet property="blogTitle" destination="uZB-1T-jkd" id="E7k-Qr-pl3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="57B-rX-9eE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="55" id="2JL-cB-GEE"/>
-                            <constraint firstItem="l0h-CP-EO7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="4RO-j7-tUX"/>
-                            <constraint firstItem="57B-rX-9eE" firstAttribute="centerX" secondItem="l0h-CP-EO7" secondAttribute="centerX" id="Etm-YW-Jp4"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="l0h-CP-EO7" secondAttribute="bottom" constant="507" id="I0I-1h-Xxj"/>
-                            <constraint firstItem="l0h-CP-EO7" firstAttribute="top" secondItem="57B-rX-9eE" secondAttribute="bottom" constant="8" symbolic="YES" id="XTC-BU-B4C"/>
-                            <constraint firstItem="l0h-CP-EO7" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="64" id="c3H-Pu-2H5"/>
-                            <constraint firstItem="57B-rX-9eE" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="mNW-AN-6m4"/>
+                            <constraint firstAttribute="trailing" secondItem="V0R-Tg-ZAX" secondAttribute="trailing" id="7kp-HP-yIn"/>
+                            <constraint firstItem="l0h-CP-EO7" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="64" id="O0Q-aX-aIY"/>
+                            <constraint firstItem="57B-rX-9eE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="55" id="TL4-EB-Dd5"/>
+                            <constraint firstItem="V0R-Tg-ZAX" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Vtt-oz-VNu"/>
+                            <constraint firstItem="57B-rX-9eE" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="X8e-Ul-gTu"/>
+                            <constraint firstItem="57B-rX-9eE" firstAttribute="centerX" secondItem="l0h-CP-EO7" secondAttribute="centerX" id="ajd-q8-Wgi"/>
+                            <constraint firstItem="l0h-CP-EO7" firstAttribute="centerX" secondItem="V0R-Tg-ZAX" secondAttribute="centerX" id="jXw-kM-KAx"/>
+                            <constraint firstItem="V0R-Tg-ZAX" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="qFS-8H-3G8"/>
+                            <constraint firstItem="V0R-Tg-ZAX" firstAttribute="top" secondItem="l0h-CP-EO7" secondAttribute="bottom" constant="41" id="vho-Tp-XCt"/>
+                            <constraint firstItem="l0h-CP-EO7" firstAttribute="top" secondItem="57B-rX-9eE" secondAttribute="bottom" constant="8" symbolic="YES" id="y1r-7D-OnT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="first" selectedImage="second" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="V0R-Tg-ZAX" id="kM8-fl-Sgu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +143,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogb-cn-EFD">
-                                <rect key="frame" x="16" y="189" width="343" height="429"/>
+                                <rect key="frame" x="16" y="189" width="343" height="478"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
