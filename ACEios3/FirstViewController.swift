@@ -55,6 +55,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        performSegue(withIdentifier: "pressedCell", sender: nil)
+
         
     }
     
@@ -132,7 +134,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
     }
-
+    
+    
+    // other stuff //////////////////////////////////////////////////////////////
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! SecondViewController
+        destinationVC.blogTitleString = "heyyy from segueeee"
+        
+        print("PREPARING FOR SEGUE")
+    }
 
 
     override func didReceiveMemoryWarning() {

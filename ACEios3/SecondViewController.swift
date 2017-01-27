@@ -11,6 +11,8 @@ import Foundation
 
 class SecondViewController: UIViewController, UITextViewDelegate {
     
+    var blogTitleString:String! = "blah"
+    
     @IBOutlet weak var blogTitle: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var blogContentTextView: UITextView!
@@ -23,6 +25,8 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         self.blogTextView.delegate = self
         
         getBlog()
+
+        print(blogTitleString)
         
     }
 
