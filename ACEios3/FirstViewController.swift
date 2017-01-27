@@ -12,7 +12,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     
-    var blogTitles = [String]()
+    var blogTitles = [String]() // array of blog titles that fill thel table view
+    var detailsArr = [String]() // array of detail labels (gray text below the title of the table view cell)
+    var blogIdArr = [String]() // this is used to ask jBackend for the blog content
     
     let cellReuseIdentifier = "blogCell"
     
@@ -44,6 +46,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! BlogTableViewCell
         
         cell.blogTitle.text = self.blogTitles[indexPath.row]
+        cell.detailLabel.text = self.detailsArr[indexPath.row]
         
         return cell
         
@@ -64,12 +67,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     // blog content //////////////////////////////////////////////////////
-    
-    func parseBlogHTML(html: String) -> String {
-        return html
-    }
-
-    
+ 
     func getMostRecentBlogs() {
         let url = URL(string: "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&app=8&resource=items&category=blog&limit=10")
         
@@ -93,50 +91,44 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         
                         // json content
-                        var blogContent:String! = ""
                         
                         let elements = json["items"] as! [AnyObject]
-                        var i=0
                         
                         for element in elements {
-                            print("\n\n")
-                            print(element)
+                            // remember this blog ID
+                            let blogID = element["id"] as! String
+                            self.blogIdArr.append(blogID)
                             
+                            // remember this blog name
                             let blogName = element["name"] as! String
                             self.blogTitles.append(blogName)
-                            print(self.blogTitles)
                             
+                            // remember this blog date
+                            let creationTime = element["created"] as! String
+                            let creationDate = creationTime.components(separatedBy: " ")
+                            let creationDateArr = creationDate[0].components(separatedBy: "-")
+                            let month = creationDateArr[1]
+                            let day = creationDateArr[2]
+                            let year = creationDateArr[0]
+
+                            let blogDetails = month + "-" + day + "-" + year
                             
-                                /*
-                                let val = element.value as! [String:Any]
-                                let blogArr = val["data"] as! [Any]
-                                for paragraph in blogArr {
-                                    let para = paragraph as! [String:Any]
-                                    let paragraphVal = para["value"]
-                                    blogContent = blogContent + "\n\n" + (paragraphVal as! String)
-                                }
- */
+                            self.detailsArr.append(blogDetails)
                             
-                            
-                            i+=1
                         }
                         
-                        
-                        let parsedHTML = self.parseBlogHTML(html: blogContent)
-                        
-                        print(parsedHTML)
-                        //self.blogTextView.text = parsedHTML
+                        self.tableView.reloadData() // update table view with blog data
                         
                         
                     }catch {
                         print("Error with Json: \(error)")
                     }
+
                 }
                 
             }
         }
         task.resume()
-        self.tableView.reloadData() // update table view with blog data
         
         
     }

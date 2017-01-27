@@ -84,9 +84,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="authorLabel" destination="lpq-a9-lNn" id="0mY-Ol-yJg"/>
                                             <outlet property="blogImage" destination="Ntb-zS-ubB" id="bW0-yh-fzm"/>
                                             <outlet property="blogTitle" destination="uZB-1T-jkd" id="E7k-Qr-pl3"/>
+                                            <outlet property="detailLabel" destination="lpq-a9-lNn" id="Org-D5-qU6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

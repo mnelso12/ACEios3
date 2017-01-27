@@ -12,7 +12,7 @@ class BlogTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var blogTitle: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var blogImage: UIImageView!
     
     override func awakeFromNib() {
