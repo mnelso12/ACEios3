@@ -14,7 +14,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var blogTitles = [String]() // array of blog titles that fill thel table view
     var detailsArr = [String]() // array of detail labels (gray text below the title of the table view cell)
+    var datesArr = [String]() // array of only the blog dates
     var blogIdArr = [String]() // this is used to ask jBackend for the blog content
+    
+    var selectedBlogTitle:String!
+    var selectedBlogContent:String!
+    var selectedBlogDate:String!
+    var selectedBlogAuthor:String!
     
     let cellReuseIdentifier = "blogCell"
     
@@ -55,14 +61,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
-        performSegue(withIdentifier: "pressedCell", sender: nil)
-
         
+        self.selectedBlogDate = self.datesArr[indexPath.row]
+        
+        getBlog(blogID: self.blogIdArr[indexPath.row])
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
     
     
     
@@ -91,6 +100,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                         
+                        print("printing all blog info")
+                        print(json)
                         
                         // json content
                         
@@ -104,7 +115,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             // remember this blog name
                             let blogName = element["name"] as! String
                             self.blogTitles.append(blogName)
-                            
+                    
                             // remember this blog date
                             let creationTime = element["created"] as! String
                             let creationDate = creationTime.components(separatedBy: " ")
@@ -113,8 +124,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             let day = creationDateArr[2]
                             let year = creationDateArr[0]
 
-                            let blogDetails = month + "-" + day + "-" + year
+                            let blogDate = month + "-" + day + "-" + year
                             
+                            let blogDetails = blogDate // change this?
+                            
+                            self.datesArr.append(blogDate)
                             self.detailsArr.append(blogDetails)
                             
                         }
@@ -136,13 +150,115 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
+    // get all info from a particular blog given its id - this function is called when blog cell is selected
+    func getBlog(blogID: String) {
+        let urlString = "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&resource=items&app=8&id=" + blogID
+        let url = URL(string: urlString)
+        
+        
+        
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            
+            DispatchQueue.main.async(){
+                
+                guard let data = data, error == nil else { return }
+                
+                
+                let httpResponse = response as! HTTPURLResponse
+                let statusCode = httpResponse.statusCode
+                
+                if (statusCode == 200) {
+                    print("Everyone is fine, file downloaded successfully.")
+                    do{
+                        
+                        let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
+                        
+                        print("\n\n\nprinting the info of the blog selected\n")
+                        print(json)
+                        
+                        // title and author
+                        self.selectedBlogTitle = json["name"] as! String?
+                        //self.selectedBlogAuthor = "madelyn"
+                        
+                        // blog content
+                        var blogContent:String! = ""
+                        
+                        let elements = json["elements"] as! [String:Any]
+                        var i=0
+                        
+                        for element in elements {
+                            
+                            if (i==4) {
+                                let val = element.value as! [String:Any]
+                                var j = 0
+                                for thing in val {
+                                    if (j==1) {
+                                        print(thing.1)
+                                        let data = thing.1 as! [Any]
+                                        
+                                        for blob in data {
+                                            let entry = blob as! [String:Any]
+                                            let authorString = entry["value"] as! String
+                                            self.selectedBlogAuthor = authorString
+                                        }
+                                    }
+                                    j += 1
+                                }
+                                
+                                //let data = val["data"] as! [Any]
+                                print("AUTHOR:")
+                                print(data)
+
+                            }
+                            
+                            print("element number %i", i)
+                            print(element)
+                            
+                            if (i==7) {
+                                let val = element.value as! [String:Any]
+                                let blogArr = val["data"] as! [Any]
+                                for paragraph in blogArr {
+                                    let para = paragraph as! [String:Any]
+                                    let paragraphVal = para["value"]
+                                    blogContent = blogContent + "\n\n" + (paragraphVal as! String)
+                                }
+                            }
+                            
+                            
+                            i+=1
+                        }
+                        
+                        self.selectedBlogContent = blogContent
+                        
+                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
+                        
+                        //self.blogTextView.text = parsedHTML
+                        
+                    }catch {
+                        print("Error with Json: \(error)")
+                    }
+                }
+                print("ending dispatch queue")
+                self.nowSegue()
+            }
+        }
+        task.resume()
+    }
+
+    
+    func nowSegue() {
+        performSegue(withIdentifier: "pressedCell", sender: self)
+    }
+    
     // other stuff //////////////////////////////////////////////////////////////
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        print("in prepare for segue...")
+
         let destinationVC = segue.destination as! SecondViewController
-        destinationVC.blogTitleString = "heyyy from segueeee"
-        
-        print("PREPARING FOR SEGUE")
+        destinationVC.blogTitleString = self.selectedBlogTitle
+        destinationVC.blogContentString = self.selectedBlogContent
+        destinationVC.blogDateString = self.selectedBlogDate
+        destinationVC.blogAuthorString = self.selectedBlogAuthor
     }
 
 

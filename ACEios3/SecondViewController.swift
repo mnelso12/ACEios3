@@ -11,11 +11,14 @@ import Foundation
 
 class SecondViewController: UIViewController, UITextViewDelegate {
     
-    var blogTitleString:String! = "blah"
+    var blogTitleString:String! = "Blog Title"
+    var blogContentString:String! = "Blog Content"
+    var blogDateString:String! = "1-1-17"
+    var blogAuthorString:String! = "Author"
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var blogTitle: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var blogContentTextView: UITextView!
     @IBOutlet weak var blogTextView: UITextView!
     
     override func viewDidLoad() {
@@ -24,9 +27,11 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         
         self.blogTextView.delegate = self
         
-        getBlog()
-
-        print(blogTitleString)
+        // update ui elements with strings passed from home view controller
+        self.blogTitle.text = self.blogTitleString
+        self.blogTextView.text = self.blogContentString
+        self.dateLabel.text = self.blogDateString
+        self.authorLabel.text = self.blogAuthorString
         
     }
 
@@ -79,8 +84,8 @@ class SecondViewController: UIViewController, UITextViewDelegate {
                     print(json)
                     
                     // title and author
-                    self.blogTitle.text = json["name"] as! String?
-                    self.authorLabel.text = "author here"
+                    //self.blogTitle.text = json["name"] as! String?
+                    //self.authorLabel.text = "author here"
                     
                     
                     // blog content
@@ -106,7 +111,7 @@ class SecondViewController: UIViewController, UITextViewDelegate {
                     
                     let parsedHTML = self.parseBlogHTML(html: blogContent)
                     
-                    self.blogTextView.text = parsedHTML
+                    //self.blogTextView.text = parsedHTML
                     
                 }catch {
                     print("Error with Json: \(error)")
