@@ -20,6 +20,7 @@
 		237886531E383C3200E238A2 /* spirituality.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 237886521E383C3200E238A2 /* spirituality.jpg */; };
 		237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */; };
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
+		23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B41AC31E3FE643009A0F7A /* news-icon-19.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
 		237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "4 Advocates Leaders Fixed version.jpg"; path = "../../../../Downloads/4 Advocates Leaders Fixed version.jpg"; sourceTree = "<group>"; };
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
+		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */,
 				2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */,
+				23B41AC31E3FE643009A0F7A /* news-icon-19.png */,
 				236CF8FF1E32BD19005DD95A /* ACEios3 */,
 				236CF9161E32BD1A005DD95A /* ACEios3Tests */,
 				236CF9211E32BD1A005DD95A /* ACEios3UITests */,
@@ -255,6 +258,7 @@
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
 				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
 				237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */,
+				23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */,
 				237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */,
 				236CF9081E32BD19005DD95A /* Main.storyboard in Resources */,
 			);

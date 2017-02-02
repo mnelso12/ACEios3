@@ -32,6 +32,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedBlogContent:String!
     var selectedBlogDate:String!
     var selectedBlogAuthor:String!
+    var selectedImgUrl:String!
     
     let cellReuseIdentifier = "blogCell"
     
@@ -108,6 +109,66 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 70
     }
     
+    
+    // parse the html stuff to get rid of tags and to find the img url source
+    func parseBlogHTML(html: String) -> String {
+        var returnStr = " "
+        var isTag = false
+        var tagCount = 0
+        var indexInt = 0
+        var startOfImgIndex = 0
+        var imgUrl = ""
+        var isImgUrl = false
+        var finalImgUrl = ""
+
+         for index in html.characters.indices {
+            
+            if (html[index] == "<") {
+                isTag = true
+                
+                print("index of <", indexInt)
+                
+                let start = html.index(html.startIndex, offsetBy: indexInt+1)
+                let end = html.index(html.startIndex, offsetBy: indexInt+4)
+                let range = start..<end
+                if (html.substring(with: range) == "img") { // check if this is "img"
+                    isImgUrl = true
+                    startOfImgIndex = indexInt
+                }
+            }
+            else if (html[index] == ">") { // end of tag
+                isTag = false
+                isImgUrl = false
+                tagCount += 1
+            }
+            else if (isTag == false) { // just normal text
+                returnStr.append(html[index])
+            }
+            else if (isImgUrl == true) { // part of img url string
+                if (indexInt > (startOfImgIndex + 9)) {
+                    imgUrl.append(html[index])
+                }
+            }
+            
+            indexInt += 1
+         }
+    
+        for i in imgUrl.characters.indices {
+            if (imgUrl[i] == "\"") {
+                break
+            }
+            else {
+                finalImgUrl.append(imgUrl[i])
+            }
+        }
+        
+        print("total tags:", tagCount)
+        print("img url:", finalImgUrl)
+        self.selectedImgUrl = finalImgUrl
+        return returnStr
+    }
+
+
     
     // news content //////////////////////////////////////////////////////
     
@@ -241,11 +302,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 
                             }
                             
-                            print("element number %i", i)
-                            print(element)
+                            //print("element number %i", i)
+                            //print(element)
                             
-                            /*
-                            if (i==7) {
+                            
+                            if (i==11) {
                                 let val = element.value as! [String:Any]
                                 let blogArr = val["data"] as! [Any]
                                 for paragraph in blogArr {
@@ -254,18 +315,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                     blogContent = blogContent + "\n\n" + (paragraphVal as! String)
                                 }
                             }
- */
+ 
                             
                             
                             i+=1
                         }
-                        blogContent = "blahh"
                         
-                        self.selectedBlogContent = blogContent
                         
-                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
+                        let parsedHTML = self.parseBlogHTML(html: blogContent)
                         
-                        //self.blogTextView.text = parsedHTML
+                        self.selectedBlogContent = parsedHTML
+
                         
                     }catch {
                         print("Error with Json: \(error)")
@@ -432,11 +492,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             i+=1
                         }
                         
-                        self.selectedBlogContent = blogContent
+                        let parsedHTML = self.parseBlogHTML(html: blogContent)
                         
-                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
-                        
-                        //self.blogTextView.text = parsedHTML
+                        self.selectedBlogContent = parsedHTML
                         
                     }catch {
                         print("Error with Json: \(error)")
@@ -463,6 +521,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         destinationVC.blogContentString = self.selectedBlogContent
         destinationVC.blogDateString = self.selectedBlogDate
         destinationVC.blogAuthorString = self.selectedBlogAuthor
+        destinationVC.imgUrlString = self.selectedImgUrl
     }
 
 

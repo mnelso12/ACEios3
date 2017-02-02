@@ -15,11 +15,13 @@ class SecondViewController: UIViewController, UITextViewDelegate {
     var blogContentString:String! = "Blog Content"
     var blogDateString:String! = "1-1-17"
     var blogAuthorString:String! = "Author"
+    var imgUrlString:String! = "blahhh"
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var blogTitle: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var blogTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,8 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         self.dateLabel.text = self.blogDateString
         self.authorLabel.text = self.blogAuthorString
         
+        setImage(urlStr: self.imgUrlString)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +44,21 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func setImage(urlStr: String) {
+        if (urlStr == "" || urlStr == " ") {
+            imageView.image = UIImage(named: "ace_logo_color_whitetext_PNG.png")
+        }
+        else {
+            let url = URL(string: urlStr)
+        
+            //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            if let data = try? Data(contentsOf: url!){
+                imageView.image = UIImage(data: data)
+            }
+        }
+        
+    }
+    
     func parseBlogHTML(html: String) -> String {
         /*
         let middle = html.index(html.startIndex, offsetBy: html.characters.count / 2)
