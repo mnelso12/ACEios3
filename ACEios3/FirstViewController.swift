@@ -117,6 +117,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var tagCount = 0
         var indexInt = 0
         var startOfImgIndex = 0
+        var startOfNBSPIndex = 0
         var imgUrl = ""
         var isImgUrl = false
         var finalImgUrl = ""
@@ -126,14 +127,25 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if (html[index] == "<") {
                 isTag = true
                 
-                print("index of <", indexInt)
-                
                 let start = html.index(html.startIndex, offsetBy: indexInt+1)
                 let end = html.index(html.startIndex, offsetBy: indexInt+4)
+                let pTagEnd = html.index(html.startIndex, offsetBy: indexInt+2)
                 let range = start..<end
+                let pTagRange = start..<pTagEnd
                 if (html.substring(with: range) == "img") { // check if this is "img"
                     isImgUrl = true
                     startOfImgIndex = indexInt
+                }
+                else if (html.substring(with: pTagRange) == "p") { // check if this is "p"
+                    returnStr.append("\n")
+                }
+            }
+            else if (html[index] == "&") { // end of tag
+                let start = html.index(html.startIndex, offsetBy: indexInt+1)
+                let end = html.index(html.startIndex, offsetBy: indexInt+6)
+                let range = start..<end
+                if (html.substring(with: range) == "nbsp;") { // check if this is "&nbsp;"
+                    startOfNBSPIndex = indexInt
                 }
             }
             else if (html[index] == ">") { // end of tag
@@ -141,8 +153,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 isImgUrl = false
                 tagCount += 1
             }
-            else if (isTag == false) { // just normal text
+            else if ((isTag == false) && (indexInt > (startOfNBSPIndex + 6))) { // just normal text
                 returnStr.append(html[index])
+                startOfNBSPIndex = 0
             }
             else if (isImgUrl == true) { // part of img url string
                 if (indexInt > (startOfImgIndex + 9)) {
