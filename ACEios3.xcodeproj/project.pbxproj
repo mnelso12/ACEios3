@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
+		23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653ACF1E49912F00529652 /* SpiritualityViewController.swift */; };
+		23653AD21E49948600529652 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653AD11E49948600529652 /* ApplyViewController.swift */; };
 		236CF9011E32BD19005DD95A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9001E32BD19005DD95A /* AppDelegate.swift */; };
 		236CF9031E32BD19005DD95A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9021E32BD19005DD95A /* FirstViewController.swift */; };
 		236CF9051E32BD19005DD95A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9041E32BD19005DD95A /* SecondViewController.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
+		23653ACF1E49912F00529652 /* SpiritualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualityViewController.swift; sourceTree = "<group>"; };
+		23653AD11E49948600529652 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
 		236CF8FD1E32BD19005DD95A /* ACEios3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEios3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236CF9001E32BD19005DD95A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236CF9021E32BD19005DD95A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +124,10 @@
 				236CF9021E32BD19005DD95A /* FirstViewController.swift */,
 				236CF9041E32BD19005DD95A /* SecondViewController.swift */,
 				236CF9061E32BD19005DD95A /* Main.storyboard */,
+				23653AD11E49948600529652 /* ApplyViewController.swift */,
 				232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */,
 				237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */,
+				23653ACF1E49912F00529652 /* SpiritualityViewController.swift */,
 				237886521E383C3200E238A2 /* spirituality.jpg */,
 				236CF9091E32BD19005DD95A /* Assets.xcassets */,
 				236CF90B1E32BD19005DD95A /* LaunchScreen.storyboard */,
@@ -290,7 +296,9 @@
 			files = (
 				232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */,
 				236CF9051E32BD19005DD95A /* SecondViewController.swift in Sources */,
+				23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */,
 				23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */,
+				23653AD21E49948600529652 /* ApplyViewController.swift in Sources */,
 				236CF9011E32BD19005DD95A /* AppDelegate.swift in Sources */,
 				236CF9031E32BD19005DD95A /* FirstViewController.swift in Sources */,
 			);

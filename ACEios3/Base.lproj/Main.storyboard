@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="3298.4000000000001" y="886.50674662668678"/>
         </scene>
-        <!--View Controller-->
+        <!--Apply View Controller-->
         <scene sceneID="pbQ-dg-cI4">
             <objects>
-                <viewController id="ltW-TS-er2" sceneMemberID="viewController">
+                <viewController id="ltW-TS-er2" customClass="ApplyViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YZ7-Rz-jKU"/>
                         <viewControllerLayoutGuide type="bottom" id="JTi-EJ-axK"/>
@@ -319,6 +319,9 @@
                                 <state key="normal" title="Apply Now!">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyNowPressed:" destination="ltW-TS-er2" eventType="touchUpInside" id="4zh-Sa-hVb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
                                 <rect key="frame" x="16" y="323" width="343" height="84"/>
@@ -383,7 +386,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jR4-Hi-9Me" id="CzW-aK-I9K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -456,7 +459,7 @@
         <!--Spirituality-->
         <scene sceneID="tLV-RY-Ftp">
             <objects>
-                <viewController id="MuV-Vb-uqh" sceneMemberID="viewController">
+                <viewController id="MuV-Vb-uqh" customClass="SpiritualityViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zJq-tg-CAF"/>
                         <viewControllerLayoutGuide type="bottom" id="Rgf-2f-A0A"/>
@@ -481,6 +484,9 @@
                                 <state key="normal" title="Spiritual Resources">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="spiritualityResourcesPressed:" destination="MuV-Vb-uqh" eventType="touchUpInside" id="681-F2-ZHr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d6-4x-bj6">
                                 <rect key="frame" x="16" y="474" width="343" height="55"/>
