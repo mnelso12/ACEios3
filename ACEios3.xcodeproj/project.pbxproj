@@ -25,6 +25,8 @@
 		23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */; };
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
 		23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B41AC31E3FE643009A0F7A /* news-icon-19.png */; };
+		23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C31E4AEBA900119327 /* gray-pattern.png */; };
+		23E018C61E4AECBF00119327 /* bluePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C51E4AECBF00119327 /* bluePattern.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
+		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
+		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		236CF8F41E32BD19005DD95A = {
 			isa = PBXGroup;
 			children = (
+				23E018C51E4AECBF00119327 /* bluePattern.png */,
+				23E018C31E4AEBA900119327 /* gray-pattern.png */,
 				23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */,
 				2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */,
 				23B41AC31E3FE643009A0F7A /* news-icon-19.png */,
@@ -268,8 +274,10 @@
 				237886531E383C3200E238A2 /* spirituality.jpg in Resources */,
 				236CF90D1E32BD19005DD95A /* LaunchScreen.storyboard in Resources */,
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
+				23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */,
 				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
 				237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */,
+				23E018C61E4AECBF00119327 /* bluePattern.png in Resources */,
 				23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */,
 				237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */,
 				236CF9081E32BD19005DD95A /* Main.storyboard in Resources */,

@@ -46,6 +46,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // load blogs into table view
         getMostRecentBlogs()
         getMostRecentNews()
+        
+        let tempImageView = UIImageView(image: UIImage(named: "bluePattern.png"))
+        tempImageView.frame = self.tableView.frame
+        self.tableView.backgroundView = tempImageView;
+
     }
     
     // segmented control (blog/news)
