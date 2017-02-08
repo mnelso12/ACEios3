@@ -22,6 +22,7 @@
 		237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */; };
 		237886531E383C3200E238A2 /* spirituality.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 237886521E383C3200E238A2 /* spirituality.jpg */; };
 		237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */; };
+		23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */; };
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
 		23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B41AC31E3FE643009A0F7A /* news-icon-19.png */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-11-04 at 2.00.33 AM.png"; path = "../../../../Desktop/Screen Shot 2016-11-04 at 2.00.33 AM.png"; sourceTree = "<group>"; };
 		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
 		237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "4 Advocates Leaders Fixed version.jpg"; path = "../../../../Downloads/4 Advocates Leaders Fixed version.jpg"; sourceTree = "<group>"; };
+		23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				236CF9021E32BD19005DD95A /* FirstViewController.swift */,
 				236CF9041E32BD19005DD95A /* SecondViewController.swift */,
 				236CF9061E32BD19005DD95A /* Main.storyboard */,
+				23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */,
 				23653AD11E49948600529652 /* ApplyViewController.swift */,
 				232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */,
 				237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */,
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */,
 				232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */,
 				236CF9051E32BD19005DD95A /* SecondViewController.swift in Sources */,
 				23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */,
