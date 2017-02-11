@@ -202,7 +202,7 @@
         <!--Connect-->
         <scene sceneID="vP3-Zh-Qp1">
             <objects>
-                <viewController id="IuF-z9-zHs" sceneMemberID="viewController">
+                <viewController id="IuF-z9-zHs" customClass="LinksViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3vN-TL-qTT"/>
                         <viewControllerLayoutGuide type="bottom" id="h8W-Ae-YmL"/>
@@ -212,23 +212,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTJ-Ev-5bi">
-                                <rect key="frame" x="16" y="330" width="343" height="55"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.34901960780000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="475" width="343" height="55"/>
+                                <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="xtM-Kz-Msv"/>
+                                    <constraint firstAttribute="height" constant="55" id="aan-HJ-kum"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Job Board">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOI-Kz-LzC">
-                                <rect key="frame" x="16" y="255" width="343" height="55"/>
+                                <rect key="frame" x="16" y="547" width="343" height="55"/>
                                 <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="zR5-Wr-pHX"/>
+                                    <constraint firstAttribute="height" constant="55" id="HuD-HV-FGV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Contact Us!">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -236,26 +236,42 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lww-ng-Cay">
                                 <rect key="frame" x="16" y="28" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="ccr-HS-HCk"/>
+                                    <constraint firstAttribute="height" constant="55" id="vZV-F6-d4Z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-Lg-VCa">
+                                <rect key="frame" x="16" y="402" width="343" height="55"/>
+                                <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Cii-Rk-kHO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                <state key="normal" title="Nominate a Leader">
+                                    <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nominateLeaderPressed:" destination="IuF-z9-zHs" eventType="touchUpInside" id="ReV-tC-SQo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lww-ng-Cay" firstAttribute="leading" secondItem="8zK-Ss-b4l" secondAttribute="leadingMargin" id="Dic-zW-Mnp"/>
-                            <constraint firstItem="h8W-Ae-YmL" firstAttribute="top" secondItem="CTJ-Ev-5bi" secondAttribute="bottom" constant="233" id="K7S-sD-Xch"/>
-                            <constraint firstItem="DOI-Kz-LzC" firstAttribute="leading" secondItem="CTJ-Ev-5bi" secondAttribute="leading" id="e9a-M1-8xc"/>
-                            <constraint firstItem="CTJ-Ev-5bi" firstAttribute="top" secondItem="DOI-Kz-LzC" secondAttribute="bottom" constant="20" id="fk5-hE-HsG"/>
-                            <constraint firstItem="DOI-Kz-LzC" firstAttribute="trailing" secondItem="CTJ-Ev-5bi" secondAttribute="trailing" id="g04-h3-7hD"/>
-                            <constraint firstItem="lww-ng-Cay" firstAttribute="trailing" secondItem="DOI-Kz-LzC" secondAttribute="trailing" id="h75-7M-BNS"/>
-                            <constraint firstItem="lww-ng-Cay" firstAttribute="top" secondItem="3vN-TL-qTT" secondAttribute="bottom" constant="8" symbolic="YES" id="qqq-wc-d4I"/>
-                            <constraint firstItem="lww-ng-Cay" firstAttribute="leading" secondItem="DOI-Kz-LzC" secondAttribute="leading" id="sh4-lH-QCp"/>
-                            <constraint firstItem="lww-ng-Cay" firstAttribute="trailing" secondItem="8zK-Ss-b4l" secondAttribute="trailingMargin" id="zuE-RF-rdK"/>
+                            <constraint firstItem="h8W-Ae-YmL" firstAttribute="top" secondItem="DOI-Kz-LzC" secondAttribute="bottom" constant="16" id="8aE-HX-ZjW"/>
+                            <constraint firstItem="lww-ng-Cay" firstAttribute="trailing" secondItem="8zK-Ss-b4l" secondAttribute="trailingMargin" id="CPt-MC-eYy"/>
+                            <constraint firstItem="CTJ-Ev-5bi" firstAttribute="trailing" secondItem="DOI-Kz-LzC" secondAttribute="trailing" id="Esq-cE-G0c"/>
+                            <constraint firstItem="lww-ng-Cay" firstAttribute="trailing" secondItem="cwH-Lg-VCa" secondAttribute="trailing" id="JCD-jC-LgV"/>
+                            <constraint firstItem="CTJ-Ev-5bi" firstAttribute="leading" secondItem="DOI-Kz-LzC" secondAttribute="leading" id="NSL-4E-CoN"/>
+                            <constraint firstItem="cwH-Lg-VCa" firstAttribute="trailing" secondItem="CTJ-Ev-5bi" secondAttribute="trailing" id="UTV-BH-t7G"/>
+                            <constraint firstItem="lww-ng-Cay" firstAttribute="top" secondItem="3vN-TL-qTT" secondAttribute="bottom" constant="8" symbolic="YES" id="WQE-hN-1c2"/>
+                            <constraint firstItem="lww-ng-Cay" firstAttribute="leading" secondItem="8zK-Ss-b4l" secondAttribute="leadingMargin" id="afz-iP-dW0"/>
+                            <constraint firstItem="cwH-Lg-VCa" firstAttribute="leading" secondItem="CTJ-Ev-5bi" secondAttribute="leading" id="foK-G2-02l"/>
+                            <constraint firstItem="lww-ng-Cay" firstAttribute="leading" secondItem="cwH-Lg-VCa" secondAttribute="leading" id="guJ-60-Kd7"/>
+                            <constraint firstItem="CTJ-Ev-5bi" firstAttribute="top" secondItem="cwH-Lg-VCa" secondAttribute="bottom" constant="18" id="tEa-zd-4S4"/>
+                            <constraint firstItem="DOI-Kz-LzC" firstAttribute="top" secondItem="CTJ-Ev-5bi" secondAttribute="bottom" constant="17" id="yb1-8F-VLa"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Connect" image="first" id="QUd-TM-UnD"/>
@@ -279,11 +295,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4I-Ks-6jV">
                                 <rect key="frame" x="16" y="467" width="343" height="55"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.34901960780000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="dec-6p-Sbk"/>
+                                    <constraint firstAttribute="height" constant="55" id="XQX-sh-hR5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Application Checklist">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -295,9 +311,9 @@
                                 <rect key="frame" x="16" y="542" width="343" height="55"/>
                                 <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="ziv-oc-dPB"/>
+                                    <constraint firstAttribute="height" constant="55" id="2sD-SN-OfG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Apply Now!">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -305,50 +321,41 @@
                                     <action selector="applyNowPressed:" destination="ltW-TS-er2" eventType="touchUpInside" id="4zh-Sa-hVb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace_logo_color_whitetext_PNG.png" translatesAutoresizingMaskIntoConstraints="NO" id="dtG-2a-BLu">
-                                <rect key="frame" x="100" y="114" width="174" height="174"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply to ACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra5-DV-h6u">
                                 <rect key="frame" x="16" y="20" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="z9K-8c-aK6"/>
+                                    <constraint firstAttribute="height" constant="55" id="GeV-O9-FtW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2016" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
-                                <rect key="frame" x="16" y="340" width="343" height="91"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
+                                <rect key="frame" x="16" y="368" width="343" height="91"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="91" id="TBO-0q-gV1"/>
+                                    <constraint firstAttribute="height" constant="91" id="wVW-Jc-Yar"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.85731741006136475" blue="0.13480856202267155" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dtG-2a-BLu" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" constant="84" id="33a-Pa-bqR"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="4kR-G6-oP8" secondAttribute="trailing" id="5Fx-O2-Rlb"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="CqU-EG-koO"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="4kR-G6-oP8" secondAttribute="leading" id="DVk-pl-IBD"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="centerX" secondItem="dtG-2a-BLu" secondAttribute="centerX" id="Eti-UV-Nnw"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="KVn-8R-yNC"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="KaT-mS-cTf"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="TOi-yr-UCN"/>
-                            <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="20" id="Z6m-0r-pGI"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="c5T-0P-AVc"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" id="h1x-hb-475"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="jIu-Bh-jAh"/>
-                            <constraint firstItem="dtG-2a-BLu" firstAttribute="top" secondItem="Ra5-DV-h6u" secondAttribute="bottom" constant="39" id="nZ7-Es-nIF"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="top" secondItem="dtG-2a-BLu" secondAttribute="bottom" constant="52" id="xNq-1H-YIx"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="4kR-G6-oP8" secondAttribute="bottom" constant="36" id="zY1-b6-Bc2"/>
-                            <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="21" id="zi8-pt-uSf"/>
+                            <constraint firstItem="4kR-G6-oP8" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="CJm-pY-Xev"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="JJe-YD-WOP"/>
+                            <constraint firstItem="4kR-G6-oP8" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="LjS-02-3rh"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="4kR-G6-oP8" secondAttribute="bottom" constant="8" symbolic="YES" id="QLm-OS-mff"/>
+                            <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="21" id="RUB-ud-9A7"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="STV-Wy-yhg"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="TLL-wz-YDW"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="4kR-G6-oP8" secondAttribute="leading" id="fAD-qv-xtX"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" id="fEU-UI-r6Q"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="4kR-G6-oP8" secondAttribute="trailing" id="i8x-at-f2A"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="mCV-4B-elT"/>
+                            <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="20" id="ucX-VE-Zdf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Am9-9i-1YG"/>
@@ -392,7 +399,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-b3-WpP">
-                                                    <rect key="frame" x="24" y="66" width="277" height="126"/>
+                                                    <rect key="frame" x="24" y="66" width="277" height="125"/>
                                                     <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -434,7 +441,7 @@
         <!--Newsletter-->
         <scene sceneID="sBq-ag-Cg3">
             <objects>
-                <viewController id="pz5-i0-p8q" sceneMemberID="viewController">
+                <viewController id="pz5-i0-p8q" customClass="NewsletterViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P4a-kc-wmf"/>
                         <viewControllerLayoutGuide type="bottom" id="3Yw-jr-240"/>
@@ -443,37 +450,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvA-Wz-in0">
-                                <rect key="frame" x="16" y="358" width="343" height="55"/>
-                                <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Ubr-JL-ulc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Sign Up For Newsletter">
-                                    <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newsletter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i49-uG-mUE">
                                 <rect key="frame" x="16" y="28" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="T0i-ot-Ecs"/>
+                                    <constraint firstAttribute="height" constant="55" id="BGj-CM-LQd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvA-Wz-in0">
+                                <rect key="frame" x="16" y="539" width="343" height="55"/>
+                                <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="SOA-bM-asy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                <state key="normal" title="Sign Up For Newsletter">
+                                    <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpForNewsletter:" destination="pz5-i0-p8q" eventType="touchUpInside" id="NaO-Sq-vKl"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="i49-uG-mUE" firstAttribute="leading" secondItem="A7A-zp-CaK" secondAttribute="leadingMargin" id="I5s-AB-g6a"/>
-                            <constraint firstItem="i49-uG-mUE" firstAttribute="trailing" secondItem="A7A-zp-CaK" secondAttribute="trailingMargin" id="OxC-Ct-WaS"/>
-                            <constraint firstItem="3Yw-jr-240" firstAttribute="top" secondItem="hvA-Wz-in0" secondAttribute="bottom" constant="205" id="gqV-d8-7YQ"/>
-                            <constraint firstItem="i49-uG-mUE" firstAttribute="trailing" secondItem="hvA-Wz-in0" secondAttribute="trailing" id="qWg-q3-pnW"/>
-                            <constraint firstItem="i49-uG-mUE" firstAttribute="top" secondItem="P4a-kc-wmf" secondAttribute="bottom" constant="8" symbolic="YES" id="x3D-Gi-pJy"/>
-                            <constraint firstItem="i49-uG-mUE" firstAttribute="leading" secondItem="hvA-Wz-in0" secondAttribute="leading" id="zY4-8K-DAQ"/>
+                            <constraint firstItem="i49-uG-mUE" firstAttribute="leading" secondItem="A7A-zp-CaK" secondAttribute="leadingMargin" id="4wl-hH-OTk"/>
+                            <constraint firstItem="i49-uG-mUE" firstAttribute="top" secondItem="P4a-kc-wmf" secondAttribute="bottom" constant="8" symbolic="YES" id="5cI-CJ-9aS"/>
+                            <constraint firstItem="3Yw-jr-240" firstAttribute="top" secondItem="hvA-Wz-in0" secondAttribute="bottom" constant="24" id="HyO-oW-ont"/>
+                            <constraint firstItem="i49-uG-mUE" firstAttribute="leading" secondItem="hvA-Wz-in0" secondAttribute="leading" id="ULn-r7-XjB"/>
+                            <constraint firstItem="i49-uG-mUE" firstAttribute="trailing" secondItem="hvA-Wz-in0" secondAttribute="trailing" id="bio-Bd-uXR"/>
+                            <constraint firstItem="i49-uG-mUE" firstAttribute="trailing" secondItem="A7A-zp-CaK" secondAttribute="trailingMargin" id="tck-wT-GoZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Newsletter" image="second" id="Dpe-hR-Ump"/>
@@ -496,19 +505,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spirituality.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="deb-xO-f9m">
-                                <rect key="frame" x="16" y="83" width="343" height="227"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="227" id="9bq-Ix-Yqs"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im3-Ts-1oE">
                                 <rect key="frame" x="16" y="546" width="343" height="55"/>
-                                <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="8Fd-jQ-vfa"/>
+                                    <constraint firstAttribute="height" constant="55" id="xDv-KR-756"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Spiritual Resources">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -518,11 +521,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d6-4x-bj6">
                                 <rect key="frame" x="16" y="474" width="343" height="55"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.34901960780000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="rEa-EX-jIW"/>
+                                    <constraint firstAttribute="height" constant="55" id="YnQ-nr-IuR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Weekly Spiritual Reflection">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -530,32 +533,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirituality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-qh-XVI">
                                 <rect key="frame" x="16" y="20" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="YRI-xc-lkI"/>
+                                    <constraint firstAttribute="height" constant="55" id="JR5-ec-7vc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="deb-xO-f9m" firstAttribute="trailing" secondItem="2d6-4x-bj6" secondAttribute="trailing" id="2ON-iz-gg7"/>
-                            <constraint firstItem="deb-xO-f9m" firstAttribute="leading" secondItem="2d6-4x-bj6" secondAttribute="leading" id="4P7-d9-XOt"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="DsQ-5H-tDK" secondAttribute="leadingMargin" id="Ai5-E0-n9V"/>
-                            <constraint firstItem="2d6-4x-bj6" firstAttribute="leading" secondItem="Im3-Ts-1oE" secondAttribute="leading" id="GSQ-Cg-0y5"/>
-                            <constraint firstItem="Im3-Ts-1oE" firstAttribute="top" secondItem="2d6-4x-bj6" secondAttribute="bottom" constant="17" id="RyQ-6v-Kpr"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="trailing" secondItem="deb-xO-f9m" secondAttribute="trailing" id="TOU-NH-8jL"/>
-                            <constraint firstItem="2d6-4x-bj6" firstAttribute="trailing" secondItem="Im3-Ts-1oE" secondAttribute="trailing" id="XOI-oM-eqG"/>
-                            <constraint firstItem="deb-xO-f9m" firstAttribute="top" secondItem="Nzh-qh-XVI" secondAttribute="bottom" constant="8" symbolic="YES" id="XbJ-PQ-ytm"/>
-                            <constraint firstItem="Rgf-2f-A0A" firstAttribute="top" secondItem="Im3-Ts-1oE" secondAttribute="bottom" constant="17" id="Xe3-vN-P3g"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="deb-xO-f9m" secondAttribute="leading" id="tXy-B2-iBS"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="top" secondItem="zJq-tg-CAF" secondAttribute="bottom" id="uyc-42-Lbl"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="trailing" secondItem="DsQ-5H-tDK" secondAttribute="trailingMargin" id="wGT-fs-lML"/>
+                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="top" secondItem="zJq-tg-CAF" secondAttribute="bottom" id="8hq-b5-XXT"/>
+                            <constraint firstItem="2d6-4x-bj6" firstAttribute="leading" secondItem="Im3-Ts-1oE" secondAttribute="leading" id="IIm-GB-Zx3"/>
+                            <constraint firstItem="2d6-4x-bj6" firstAttribute="trailing" secondItem="Im3-Ts-1oE" secondAttribute="trailing" id="N2u-LB-oyh"/>
+                            <constraint firstItem="Rgf-2f-A0A" firstAttribute="top" secondItem="Im3-Ts-1oE" secondAttribute="bottom" constant="17" id="dHx-nP-FJC"/>
+                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="trailing" secondItem="DsQ-5H-tDK" secondAttribute="trailingMargin" id="e1G-wM-D4Y"/>
+                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="2d6-4x-bj6" secondAttribute="leading" id="eXX-cy-HGL"/>
+                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="DsQ-5H-tDK" secondAttribute="leadingMargin" id="ix8-lB-k63"/>
+                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="trailing" secondItem="2d6-4x-bj6" secondAttribute="trailing" id="qp8-a1-q5b"/>
+                            <constraint firstItem="Im3-Ts-1oE" firstAttribute="top" secondItem="2d6-4x-bj6" secondAttribute="bottom" constant="17" id="xFE-l0-d5L"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Spirituality" id="nTa-KL-p2Z"/>
+                    <tabBarItem key="tabBarItem" title="Spirituality" image="first" id="nTa-KL-p2Z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnA-Uk-F1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -575,9 +574,9 @@
                     <connections>
                         <segue destination="c3s-Eg-afU" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="MuV-Vb-uqh" kind="relationship" relationship="viewControllers" id="FiT-Ka-vbu"/>
+                        <segue destination="pz5-i0-p8q" kind="relationship" relationship="viewControllers" id="2dg-Ly-plR"/>
                         <segue destination="4Qs-a9-wMj" kind="relationship" relationship="viewControllers" id="Ei2-nX-dyx"/>
                         <segue destination="IuF-z9-zHs" kind="relationship" relationship="viewControllers" id="bom-Q9-QKS"/>
-                        <segue destination="pz5-i0-p8q" kind="relationship" relationship="viewControllers" id="2dg-Ly-plR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -608,7 +607,7 @@
         <scene sceneID="0F0-4L-tAg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Qs-a9-wMj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Apply" id="c6z-7Y-XuC"/>
+                    <tabBarItem key="tabBarItem" title="Apply" image="second" id="c6z-7Y-XuC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v6I-1Q-EBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -626,10 +625,8 @@
     </scenes>
     <resources>
         <image name="ace_logo_color_PNG.png" width="405" height="405"/>
-        <image name="ace_logo_color_whitetext_PNG.png" width="405" height="405"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
-        <image name="spirituality.jpg" width="2036" height="1257"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

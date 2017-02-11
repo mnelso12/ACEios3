@@ -12,6 +12,8 @@
 		231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */; };
 		231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */; };
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
+		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
+		235FA3FD1E4FC0D6000891BB /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */; };
 		23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653ACF1E49912F00529652 /* SpiritualityViewController.swift */; };
 		23653AD21E49948600529652 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653AD11E49948600529652 /* ApplyViewController.swift */; };
 		236CF9011E32BD19005DD95A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9001E32BD19005DD95A /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GaramondPremrPro.otf; path = ../../../Downloads/GaramondPremrPro.otf; sourceTree = "<group>"; };
 		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
+		234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
+		235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		23653ACF1E49912F00529652 /* SpiritualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualityViewController.swift; sourceTree = "<group>"; };
 		23653AD11E49948600529652 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
 		236CF8FD1E32BD19005DD95A /* ACEios3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEios3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,8 @@
 				236CF9021E32BD19005DD95A /* FirstViewController.swift */,
 				236CF9041E32BD19005DD95A /* SecondViewController.swift */,
 				236CF9061E32BD19005DD95A /* Main.storyboard */,
+				234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */,
+				235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */,
 				23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */,
 				23653AD11E49948600529652 /* ApplyViewController.swift */,
 				232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */,
@@ -322,9 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */,
+				234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */,
 				232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */,
 				236CF9051E32BD19005DD95A /* SecondViewController.swift in Sources */,
 				23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */,
+				235FA3FD1E4FC0D6000891BB /* LinksViewController.swift in Sources */,
 				23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */,
 				23653AD21E49948600529652 /* ApplyViewController.swift in Sources */,
 				236CF9011E32BD19005DD95A /* AppDelegate.swift in Sources */,
