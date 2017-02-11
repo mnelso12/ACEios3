@@ -49,5 +49,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PolarisCondensed-Medium.otf</string>
+		<string>GalaxiePolaris-Medium.otf</string>
+		<string>GaramondPremrPro.otf</string>
+	</array>
 </dict>
 </plist>

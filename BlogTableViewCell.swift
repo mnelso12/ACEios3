@@ -18,6 +18,9 @@ class BlogTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.blogTitle.font = UIFont(name: "GaramondPremrPro", size: 22)
+        self.detailLabel.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

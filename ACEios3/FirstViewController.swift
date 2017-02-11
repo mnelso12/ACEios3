@@ -40,6 +40,23 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
+        
+        for family: String in UIFont.familyNames
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                print("== \(names)")
+            }
+        }
+
+        
+        
+        
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -119,6 +136,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func parseBlogHTML(html: String) -> String {
         var returnStr = " "
         var isTag = false
+        var isWidgetkit = false
         var tagCount = 0
         var indexInt = 0
         var startOfImgIndex = 0
@@ -153,12 +171,23 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     startOfNBSPIndex = indexInt
                 }
             }
+            else if (html[index] == "[") { // could be start of [widgetkit id=...]
+                let start = html.index(html.startIndex, offsetBy: indexInt+1)
+                let end = html.index(html.startIndex, offsetBy: indexInt+10)
+                let range = start..<end
+                if (html.substring(with: range) == "widgetkit") { // check if this is "widgetkit"
+                    isWidgetkit = true
+                }
+            }
             else if (html[index] == ">") { // end of tag
                 isTag = false
                 isImgUrl = false
                 tagCount += 1
             }
-            else if ((isTag == false) && (indexInt > (startOfNBSPIndex + 6))) { // just normal text
+            else if ((html[index] == "]") && (isWidgetkit == true)) { // end of "[widgetkit id=...]"
+                isWidgetkit = false
+            }
+            else if ((isTag == false) && (isWidgetkit == false) && (indexInt > (startOfNBSPIndex + 6))) { // just normal text
                 returnStr.append(html[index])
                 startOfNBSPIndex = 0
             }
@@ -210,9 +239,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     do{
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
-                        
-                        print("printing all news info")
-                        print(json)
                         
                         // json content
                         
@@ -282,8 +308,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                         
-                        print("\n\n\nprinting the info of the news article selected\n")
-                        print(json)
+                        //print("\n\n\nprinting the info of the news article selected\n")
+                        //print(json)
                         
                         // title and author
                         self.selectedBlogTitle = json["name"] as! String?
@@ -315,8 +341,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 }
                                 
                                 //let data = val["data"] as! [Any]
-                                print("AUTHOR:")
-                                print(data)
+                                //print("AUTHOR:")
+                                //print(data)
                                 
                             }
                             
@@ -488,13 +514,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 }
                                 
                                 //let data = val["data"] as! [Any]
-                                print("AUTHOR:")
-                                print(data)
+                                //print("AUTHOR:")
+                                //print(data)
 
                             }
                             
-                            print("element number %i", i)
-                            print(element)
+                            //print("element number %i", i)
+                            //print(element)
                             
                             if (i==7) {
                                 let val = element.value as! [String:Any]

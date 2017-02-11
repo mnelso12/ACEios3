@@ -40,6 +40,11 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         self.dateLabel.text = self.blogDateString
         self.authorLabel.text = self.blogAuthorString
         
+        self.blogTitle.font = UIFont(name: "GaramondPremrPro", size: 30)
+        self.dateLabel.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
+        self.authorLabel.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
+        self.blogTextView.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
+        
         setImage(urlStr: self.imgUrlString)
         
     }
@@ -49,6 +54,9 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
     override func viewDidLayoutSubviews() {
         
         super.viewDidLayoutSubviews()
+        
+        self.positionImageView()
+        self.positionLabels()
         
         let contentSize = self.blogTextView.sizeThatFits(self.self.blogTextView.bounds.size)
         var frame = self.blogTextView.frame
@@ -66,10 +74,21 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func positionImageView() {
+        // set image width to screen width
+        let screenSize: CGRect = UIScreen.main.bounds
+        self.imageView.frame = CGRect(x: 0, y: -50, width: screenSize.width, height: 200)
+    }
+    
+    func positionLabels() {
+        let screenSize: CGRect = UIScreen.main.bounds
+        self.blogTitle.frame = CGRect(x: 20, y: 180, width: screenSize.width - 40, height: 80)
+    }
 
     func setImage(urlStr: String) {
         if (urlStr == "" || urlStr == " ") {
-            imageView.image = UIImage(named: "ace_logo_color_whitetext_PNG.png")
+            imageView.image = UIImage(named: "ace_logo_color_PNG.png")
         }
         else {
             let url = URL(string: urlStr)
