@@ -14,6 +14,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var blogNews: UISegmentedControl! // segmented control
     
     var isBlog = true // whether or not table view is blog (vs. is news)
+    var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
 
     // blog data arrays
     var blogTitles = [String]() // array of blog titles that fill thel table view
@@ -42,7 +43,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         
-        
+        /*
         for family: String in UIFont.familyNames
         {
             print("\(family)")
@@ -51,10 +52,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print("== \(names)")
             }
         }
-
-        
-        
-        
+        */
         
         
         tableView.delegate = self
@@ -63,6 +61,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // load blogs into table view
         getMostRecentBlogs()
         getMostRecentNews()
+        
+        styleLoadingIcon()
         
         let tempImageView = UIImageView(image: UIImage(named: "bluePattern.png"))
         tempImageView.frame = self.tableView.frame
@@ -124,7 +124,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             getNews(newsID: self.newsIdArr[indexPath.row])
             self.selectedBlogDate = self.newsDatesArr[indexPath.row]
         }
+        
+        // start loading indicator
+        activityView.startAnimating()
+        self.view.addSubview(activityView)
 
+    }
+    
+    func styleLoadingIcon() {
+        // is already declared as class variable
+        activityView.center = self.view.center
+        activityView.color = UIColor.black
+        activityView.backgroundColor = UIColor.white
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -566,6 +577,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         destinationVC.blogDateString = self.selectedBlogDate
         destinationVC.blogAuthorString = self.selectedBlogAuthor
         destinationVC.imgUrlString = self.selectedImgUrl
+        
+        self.activityView.removeFromSuperview()
     }
 
 
