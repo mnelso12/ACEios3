@@ -25,6 +25,10 @@ class LinksViewController: UIViewController {
         UIApplication.shared.openURL(NSURL(string: "https://nd.qualtrics.com/jfe/form/SV_5tCq3aDJR0jfzmt")! as URL)
     }
 
+    @IBAction func pressedJobBoard(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://ace.nd.edu/job-board")! as URL)
+    }
+    
     /*
     // MARK: - Navigation
 

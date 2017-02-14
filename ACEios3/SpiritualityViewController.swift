@@ -10,10 +10,13 @@ import UIKit
 
 class SpiritualityViewController: UIViewController {
 
+    @IBOutlet weak var spiritualityImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.spiritualityImageView.layer.cornerRadius = 5
+        self.spiritualityImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

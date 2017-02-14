@@ -42,17 +42,6 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView;
         
-        /*
-        if ((locations.count == estDates.count) && (locations.count == numTeachers.count) && (locations.count == numSchools.count) && (locations.count == diocese.count)) {
-            
-            print("ALL IS WELLLLLL")
-        }
-        else {
-            
-            print("somethigns screwed up!!!!!!")
-        }
- */
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +65,7 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.establishedDate.text = "Est. " + self.estDates[indexPath.row]
         cell.diocese.text = "Serves " + self.diocese[indexPath.row]
         
+        cell.seeOnlineButton.tag = indexPath.row
         
         return cell
         
@@ -84,6 +74,7 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        
         
         if (self.selectedCellIndex == indexPath.row) {
             self.selectedCellIndex = -1
@@ -105,15 +96,5 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
             return 60
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

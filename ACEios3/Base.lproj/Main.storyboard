@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRn-gN-o2T" id="nCQ-HF-735">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-1T-jkd">
@@ -221,6 +221,9 @@
                                 <state key="normal" title="Job Board">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedJobBoard:" destination="IuF-z9-zHs" eventType="touchUpInside" id="Fho-Pu-W6f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOI-Kz-LzC">
                                 <rect key="frame" x="16" y="547" width="343" height="55"/>
@@ -353,7 +356,7 @@
                                     <segue destination="btm-VX-rjZ" kind="show" id="0Nu-dQ-P60"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace_app_community.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-Ah-KwB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace_app_community.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-Ah-KwB">
                                 <rect key="frame" x="16" y="83" width="343" height="198"/>
                             </imageView>
                         </subviews>
@@ -382,6 +385,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Am9-9i-1YG"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="applyImageView" destination="qoU-Ah-KwB" id="MG7-ZB-UoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEb-kq-Zan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -408,7 +414,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jR4-Hi-9Me" id="CzW-aK-I9K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-cI-YBa">
@@ -481,7 +487,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ASY-ly-DZj" id="zCX-zt-FUs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of teachers: 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-xP-hoD">
@@ -492,14 +498,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schools served: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFD-et-xgs">
-                                                    <rect key="frame" x="191" y="100" width="176" height="30"/>
+                                                    <rect key="frame" x="191" y="93" width="176" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serves Diocese of Biloxi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXe-61-A2I">
-                                                    <rect key="frame" x="191" y="170" width="176" height="44"/>
+                                                    <rect key="frame" x="191" y="153" width="176" height="61"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -509,18 +515,29 @@
                                                     <rect key="frame" x="16" y="62" width="161" height="152"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Established in 1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXP-he-voo">
-                                                    <rect key="frame" x="191" y="138" width="176" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCl-qJ-SO1">
-                                                    <rect key="frame" x="16" y="8" width="351" height="46"/>
+                                                    <rect key="frame" x="16" y="8" width="259" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                                     <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y3-kb-uJz">
+                                                    <rect key="frame" x="283" y="16" width="84" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                                    <state key="normal" title="see online">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pressedSeeOnline:" destination="ASY-ly-DZj" eventType="touchUpInside" id="Ks6-zT-QlY"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Established in 1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXP-he-voo">
+                                                    <rect key="frame" x="191" y="123" width="176" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -529,8 +546,10 @@
                                             <outlet property="cityLabel" destination="BCl-qJ-SO1" id="JCR-dm-kBx"/>
                                             <outlet property="diocese" destination="uXe-61-A2I" id="mhD-bo-cgh"/>
                                             <outlet property="establishedDate" destination="gXP-he-voo" id="QjY-F1-Gh5"/>
+                                            <outlet property="locationImageView" destination="gJQ-JQ-3Rd" id="REe-HL-ZuI"/>
                                             <outlet property="numberOfSchoolsServed" destination="vFD-et-xgs" id="QRq-PV-8mZ"/>
                                             <outlet property="numberOfTeachers" destination="zgl-xP-hoD" id="Kfu-LF-INj"/>
+                                            <outlet property="seeOnlineButton" destination="2Y3-kb-uJz" id="VQ7-Tb-Hfj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -668,6 +687,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Spirituality" image="first" id="nTa-KL-p2Z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="spiritualityImageView" destination="ujc-II-rff" id="ReV-Gu-YFx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnA-Uk-F1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -701,7 +723,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c3s-Eg-afU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="first" selectedImage="second" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dZB-LB-xey">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dZB-LB-xey">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -721,7 +743,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Qs-a9-wMj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Apply" image="second" id="c6z-7Y-XuC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v6I-1Q-EBP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6I-1Q-EBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

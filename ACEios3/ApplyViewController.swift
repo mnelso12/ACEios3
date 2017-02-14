@@ -10,10 +10,14 @@ import UIKit
 
 class ApplyViewController: UIViewController {
 
+    
+    @IBOutlet weak var applyImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.applyImageView.layer.cornerRadius = 5
+        self.applyImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
