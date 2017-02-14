@@ -18,7 +18,14 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
     
     let locations = ["Atlanta, GA", "Austin, TX", "Baton Rouge, LA", "Biloxi, MS", "Brownsville, TX", "Chicago, IL", "Corpus Christi, TX", "Dallas, TX", "Denver, CO", "Fort Worth, TX", "Indianapolis, IN", "Jacksonville, FL", "LA (East), CA", "LA (South Central), CA", "Memphis, TN", "Mission, TX", "Mobile, AL", "New Orleans, LA", "New York, NY", "Oakland, CA", "Oklahoma City, OK", "Peoria, IL", "Phoenix, AZ", "Richmond, VA", "Sacramento, CA", "San Antonio, TX", "San Jose, CA", "Santa Ana, CA", "St. Petersburg, FL", "Tampa, FL", "Tucson, AZ", "Tulsa, OK", "Washington, D.C."]
     
+    let estDates = ["1998", "2000", "1994", "1995", "1997", "2013", "1996", "1997", "2005", "1996", "2015", "1994", "2000", "2000", "1999", "1998", "1994", "2007", "2016", "2011", "1994", "2015", "2000", "2010", "2010", "2003", "2015", "2013", "1997", "2014", "2001", "1996", "2006"]
+
     let numTeachers = ["4", "5", "6", "6", "6", "6", "5", "10", "5", "5", "6", "4", "5", "5", "6", "4", "5", "7", "4", "5", "6", "4", "4", "5", "6", "7", "5", "5", "8", "4", "8", "3", "6"]
+    
+    let numSchools = ["3", "4", "3", "4", "3", "5", "3", "6", "5", "4", "4", "4", "2", "3", "3", "4", "3", "7", "???", "5", "4", "2", "3", "2", "4", "6", "3", "5", "4", "2", "6", "3", "5"]
+    
+
+    let diocese = ["Archdiocese of Atlanta", "Diocese of Austin", "Diocese of Baton Rouge", "Diocese of Biloxi", "Diocese of Brownsville", "Archdiocese of Chicago", "Diocese of Corpus Cristi", "Diocese of Dallas", "Archdiocese of Denver", "Diocese of Fort Worth", "Archdiocese of Indianapolis", "Diocese of St. Augustine", "Archdiocese of Los Angeles", "Archdiocese of Los Angeles", "Diocese of Memphis", "Diocese of Brownsville", "Archdiocese of Mobile", "Archdiocese of New Orleans", "Archdiocese of New York", "Diocese of Oakland", "Archdiocese of Oklahoma City", "Diocese of Peoria", "Diocese of Phoenix", "Diocese of Richmond", "Diocese of Sacramento", "Archdiocese of San Antonio", "Diocese of San Jose", "Diocese of Orange", "Diocese of St. Petersburg", "Diocese of St. Petersburg", "Diocese of Tucson", "Diocese of Tulsa", "Archdiocese of Washington D.C."]
     
    
     
@@ -34,6 +41,17 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         let tempImageView = UIImageView(image: UIImage(named: "gray-pattern.png"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView;
+        
+        /*
+        if ((locations.count == estDates.count) && (locations.count == numTeachers.count) && (locations.count == numSchools.count) && (locations.count == diocese.count)) {
+            
+            print("ALL IS WELLLLLL")
+        }
+        else {
+            
+            print("somethigns screwed up!!!!!!")
+        }
+ */
 
     }
 
@@ -54,9 +72,9 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.cityLabel.text = self.locations[indexPath.row]
         cell.numberOfTeachers.text = "Teachers: " + self.numTeachers[indexPath.row]
-        cell.numberOfSchoolsServed.text = "Schools served: 4"
-        cell.establishedDate.text = "Est. 1995"
-        cell.diocese.text = "Serves Diocese of Biloxi"
+        cell.numberOfSchoolsServed.text = "Schools served: " + self.numSchools[indexPath.row]
+        cell.establishedDate.text = "Est. " + self.estDates[indexPath.row]
+        cell.diocese.text = "Serves " + self.diocese[indexPath.row]
         
         
         return cell
