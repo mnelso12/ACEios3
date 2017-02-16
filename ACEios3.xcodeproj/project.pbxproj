@@ -17,6 +17,7 @@
 		23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653ACF1E49912F00529652 /* SpiritualityViewController.swift */; };
 		23653AD21E49948600529652 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653AD11E49948600529652 /* ApplyViewController.swift */; };
 		2369C7091E52BF0000755BD3 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */; };
+		236A286D1E553ABB00201F10 /* SpiritualReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */; };
 		236CF9011E32BD19005DD95A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9001E32BD19005DD95A /* AppDelegate.swift */; };
 		236CF9031E32BD19005DD95A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9021E32BD19005DD95A /* FirstViewController.swift */; };
 		236CF9051E32BD19005DD95A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9041E32BD19005DD95A /* SecondViewController.swift */; };
@@ -68,6 +69,7 @@
 		23653ACF1E49912F00529652 /* SpiritualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualityViewController.swift; sourceTree = "<group>"; };
 		23653AD11E49948600529652 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
 		2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualReflectionViewController.swift; sourceTree = "<group>"; };
 		236CF8FD1E32BD19005DD95A /* ACEios3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEios3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236CF9001E32BD19005DD95A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236CF9021E32BD19005DD95A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		236CF8F41E32BD19005DD95A = {
 			isa = PBXGroup;
 			children = (
+				236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */,
 				2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */,
 				239DABD11E5182D40018D556 /* LocationTableViewCell.swift */,
 				231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */,
@@ -357,6 +360,7 @@
 				239517421E517F50003604AE /* TFLocationsViewController.swift in Sources */,
 				236CF9011E32BD19005DD95A /* AppDelegate.swift in Sources */,
 				236CF9031E32BD19005DD95A /* FirstViewController.swift in Sources */,
+				236A286D1E553ABB00201F10 /* SpiritualReflectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
 
     let numTeachers = ["4", "5", "6", "6", "6", "6", "5", "10", "5", "5", "6", "4", "5", "5", "6", "4", "5", "7", "4", "5", "6", "4", "4", "5", "6", "7", "5", "5", "8", "4", "8", "3", "6"]
     
-    let numSchools = ["3", "4", "3", "4", "3", "5", "3", "6", "5", "4", "4", "4", "2", "3", "3", "4", "3", "7", "???", "5", "4", "2", "3", "2", "4", "6", "3", "5", "4", "2", "6", "3", "5"]
+    let numSchools = ["3", "4", "3", "4", "3", "5", "3", "6", "5", "4", "4", "4", "2", "3", "3", "4", "3", "7", "4", "5", "4", "2", "3", "2", "4", "6", "3", "5", "4", "2", "6", "3", "5"]
     
 
     let diocese = ["Archdiocese of Atlanta", "Diocese of Austin", "Diocese of Baton Rouge", "Diocese of Biloxi", "Diocese of Brownsville", "Archdiocese of Chicago", "Diocese of Corpus Cristi", "Diocese of Dallas", "Archdiocese of Denver", "Diocese of Fort Worth", "Archdiocese of Indianapolis", "Diocese of St. Augustine", "Archdiocese of Los Angeles", "Archdiocese of Los Angeles", "Diocese of Memphis", "Diocese of Brownsville", "Archdiocese of Mobile", "Archdiocese of New Orleans", "Archdiocese of New York", "Diocese of Oakland", "Archdiocese of Oklahoma City", "Diocese of Peoria", "Diocese of Phoenix", "Diocese of Richmond", "Diocese of Sacramento", "Archdiocese of San Antonio", "Diocese of San Jose", "Diocese of Orange", "Diocese of St. Petersburg", "Diocese of St. Petersburg", "Diocese of Tucson", "Diocese of Tulsa", "Archdiocese of Washington D.C."]
