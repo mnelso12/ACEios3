@@ -32,6 +32,15 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         self.blogTextView.delegate = self
         self.scrollView.delegate = self
         self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 15, 65);
+        
+        // 5s: 320, 65
+        // 6s: 375, 15
+        // 7: 375, 15
+        // 6 plus: 414, none
+        
+        
+        print("view width:", self.view.frame.width)
+        
         //self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+self.blogTextView.frame.height)
         
         // update ui elements with strings passed from home view controller
@@ -46,6 +55,8 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         self.blogTextView.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
         
         setImage(urlStr: self.imgUrlString)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
         
     }
     
@@ -66,7 +77,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.blogTextView, attribute: .height, relatedBy: .equal, toItem: self.blogTextView, attribute: .width, multiplier: self.blogTextView.bounds.height/blogTextView.bounds.width, constant: 1)
         self.blogTextView.addConstraint(aspectRatioTextViewConstraint)
         
-        // sets scrollView height to fit textView and stuff. Math could be better here
+        // sets scrollView height to fit textView and stuff. Math could be better here TODO
         self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+self.blogTextView.frame.height)
     }
 
@@ -85,6 +96,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         let screenSize: CGRect = UIScreen.main.bounds
         self.blogTitle.frame = CGRect(x: 20, y: 180, width: screenSize.width - 40, height: 80)
     }
+
 
     func setImage(urlStr: String) {
         if (urlStr == "" || urlStr == " ") {

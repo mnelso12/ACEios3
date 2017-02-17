@@ -14,6 +14,7 @@ class SpiritualityViewController: UIViewController {
     
     let apikey = ""
     var weeklyRef = " "
+    let numReflectionIDsLoaded = "200"
     
     var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
     
@@ -26,13 +27,89 @@ class SpiritualityViewController: UIViewController {
         self.spiritualityImageView.clipsToBounds = true
         
         self.styleLoadingIcon()
+        self.loadListOfSpiritualReflections()
+     
     }
+    
     
     func styleLoadingIcon() {
         // is already declared as class variable
         activityView.center = self.view.center
         activityView.color = UIColor.black
         activityView.backgroundColor = UIColor.white
+    }
+    
+    func loadListOfSpiritualReflections() {
+        let urlString = "https://us2.api.mailchimp.com/3.0/campaigns?folder_id=be2244f13f&count=" + self.numReflectionIDsLoaded
+        let url = URL(string: urlString)
+        let param = "apikey " + self.apikey
+        let request = NSMutableURLRequest(url: url!)
+        
+        request.setValue(param, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: request as URLRequest) { data, response, error in
+            
+            DispatchQueue.main.async(){
+                
+                guard let data = data, error == nil else { return }
+                
+                
+                let httpResponse = response as! HTTPURLResponse
+                let statusCode = httpResponse.statusCode
+                
+                if (statusCode == 200) {
+                    print("Everyone is fine IN SPIRITUAL REFLECTION, file downloaded successfully.")
+                    do{
+                        
+                        let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
+                        //print(json)
+                        
+                        // TODO
+                        /*
+                        var IDlist = [String]()
+                        
+                        var objIndex = 0
+                        for obj in json {
+                            
+                            print("obj:\n", obj)
+                            
+                            // get total number of items
+                            if (objIndex == 2) {
+                                let element = obj.value as! [String:Any]
+                                let numCampaigns = element["total_items"]
+                                print("num campaigns", numCampaigns)
+                            }
+ */
+                            
+                            
+                            /*
+                            let val = obj.value as! [String:Any]
+                            
+                            for thing in val {
+                                print("thing:\n", thing)
+                            }
+ 
+                            objIndex += 1
+                        }
+                        
+                        print(IDlist)
+ */
+                        //let plainText = json["plain_text"] as! String?
+                        //self.parseJSONforSpiritualReflection(json: plainText!)
+                        
+                        
+                    }catch {
+                        print("Error IN SPIRITUALITY with Json: \(error)")
+                    }
+                }
+                print("ending dispatch queue IN SPIRITUALITY")
+                // now segue!
+            }
+        }
+        task.resume()
+
     }
 
     func loadWeeklySpiritualReflection(id: String) {
@@ -56,7 +133,7 @@ class SpiritualityViewController: UIViewController {
                     let statusCode = httpResponse.statusCode
                     
                     if (statusCode == 200) {
-                        print("Everyone is fine IN SPIRITUAL REFLECTION, file downloaded successfully.")
+                        print("Everyone is fine, file downloaded successfully.")
                         do{
                             
                             let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
@@ -67,10 +144,10 @@ class SpiritualityViewController: UIViewController {
                             
                             
                         }catch {
-                            print("Error IN SPIRITUALITY with Json: \(error)")
+                            print("Error with Json: \(error)")
                         }
                     }
-                    print("ending dispatch queue IN SPIRITUALITY")
+                    print("ending dispatch queue ")
                     // now segue!
                 }
             }

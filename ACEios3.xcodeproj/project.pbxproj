@@ -13,6 +13,7 @@
 		231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */; };
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
 		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
+		23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23593BF61E56A3C3008B39CE /* basilica.jpg */; };
 		235FA3FD1E4FC0D6000891BB /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */; };
 		23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653ACF1E49912F00529652 /* SpiritualityViewController.swift */; };
 		23653AD21E49948600529652 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653AD11E49948600529652 /* ApplyViewController.swift */; };
@@ -65,6 +66,7 @@
 		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
 		234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
+		23593BF61E56A3C3008B39CE /* basilica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basilica.jpg; path = ../../../../Downloads/basilica.jpg; sourceTree = "<group>"; };
 		235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		23653ACF1E49912F00529652 /* SpiritualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualityViewController.swift; sourceTree = "<group>"; };
 		23653AD11E49948600529652 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				236CF9021E32BD19005DD95A /* FirstViewController.swift */,
 				236CF9041E32BD19005DD95A /* SecondViewController.swift */,
 				236CF9061E32BD19005DD95A /* Main.storyboard */,
+				23593BF61E56A3C3008B39CE /* basilica.jpg */,
 				239517411E517F50003604AE /* TFLocationsViewController.swift */,
 				234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */,
 				235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */,
@@ -313,6 +316,7 @@
 				23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */,
 				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
 				237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */,
+				23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */,
 				2395173E1E5173D8003604AE /* ace_app_holding_hands.JPG in Resources */,
 				23E018C61E4AECBF00119327 /* bluePattern.png in Resources */,
 				231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */,

@@ -85,6 +85,26 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.reloadData()
     }
     
+    func makeDatePretty(oldDate: String) -> String {
+        // make "12-1-2016" into "Dec 1, 2016"
+        
+        var newDate = ""
+        var dateArr = oldDate.characters.split(whereSeparator: { $0 == "-" })
+            .map(String.init)
+        
+        //let monArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Dececember"]
+        let monArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        
+        let monthNum = Int(dateArr[0])!
+        
+        newDate.append(monArr[monthNum-1])
+        newDate.append(" ")
+        newDate.append(dateArr[1])
+        newDate.append(", ")
+        newDate.append(dateArr[2])
+        
+        return newDate
+    }
     
     
     // table view //////////////////////////////////////////////////////
@@ -101,11 +121,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if (self.isBlog == true) {
             cell.blogTitle.text = self.blogTitles[indexPath.row]
-            cell.detailLabel.text = self.detailsArr[indexPath.row]
+            cell.detailLabel.text = makeDatePretty(oldDate: self.detailsArr[indexPath.row])
         }
         else {
             cell.blogTitle.text = self.newsTitles[indexPath.row]
-            cell.detailLabel.text = self.newsDetailsArr[indexPath.row]
+            cell.detailLabel.text = makeDatePretty(oldDate: self.newsDetailsArr[indexPath.row])
         }
         
         return cell
@@ -574,7 +594,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let destinationVC = segue.destination as! SecondViewController
         destinationVC.blogTitleString = self.selectedBlogTitle
         destinationVC.blogContentString = self.selectedBlogContent
-        destinationVC.blogDateString = self.selectedBlogDate
+        destinationVC.blogDateString = makeDatePretty(oldDate: self.selectedBlogDate)
         destinationVC.blogAuthorString = self.selectedBlogAuthor
         destinationVC.imgUrlString = self.selectedImgUrl
         

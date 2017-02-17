@@ -20,6 +20,8 @@ class ContactUsViewController: UIViewController {
         super.viewDidLoad()
 
         self.alignButtonsRight()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
     }
 
     func alignButtonsRight() {

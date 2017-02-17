@@ -49,6 +49,8 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
         let tempImageView = UIImageView(image: UIImage(named: "gray-pattern.png"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView;
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
     }
 
     
