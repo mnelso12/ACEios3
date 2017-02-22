@@ -12,16 +12,33 @@ class SpiritualReflectionViewController: UIViewController {
 
     var weeklyRef:String! = ""
     
-    @IBOutlet weak var textView: UITextView!
-
+    //@IBOutlet weak var textView: UITextView!
+    
+    //var textView: UITextView!
+    //var reflectionText: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.textView.text = self.weeklyRef
-        self.textView.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
-        self.textView.layer.cornerRadius = 5
-        
         setBackgroundImage(imageNamed: "basilica.jpg")
+        setTextViewFrame()
+    }
+    
+    func setTextViewFrame() {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width;
+        let screenHeight = screenSize.height;
+        
+        let bottomBarHeight = self.tabBarController?.tabBar.frame.size.height
+        
+        let textView : UITextView = UITextView(frame : CGRect(x:20, y: 20, width:        (screenWidth-40), height: (screenHeight-40-bottomBarHeight!) ))
+        
+        textView.text = self.weeklyRef
+        textView.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
+        textView.layer.cornerRadius = 5
+        textView.layer.opacity = 0.85
+        
+        self.view.addSubview( textView )
     }
     
     func setBackgroundImage(imageNamed:String) {

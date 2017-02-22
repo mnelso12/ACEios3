@@ -15,7 +15,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var isBlog = true // whether or not table view is blog (vs. is news)
     var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
-
+    
     // blog data arrays
     var blogTitles = [String]() // array of blog titles that fill thel table view
     var detailsArr = [String]() // array of detail labels (gray text below the title of the table view cell)

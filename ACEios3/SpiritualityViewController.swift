@@ -12,7 +12,7 @@ class SpiritualityViewController: UIViewController {
 
     @IBOutlet weak var spiritualityImageView: UIImageView!
     
-    let apikey = ""
+    let apikey = "3009947f4086c85e7b735f4b4222e514-us2"
     var weeklyRef = " "
     let numReflectionIDsLoaded = "200"
     
