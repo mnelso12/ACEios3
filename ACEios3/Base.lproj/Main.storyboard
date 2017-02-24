@@ -699,7 +699,7 @@ Notre Dame, IN 46556</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCl-qJ-SO1">
                                                     <rect key="frame" x="8" y="8" width="259" height="54"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="ori-rp-ZXX"/>
+                                                        <constraint firstAttribute="height" constant="45" id="ori-rp-ZXX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                                     <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -757,7 +757,7 @@ Notre Dame, IN 46556</string>
                                                         <constraint firstItem="gXP-he-voo" firstAttribute="top" secondItem="vFD-et-xgs" secondAttribute="bottom" constant="4" id="hf6-o5-uaN"/>
                                                         <constraint firstItem="uXe-61-A2I" firstAttribute="leading" secondItem="gJQ-JQ-3Rd" secondAttribute="trailing" constant="22" id="kiX-Oc-bSH"/>
                                                         <constraint firstItem="vFD-et-xgs" firstAttribute="leading" secondItem="gJQ-JQ-3Rd" secondAttribute="trailing" constant="22" id="mCi-jr-vCV"/>
-                                                        <constraint firstItem="gJQ-JQ-3Rd" firstAttribute="leading" secondItem="KmO-Cm-md5" secondAttribute="leading" constant="8" id="ojf-lw-jsI"/>
+                                                        <constraint firstItem="gJQ-JQ-3Rd" firstAttribute="leading" secondItem="KmO-Cm-md5" secondAttribute="leading" constant="20" id="ojf-lw-jsI"/>
                                                         <constraint firstItem="uXe-61-A2I" firstAttribute="width" secondItem="gXP-he-voo" secondAttribute="width" id="tHR-mF-9zs"/>
                                                         <constraint firstItem="uXe-61-A2I" firstAttribute="width" secondItem="vFD-et-xgs" secondAttribute="width" id="vCQ-QP-5Gw"/>
                                                         <constraint firstAttribute="trailing" secondItem="zgl-xP-hoD" secondAttribute="trailing" constant="8" id="wFC-BT-i6q"/>
@@ -778,8 +778,8 @@ Notre Dame, IN 46556</string>
                                             <constraints>
                                                 <constraint firstItem="KmO-Cm-md5" firstAttribute="width" secondItem="zCX-zt-FUs" secondAttribute="width" id="KZ4-OV-mbq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2Y3-kb-uJz" secondAttribute="trailing" id="ika-HK-rUs"/>
-                                                <constraint firstItem="KmO-Cm-md5" firstAttribute="top" secondItem="BCl-qJ-SO1" secondAttribute="bottom" id="kv7-sZ-mvG"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="BCl-qJ-SO1" secondAttribute="leading" id="sdT-Xs-KD4"/>
+                                                <constraint firstItem="KmO-Cm-md5" firstAttribute="top" secondItem="BCl-qJ-SO1" secondAttribute="bottom" constant="15" id="kv7-sZ-mvG"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="BCl-qJ-SO1" secondAttribute="leading" constant="-8" id="sdT-Xs-KD4"/>
                                                 <constraint firstItem="BCl-qJ-SO1" firstAttribute="centerY" secondItem="2Y3-kb-uJz" secondAttribute="centerY" id="tMy-I9-tD3"/>
                                                 <constraint firstAttribute="topMargin" secondItem="BCl-qJ-SO1" secondAttribute="top" id="zfj-js-eWT"/>
                                             </constraints>
