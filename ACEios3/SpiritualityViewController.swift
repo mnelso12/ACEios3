@@ -14,7 +14,8 @@ class SpiritualityViewController: UIViewController {
     
     let apikey = "3009947f4086c85e7b735f4b4222e514-us2"
     var weeklyRef = " "
-    let numReflectionIDsLoaded = "200"
+    let numReflectionIDsLoaded = "1" // should be one as long as we only care about the first most recent refletion
+    var thisWeeksReflectionID = "-1"
     
     var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
     
@@ -27,8 +28,6 @@ class SpiritualityViewController: UIViewController {
         self.spiritualityImageView.clipsToBounds = true
         
         self.styleLoadingIcon()
-        self.loadListOfSpiritualReflections()
-     
     }
     
     
@@ -39,11 +38,12 @@ class SpiritualityViewController: UIViewController {
         activityView.backgroundColor = UIColor.white
     }
     
-    func loadListOfSpiritualReflections() {
-        let urlString = "https://us2.api.mailchimp.com/3.0/campaigns?folder_id=be2244f13f&count=" + self.numReflectionIDsLoaded
+    func getThisWeeksSpiritualReflectionID() {
+        let urlString = "https://us2.api.mailchimp.com/3.0/campaigns?folder_id=be2244f13f&sort_dir=DESC&count=" + self.numReflectionIDsLoaded
         let url = URL(string: urlString)
         let param = "apikey " + self.apikey
         let request = NSMutableURLRequest(url: url!)
+        var id = "" // this weeks id, will be returned at end
         
         request.setValue(param, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"
@@ -64,40 +64,20 @@ class SpiritualityViewController: UIViewController {
                     do{
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
-                        //print(json)
-                        
-                        // TODO
-                        /*
-                        var IDlist = [String]()
+                        print(json)
                         
                         var objIndex = 0
                         for obj in json {
                             
-                            print("obj:\n", obj)
-                            
-                            // get total number of items
-                            if (objIndex == 2) {
-                                let element = obj.value as! [String:Any]
-                                let numCampaigns = element["total_items"]
-                                print("num campaigns", numCampaigns)
+                            if (objIndex == 1) {
+                                print(obj.value)
+                                let array = (obj.value as! NSArray).mutableCopy() as! NSMutableArray
+                                let thing = array[0] as! [String:AnyObject]
+                                id = thing["id"] as! String
+                                self.loadWeeklySpiritualReflection(id:id)
                             }
- */
-                            
-                            
-                            /*
-                            let val = obj.value as! [String:Any]
-                            
-                            for thing in val {
-                                print("thing:\n", thing)
-                            }
- 
                             objIndex += 1
                         }
-                        
-                        print(IDlist)
- */
-                        //let plainText = json["plain_text"] as! String?
-                        //self.parseJSONforSpiritualReflection(json: plainText!)
                         
                         
                     }catch {
@@ -109,12 +89,17 @@ class SpiritualityViewController: UIViewController {
             }
         }
         task.resume()
-
     }
 
     func loadWeeklySpiritualReflection(id: String) {
-            let urlString = "https://us2.api.mailchimp.com/3.0/campaigns/" + id + "/content"
-            let url = URL(string: urlString)
+        
+        if (id == "-1") {
+            print("Error! Could not load spiritualReflection because didn't find the ID yet")
+            return
+        }
+        
+        let urlString = "https://us2.api.mailchimp.com/3.0/campaigns/" + id + "/content"
+        let url = URL(string: urlString)
         let param = "apikey " + self.apikey
         let request = NSMutableURLRequest(url: url!)
         
@@ -148,7 +133,6 @@ class SpiritualityViewController: UIViewController {
                         }
                     }
                     print("ending dispatch queue ")
-                    // now segue!
                 }
             }
             task.resume()
@@ -211,8 +195,7 @@ class SpiritualityViewController: UIViewController {
         activityView.startAnimating()
         self.view.addSubview(activityView)
         
-        // TODO don't hard code this
-        loadWeeklySpiritualReflection(id:"9581b036be")
+        getThisWeeksSpiritualReflectionID()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -318,185 +318,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4q-vb-dJw">
-                                <rect key="frame" x="16" y="72" width="343" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="qde-Au-Urz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
-                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-PL-4tE">
-                                <rect key="frame" x="192" y="458" width="167" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="OVx-n9-lDd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="ace.1@nd.edu">
-                                    <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="generalPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="P3J-Yu-KcP"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Inquiries:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuE-7r-2xY">
-                                <rect key="frame" x="16" y="559" width="168" height="44"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-vb-U2Q">
-                                <rect key="frame" x="192" y="562" width="167" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="EU9-yo-SWF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="thelm1@nd.edu">
-                                    <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="mediaPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="ygi-kQ-gbu"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We love hearing from you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-FO-YPC">
-                                <rect key="frame" x="16" y="121" width="343" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="3Rz-o3-dMo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-5b-ZDL">
-                                <rect key="frame" x="192" y="510" width="167" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="RDK-As-EuJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="twill1@nd.edu">
-                                    <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="techPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="Czb-EU-ldT"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology Support:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca3-yJ-spJ">
-                                <rect key="frame" x="16" y="507" width="168" height="44"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Inquiries:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcy-WW-JmJ">
-                                <rect key="frame" x="16" y="455" width="168" height="44"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fax:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-aA-4Mv">
-                                <rect key="frame" x="16" y="249" width="168" height="44"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailing Address:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frm-Ka-795">
-                                <rect key="frame" x="16" y="301" width="168" height="44"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-dU-GSa">
-                                <rect key="frame" x="16" y="202" width="168" height="44"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-7J-R2l">
-                                <rect key="frame" x="192" y="205" width="167" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="H9Q-Sn-ALr"/>
-                                    <constraint firstAttribute="height" constant="39" id="Q8k-V2-ukf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="574-631-7052">
-                                    <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="phonePressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="KTi-XX-IL0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-VT-asf">
-                                <rect key="frame" x="192" y="252" width="167" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="zS7-y3-5P6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="574-631-7939">
-                                    <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-k9-XWo">
-                                <rect key="frame" x="16" y="353" width="343" height="91"/>
-                                <string key="text">Alliance for Catholic Education
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFE-Q3-PdK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4q-vb-dJw">
+                                        <rect key="frame" x="20" y="-64" width="343" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                        <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We love hearing from you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-FO-YPC">
+                                        <rect key="frame" x="20" y="-7" width="343" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-7J-R2l">
+                                        <rect key="frame" x="196" y="82" width="167" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <state key="normal" title="574-631-7052">
+                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="phonePressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="KTi-XX-IL0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-VT-asf">
+                                        <rect key="frame" x="196" y="134" width="167" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <state key="normal" title="574-631-7939">
+                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-dU-GSa">
+                                        <rect key="frame" x="20" y="79" width="168" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fax:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-aA-4Mv">
+                                        <rect key="frame" x="20" y="131" width="168" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mailing Address:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frm-Ka-795">
+                                        <rect key="frame" x="20" y="183" width="168" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-k9-XWo">
+                                        <rect key="frame" x="20" y="235" width="343" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Alliance for Catholic Education
 107 Carole Sandner Hall
 Notre Dame, IN 46556</string>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Inquiries:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcy-WW-JmJ">
+                                        <rect key="frame" x="20" y="334" width="168" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technology Support:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca3-yJ-spJ">
+                                        <rect key="frame" x="20" y="386" width="168" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Media Inquiries:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuE-7r-2xY">
+                                        <rect key="frame" x="20" y="438" width="168" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-PL-4tE">
+                                        <rect key="frame" x="196" y="337" width="167" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <state key="normal" title="ace.1@nd.edu">
+                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="generalPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="P3J-Yu-KcP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-5b-ZDL">
+                                        <rect key="frame" x="196" y="389" width="167" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <state key="normal" title="twill1@nd.edu">
+                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="techPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="Czb-EU-ldT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-vb-U2Q">
+                                        <rect key="frame" x="196" y="441" width="167" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <state key="normal" title="thelm1@nd.edu">
+                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mediaPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="ygi-kQ-gbu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="frm-Ka-795" firstAttribute="leading" secondItem="yJi-k9-XWo" secondAttribute="leading" id="0aK-Pn-NNQ"/>
-                            <constraint firstItem="frm-Ka-795" firstAttribute="top" secondItem="ovm-aA-4Mv" secondAttribute="bottom" constant="8" symbolic="YES" id="14S-q2-dOB"/>
-                            <constraint firstItem="wNq-VT-asf" firstAttribute="leading" secondItem="jH0-PL-4tE" secondAttribute="leading" id="2gl-ek-AcY"/>
-                            <constraint firstItem="ovm-aA-4Mv" firstAttribute="leading" secondItem="frm-Ka-795" secondAttribute="leading" id="4VG-4T-1Ad"/>
-                            <constraint firstItem="dg0-vb-U2Q" firstAttribute="leading" secondItem="TuE-7r-2xY" secondAttribute="trailing" constant="8" symbolic="YES" id="61j-IP-APG"/>
-                            <constraint firstItem="wNq-VT-asf" firstAttribute="trailing" secondItem="yJi-k9-XWo" secondAttribute="trailing" id="6WU-RF-l6d"/>
-                            <constraint firstItem="ovm-aA-4Mv" firstAttribute="trailing" secondItem="frm-Ka-795" secondAttribute="trailing" id="88Y-Jm-t8b"/>
-                            <constraint firstItem="ovm-aA-4Mv" firstAttribute="top" secondItem="AEA-dU-GSa" secondAttribute="bottom" constant="3" id="8IM-hV-Rg9"/>
-                            <constraint firstItem="UN9-7J-R2l" firstAttribute="leading" secondItem="wNq-VT-asf" secondAttribute="leading" id="9US-5T-ujY"/>
-                            <constraint firstItem="yJi-k9-XWo" firstAttribute="trailing" secondItem="jH0-PL-4tE" secondAttribute="trailing" id="9j9-Xf-iL4"/>
-                            <constraint firstItem="O4q-vb-dJw" firstAttribute="top" secondItem="xVJ-eG-DGa" secondAttribute="bottom" constant="8" symbolic="YES" id="AD9-p6-jJv"/>
-                            <constraint firstItem="wNq-VT-asf" firstAttribute="leading" secondItem="ovm-aA-4Mv" secondAttribute="trailing" constant="8" symbolic="YES" id="BGC-lz-Qyq"/>
-                            <constraint firstItem="AEA-dU-GSa" firstAttribute="top" secondItem="C4q-FO-YPC" secondAttribute="bottom" constant="48" id="EcB-L1-Y1s"/>
-                            <constraint firstItem="aeF-5b-ZDL" firstAttribute="leading" secondItem="dg0-vb-U2Q" secondAttribute="leading" id="Fx6-GA-9UC"/>
-                            <constraint firstItem="yJi-k9-XWo" firstAttribute="leading" secondItem="gcy-WW-JmJ" secondAttribute="leading" id="GVA-37-2Jy"/>
-                            <constraint firstItem="Ca3-yJ-spJ" firstAttribute="top" secondItem="gcy-WW-JmJ" secondAttribute="bottom" constant="8" symbolic="YES" id="HIF-CO-jWq"/>
-                            <constraint firstItem="UN9-7J-R2l" firstAttribute="top" secondItem="C4q-FO-YPC" secondAttribute="bottom" constant="51" id="HQj-RE-qNk"/>
-                            <constraint firstItem="O4q-vb-dJw" firstAttribute="leading" secondItem="C4q-FO-YPC" secondAttribute="leading" id="HTI-6N-LM1"/>
-                            <constraint firstItem="UN9-7J-R2l" firstAttribute="leading" secondItem="AEA-dU-GSa" secondAttribute="trailing" constant="8" symbolic="YES" id="HWL-zX-lgb"/>
-                            <constraint firstItem="gcy-WW-JmJ" firstAttribute="top" secondItem="yJi-k9-XWo" secondAttribute="bottom" constant="11" id="JZX-ai-AJI"/>
-                            <constraint firstItem="AEA-dU-GSa" firstAttribute="centerY" secondItem="UN9-7J-R2l" secondAttribute="centerY" id="Met-gD-efB"/>
-                            <constraint firstItem="gcy-WW-JmJ" firstAttribute="leading" secondItem="Ca3-yJ-spJ" secondAttribute="leading" id="P5L-dN-WJD"/>
-                            <constraint firstItem="aeF-5b-ZDL" firstAttribute="leading" secondItem="Ca3-yJ-spJ" secondAttribute="trailing" constant="8" symbolic="YES" id="PLv-O2-9pz"/>
-                            <constraint firstItem="jH0-PL-4tE" firstAttribute="leading" secondItem="gcy-WW-JmJ" secondAttribute="trailing" constant="8" symbolic="YES" id="QhF-eJ-JNM"/>
-                            <constraint firstItem="C4q-FO-YPC" firstAttribute="leading" secondItem="AEA-dU-GSa" secondAttribute="leading" id="Rb1-zm-pLT"/>
-                            <constraint firstItem="O4q-vb-dJw" firstAttribute="leading" secondItem="0Qr-hr-2X1" secondAttribute="leadingMargin" id="ReW-Rv-Azb"/>
-                            <constraint firstItem="TuE-7r-2xY" firstAttribute="top" secondItem="Ca3-yJ-spJ" secondAttribute="bottom" constant="8" symbolic="YES" id="RtR-s7-NMH"/>
-                            <constraint firstItem="UN9-7J-R2l" firstAttribute="trailing" secondItem="wNq-VT-asf" secondAttribute="trailing" id="SgT-Eh-raD"/>
-                            <constraint firstItem="yJi-k9-XWo" firstAttribute="top" secondItem="frm-Ka-795" secondAttribute="bottom" constant="8" symbolic="YES" id="U45-eh-VkV"/>
-                            <constraint firstItem="C4q-FO-YPC" firstAttribute="trailing" secondItem="UN9-7J-R2l" secondAttribute="trailing" id="VGv-UV-W9s"/>
-                            <constraint firstItem="gcy-WW-JmJ" firstAttribute="centerY" secondItem="jH0-PL-4tE" secondAttribute="centerY" id="aDL-2y-7bw"/>
-                            <constraint firstItem="Ca3-yJ-spJ" firstAttribute="leading" secondItem="TuE-7r-2xY" secondAttribute="leading" id="aGq-f1-cQg"/>
-                            <constraint firstItem="aeF-5b-ZDL" firstAttribute="top" secondItem="jH0-PL-4tE" secondAttribute="bottom" constant="13" id="aTX-md-82h"/>
-                            <constraint firstItem="aeF-5b-ZDL" firstAttribute="trailing" secondItem="dg0-vb-U2Q" secondAttribute="trailing" id="ax9-07-AfQ"/>
-                            <constraint firstItem="O4q-vb-dJw" firstAttribute="trailing" secondItem="0Qr-hr-2X1" secondAttribute="trailingMargin" id="boG-WC-oRz"/>
-                            <constraint firstItem="ovm-aA-4Mv" firstAttribute="centerY" secondItem="wNq-VT-asf" secondAttribute="centerY" id="cnS-Lw-se2"/>
-                            <constraint firstItem="C4q-FO-YPC" firstAttribute="top" secondItem="O4q-vb-dJw" secondAttribute="bottom" id="d2j-t1-KU3"/>
-                            <constraint firstItem="yJi-k9-XWo" firstAttribute="top" secondItem="wNq-VT-asf" secondAttribute="bottom" constant="62" id="e0A-ob-sTs"/>
-                            <constraint firstItem="dg0-vb-U2Q" firstAttribute="top" secondItem="aeF-5b-ZDL" secondAttribute="bottom" constant="13" id="fFX-QK-3M1"/>
-                            <constraint firstItem="jH0-PL-4tE" firstAttribute="top" secondItem="yJi-k9-XWo" secondAttribute="bottom" constant="14" id="g5q-YW-kS1"/>
-                            <constraint firstItem="NP6-Ew-cdO" firstAttribute="top" secondItem="TuE-7r-2xY" secondAttribute="bottom" constant="15" id="iGB-lj-KOX"/>
-                            <constraint firstItem="Ca3-yJ-spJ" firstAttribute="centerY" secondItem="aeF-5b-ZDL" secondAttribute="centerY" id="inf-a8-Cqs"/>
-                            <constraint firstItem="O4q-vb-dJw" firstAttribute="trailing" secondItem="C4q-FO-YPC" secondAttribute="trailing" id="mZS-xy-6wD"/>
-                            <constraint firstItem="TuE-7r-2xY" firstAttribute="centerY" secondItem="dg0-vb-U2Q" secondAttribute="centerY" id="o3G-cE-Ilu"/>
-                            <constraint firstItem="wNq-VT-asf" firstAttribute="top" secondItem="UN9-7J-R2l" secondAttribute="bottom" constant="8" symbolic="YES" id="p9y-nr-ixT"/>
-                            <constraint firstItem="jH0-PL-4tE" firstAttribute="trailing" secondItem="aeF-5b-ZDL" secondAttribute="trailing" id="uWz-Id-L0j"/>
-                            <constraint firstItem="jH0-PL-4tE" firstAttribute="leading" secondItem="aeF-5b-ZDL" secondAttribute="leading" id="wRE-cw-dHU"/>
-                            <constraint firstItem="AEA-dU-GSa" firstAttribute="leading" secondItem="ovm-aA-4Mv" secondAttribute="leading" id="zfC-QC-D5n"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="faxButton" destination="wNq-VT-asf" id="XN1-PM-DVK"/>
@@ -508,7 +456,7 @@ Notre Dame, IN 46556</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8f2-wU-qEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4806" y="1681"/>
+            <point key="canvasLocation" x="4805.6000000000004" y="1680.8095952023989"/>
         </scene>
         <!--Apply View Controller-->
         <scene sceneID="pbQ-dg-cI4">
@@ -930,13 +878,13 @@ Notre Dame, IN 46556</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace_app_holding_hands.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-II-rff">
-                                <rect key="frame" x="18" y="83" width="339" height="203"/>
+                                <rect key="frame" x="18" y="127" width="339" height="203"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="203" id="YqY-Pp-TA2"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirituality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-qh-XVI">
-                                <rect key="frame" x="16" y="20" width="343" height="55"/>
+                                <rect key="frame" x="16" y="64" width="343" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="fgD-Vj-yUH"/>
                                 </constraints>
@@ -1059,7 +1007,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fb6-qx-j2T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Spirituality" image="second" id="NOI-lJ-sEj"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cng-I7-ZhE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cng-I7-ZhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
