@@ -31,7 +31,8 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         
         self.blogTextView.delegate = self
         self.scrollView.delegate = self
-        self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 15, 65);
+        //self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 15, 65);
+        self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
         
         // 5s: 320, 65
         // 6s: 375, 15
@@ -54,12 +55,22 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         self.authorLabel.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
         self.blogTextView.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)
         
+        
         setImage(urlStr: self.imgUrlString)
         
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
         
     }
     
+    // disables horizontal scrolling
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x>0 {
+            scrollView.contentOffset.x = 0
+        }
+        else if scrollView.contentOffset.x<0 {
+            scrollView.contentOffset.x = 0
+        }
+    }
     
     // need this for textView to work with the scrollView
     override func viewDidLayoutSubviews() {
@@ -72,6 +83,9 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         let contentSize = self.blogTextView.sizeThatFits(self.self.blogTextView.bounds.size)
         var frame = self.blogTextView.frame
         frame.size.height = contentSize.height
+        
+        //frame.size.width = self.scrollView.frame.width-20 // added this
+        
         self.blogTextView.frame = frame
         
         let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.blogTextView, attribute: .height, relatedBy: .equal, toItem: self.blogTextView, attribute: .width, multiplier: self.blogTextView.bounds.height/blogTextView.bounds.width, constant: 1)
@@ -133,6 +147,9 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         return html
     }
     
+    
+    
+    /*
     func getBlog() {
         let url = URL(string: "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&resource=items&app=8&id=7512")
         
@@ -198,6 +215,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
     
         
     }
+ */
 
 }
 

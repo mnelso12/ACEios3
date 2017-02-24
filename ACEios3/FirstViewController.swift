@@ -43,20 +43,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+    
         
-        
-        /*
-        for family: String in UIFont.familyNames
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
-        */
-        
-               blogNews.isEnabled = false // enable when blogs and news are loaded
+        blogNews.isEnabled = false // enabled when blogs and news are loaded
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -74,23 +63,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let tempImageView = UIImageView(image: UIImage(named: "bluePattern.png"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView;
+        self.tableView.tableFooterView = UIView() // this gets rid of the annoying cell separator lines that appear in the table view before the cells are populated with data
 
-    }
-    
-    func isBlogNewsContentReady() -> Bool {
-        if (self.tableView.numberOfRows(inSection: 0) == 0) {
-            return false
-        }
-        
-        return true
     }
     
     // segmented control (blog/news)
     @IBAction func pressedSegmentedControl(_ sender: Any) {
-        //let isReady = isBlogNewsContentReady()
-        //if (isReady == false) {
-        //    return
-        //}
         
         if (self.blogIsReady == false && blogNews.selectedSegmentIndex == 0) {
             return // blogs not loaded yet
@@ -400,15 +378,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                     j += 1
                                 }
                                 
-                                //let data = val["data"] as! [Any]
-                                //print("AUTHOR:")
-                                //print(data)
-                                
                             }
-                            
-                            //print("element number %i", i)
-                            //print(element)
-                            
                             
                             if (i==11) {
                                 let val = element.value as! [String:Any]
