@@ -27,6 +27,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var newsDetailsArr = [String]() // array of news detail labels (gray text below the title of the table view cell)
     var newsDatesArr = [String]() // array of only the news article dates
     var newsIdArr = [String]() // this is used to ask jBackend for the news content
+    var blogIsReady = false
+    var newsIsReady = false
 
     
     var selectedBlogTitle:String!
@@ -54,6 +56,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         */
         
+        blogNews.isEnabled = false // enable when blogs and news are loaded
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -70,8 +73,28 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     }
     
+    func isBlogNewsContentReady() -> Bool {
+        if (self.tableView.numberOfRows(inSection: 0) == 0) {
+            return false
+        }
+        
+        return true
+    }
+    
     // segmented control (blog/news)
     @IBAction func pressedSegmentedControl(_ sender: Any) {
+        //let isReady = isBlogNewsContentReady()
+        //if (isReady == false) {
+        //    return
+        //}
+        
+        if (self.blogIsReady == false && blogNews.selectedSegmentIndex == 0) {
+            return // blogs not loaded yet
+        }
+        else if (self.newsIsReady == false && blogNews.selectedSegmentIndex == 1) {
+            return // news not loaded yet
+        }
+        
         if blogNews.selectedSegmentIndex == 0
         {
             print("is blog")
@@ -302,6 +325,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         }
                         
                         self.tableView.reloadData() // update table view with blog data
+                        self.newsIsReady = true
+                        self.blogNews.isEnabled = true // now enable blog/news switch because theres content in both
                         
                         
                     }catch {
@@ -419,6 +444,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // blog content //////////////////////////////////////////////////////
  
     func getMostRecentBlogs() {
+        
+        
         let url = URL(string: "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&app=8&resource=items&category=blog&limit=10")
         
         
@@ -473,6 +500,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         }
                         
                         self.tableView.reloadData() // update table view with blog data
+                        self.blogIsReady = true
                         
                         
                     }catch {

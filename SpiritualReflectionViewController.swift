@@ -20,8 +20,8 @@ class SpiritualReflectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setBackgroundImage(imageNamed: "basilica.jpg")
-        setTextViewFrame()
+        //setBackgroundImage(imageNamed: "basilica.jpg")
+        //setTextViewFrame()
     }
     
     func setTextViewFrame() {
