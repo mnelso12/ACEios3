@@ -51,7 +51,6 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.locations.count
     }
@@ -68,6 +67,11 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.diocese.text = "Serves " + self.diocese[indexPath.row]
         
         cell.seeOnlineButton.tag = indexPath.row
+        
+        if (self.selectedCellIndex == indexPath.row) {
+            cell.seeOnlineButton.isHidden = true
+            cell.expandedView.isHidden = false
+        }
         
         return cell
         
@@ -92,7 +96,7 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if (self.selectedCellIndex == indexPath.row) {
-            return 250
+            return 240
         }
         else {
             return 60

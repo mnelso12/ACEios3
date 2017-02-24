@@ -56,10 +56,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         */
         
-        blogNews.isEnabled = false // enable when blogs and news are loaded
+               blogNews.isEnabled = false // enable when blogs and news are loaded
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // start loading indicator while blogs and news are loading
+        activityView.startAnimating()
+        self.view.addSubview(activityView)
         
         // load blogs into table view
         getMostRecentBlogs()
@@ -327,7 +331,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         self.tableView.reloadData() // update table view with blog data
                         self.newsIsReady = true
                         self.blogNews.isEnabled = true // now enable blog/news switch because theres content in both
-                        
+                        self.activityView.removeFromSuperview() // now blog and news content are loaded, stop loading indicator
                         
                     }catch {
                         print("Error with Json: \(error)")

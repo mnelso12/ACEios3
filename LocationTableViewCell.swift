@@ -17,7 +17,7 @@ class LocationTableViewCell: UITableViewCell {
     @IBOutlet weak var establishedDate: UILabel!
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var seeOnlineButton: UIButton!
-    
+    @IBOutlet weak var expandedView: UIView!
 
 
     
@@ -31,8 +31,10 @@ class LocationTableViewCell: UITableViewCell {
         self.locationImageView.clipsToBounds = true
         
         self.seeOnlineButton.isHidden = true
+        //self.expandedView.isHidden = true
     }
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
