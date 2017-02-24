@@ -14,14 +14,14 @@ class SpiritualReflectionViewController: UIViewController {
     
     //@IBOutlet weak var textView: UITextView!
     
-    //var textView: UITextView!
+    var textView: UITextView!
     //var reflectionText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //setBackgroundImage(imageNamed: "basilica.jpg")
-        //setTextViewFrame()
+        setBackgroundImage(imageNamed: "basilica.jpg")
+        setTextViewFrame()
     }
     
     func setTextViewFrame() {
@@ -30,8 +30,9 @@ class SpiritualReflectionViewController: UIViewController {
         let screenHeight = screenSize.height;
         
         let bottomBarHeight = self.tabBarController?.tabBar.frame.size.height
+        let topBarHeight = self.navigationController?.navigationBar.frame.size.height
         
-        let textView : UITextView = UITextView(frame : CGRect(x:20, y: 20, width:        (screenWidth-40), height: (screenHeight-40-bottomBarHeight!) ))
+        let textView : UITextView = UITextView(frame : CGRect(x:20, y: 20+topBarHeight!, width:        (screenWidth-40), height: (screenHeight-40-bottomBarHeight!-topBarHeight!) ))
         
         textView.text = self.weeklyRef
         textView.font = UIFont(name: "GalaxiePolaris-Medium", size: 15)

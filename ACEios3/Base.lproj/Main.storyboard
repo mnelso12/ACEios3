@@ -236,7 +236,7 @@
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cJR-Np-agB" kind="show" id="Ibk-fy-LKx"/>
+                                    <segue destination="cJR-Np-agB" kind="show" identifier="" id="Ibk-fy-LKx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lww-ng-Cay">
@@ -285,7 +285,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sj-zZ-Ido" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5176.8000000000002" y="886.50674662668678"/>
+            <point key="canvasLocation" x="6116" y="886.50674662668678"/>
+        </scene>
+        <!--Spiritual Reflection View Controller-->
+        <scene sceneID="acv-Xn-vqN">
+            <objects>
+                <viewController id="S53-gn-DBM" customClass="SpiritualReflectionViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Nb-E9-A6I"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bk-gi-HAy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5h-Lw-rXI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3d-YA-QEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3911" y="1716"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="K6o-hw-UPk">
@@ -489,7 +508,7 @@ Notre Dame, IN 46556</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8f2-wU-qEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4237.6000000000004" y="1645.7271364317842"/>
+            <point key="canvasLocation" x="4806" y="1681"/>
         </scene>
         <!--Apply View Controller-->
         <scene sceneID="pbQ-dg-cI4">
@@ -815,26 +834,6 @@ Notre Dame, IN 46556</string>
             </objects>
             <point key="canvasLocation" x="1669.5999999999999" y="1645.7271364317842"/>
         </scene>
-        <!--Spiritual Reflection View Controller-->
-        <scene sceneID="cSB-gk-sUq">
-            <objects>
-                <viewController id="Ubf-7L-9Ax" customClass="SpiritualReflectionViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="q6m-1s-TxK"/>
-                        <viewControllerLayoutGuide type="bottom" id="iy0-8M-nHY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ISo-OZ-EvV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.1529411765" green="0.0" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="drW-8b-yos" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3546.4000000000001" y="1659.2203898050975"/>
-        </scene>
         <!--Newsletter-->
         <scene sceneID="sBq-ag-Cg3">
             <objects>
@@ -967,12 +966,12 @@ Notre Dame, IN 46556</string>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="spiritualityImageView" destination="ujc-II-rff" id="ReV-Gu-YFx"/>
-                        <segue destination="Ubf-7L-9Ax" kind="show" identifier="viewSpiritualReflection" id="pnq-oL-lhD"/>
+                        <segue destination="S53-gn-DBM" kind="show" identifier="viewSpiritualReflection" id="mVd-r6-Jat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnA-Uk-F1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546.4000000000001" y="886.50674662668678"/>
+            <point key="canvasLocation" x="4485.6000000000004" y="886.50674662668678"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -986,7 +985,7 @@ Notre Dame, IN 46556</string>
                     </tabBar>
                     <connections>
                         <segue destination="c3s-Eg-afU" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="maL-Rn-4i8" kind="relationship" relationship="viewControllers" id="FiT-Ka-vbu"/>
+                        <segue destination="Fb6-qx-j2T" kind="relationship" relationship="viewControllers" id="wDc-Vl-QMM"/>
                         <segue destination="pz5-i0-p8q" kind="relationship" relationship="viewControllers" id="2dg-Ly-plR"/>
                         <segue destination="4Qs-a9-wMj" kind="relationship" relationship="viewControllers" id="Ei2-nX-dyx"/>
                         <segue destination="ens-uP-gtc" kind="relationship" relationship="viewControllers" id="bom-Q9-QKS"/>
@@ -1052,27 +1051,26 @@ Notre Dame, IN 46556</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AG-CF-8eY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4237.6000000000004" y="886.50674662668678"/>
+            <point key="canvasLocation" x="5176.8000000000002" y="886.50674662668678"/>
         </scene>
         <!--Spirituality-->
-        <scene sceneID="8dB-fo-lsK">
+        <scene sceneID="3dh-dq-9CP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="maL-Rn-4i8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Spirituality" image="first" id="nTa-KL-p2Z"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fb6-qx-j2T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Spirituality" image="second" id="NOI-lJ-sEj"/>
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qlR-AH-McR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cng-I7-ZhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MuV-Vb-uqh" kind="relationship" relationship="rootViewController" id="Jdc-06-hl8"/>
+                        <segue destination="MuV-Vb-uqh" kind="relationship" relationship="rootViewController" id="fDu-gC-9CA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r83-t8-WoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pW6-Aa-Egm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607.1999999999998" y="886.50674662668678"/>
+            <point key="canvasLocation" x="3546.4000000000001" y="886.50674662668678"/>
         </scene>
     </scenes>
     <resources>
