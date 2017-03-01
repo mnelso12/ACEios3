@@ -16,8 +16,8 @@ class ApplyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.applyImageView.layer.cornerRadius = 5
-        self.applyImageView.clipsToBounds = true
+        //self.applyImageView.layer.cornerRadius = 5
+        //self.applyImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
