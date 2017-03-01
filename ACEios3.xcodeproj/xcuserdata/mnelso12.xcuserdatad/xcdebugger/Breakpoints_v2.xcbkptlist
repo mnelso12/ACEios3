@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/SpiritualityViewController.swift"
-            timestampString = "510036162.447119"
+            timestampString = "510050210.846005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "getThisWeeksSpiritualReflectionID()"
             landmarkType = "7">
          </BreakpointContent>

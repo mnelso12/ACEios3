@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 class SpiritualityViewController: UIViewController {
 
-    @IBOutlet weak var spiritualityImageView: UIImageView!
+    //@IBOutlet weak var spiritualityImageView: UIImageView!
     
     let apikey = "3009947f4086c85e7b735f4b4222e514-us2"
     var weeklyRef = " "
@@ -21,14 +22,44 @@ class SpiritualityViewController: UIViewController {
     var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
     
     
+    @IBOutlet var slideshow: ImageSlideshow!
+    
+    let localSource = [ImageSource(imageString: "ace_logo_color_PNG.png")!, ImageSource(imageString: "gray-pattern.png")!, ImageSource(imageString: "bluePattern.png")!, ImageSource(imageString: "ace_app_community.JPG")!]
+    //let afNetworkingSource = [AFURLSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    //let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    //let sdWebImageSource = [SDWebImageSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    //let kingfisherSource = [KingfisherSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.spiritualityImageView.layer.cornerRadius = 5
-        self.spiritualityImageView.clipsToBounds = true
+        //self.spiritualityImageView.layer.cornerRadius = 5
+        //self.spiritualityImageView.clipsToBounds = true
         
         self.styleLoadingIcon()
+        
+        
+        
+        slideshow.backgroundColor = UIColor.white
+        slideshow.slideshowInterval = 5.0
+        slideshow.pageControlPosition = PageControlPosition.underScrollView
+        slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        slideshow.pageControl.pageIndicatorTintColor = UIColor.black
+        slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        slideshow.currentPageChanged = { page in
+            print("current page:", page)
+ 
+        }
+ 
+        // try out other sources such as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
+        slideshow.setImageInputs(localSource)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTap))
+        slideshow.addGestureRecognizer(recognizer)
+    }
+    
+    func didTap() {
+        slideshow.presentFullScreenController(from: self)
     }
     
     

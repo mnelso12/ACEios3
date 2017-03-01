@@ -15,6 +15,7 @@
 		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
 		23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23593BF61E56A3C3008B39CE /* basilica.jpg */; };
 		235FA3FD1E4FC0D6000891BB /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */; };
+		2360FF4C1E66BB9F0003E277 /* Pods_ACEios3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */; };
 		23653AD01E49912F00529652 /* SpiritualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653ACF1E49912F00529652 /* SpiritualityViewController.swift */; };
 		23653AD21E49948600529652 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23653AD11E49948600529652 /* ApplyViewController.swift */; };
 		2369C7091E52BF0000755BD3 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */; };
@@ -102,6 +103,9 @@
 		23CEEADD1E66962D0086F035 /* blogNewsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = blogNewsStyle.css; sourceTree = "<group>"; };
 		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
 		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
+		595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACEios3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1660C3687D8B4BADF3AEA3 /* Pods-ACEios3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACEios3.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACEios3/Pods-ACEios3.release.xcconfig"; sourceTree = "<group>"; };
+		77E7533F00FDECBE078207C8 /* Pods-ACEios3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACEios3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACEios3/Pods-ACEios3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2360FF4C1E66BB9F0003E277 /* Pods_ACEios3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				2362209F1E65E10000E6236A /* Mapbox.framework */,
+				595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 				236CF9211E32BD1A005DD95A /* ACEios3UITests */,
 				236CF8FE1E32BD19005DD95A /* Products */,
 				2362209E1E65E10000E6236A /* Frameworks */,
+				F0F76BAF124342ACE591AE7B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +223,15 @@
 			path = ACEios3UITests;
 			sourceTree = "<group>";
 		};
+		F0F76BAF124342ACE591AE7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77E7533F00FDECBE078207C8 /* Pods-ACEios3.debug.xcconfig */,
+				6C1660C3687D8B4BADF3AEA3 /* Pods-ACEios3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 236CF9271E32BD1A005DD95A /* Build configuration list for PBXNativeTarget "ACEios3" */;
 			buildPhases = (
+				3DA58155BF0F1B17EF1F81E4 /* [CP] Check Pods Manifest.lock */,
 				236CF8F91E32BD19005DD95A /* Sources */,
 				236CF8FA1E32BD19005DD95A /* Frameworks */,
 				236CF8FB1E32BD19005DD95A /* Resources */,
+				3C6CBB2188156314C81156AF /* [CP] Embed Pods Frameworks */,
+				6B1A14DA298BDD9673B62873 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +379,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C6CBB2188156314C81156AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACEios3/Pods-ACEios3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DA58155BF0F1B17EF1F81E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B1A14DA298BDD9673B62873 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACEios3/Pods-ACEios3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		236CF8F91E32BD19005DD95A /* Sources */ = {
@@ -527,6 +594,7 @@
 		};
 		236CF9281E32BD1A005DD95A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77E7533F00FDECBE078207C8 /* Pods-ACEios3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34TZ54QCUD;
@@ -541,6 +609,7 @@
 		};
 		236CF9291E32BD1A005DD95A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C1660C3687D8B4BADF3AEA3 /* Pods-ACEios3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34TZ54QCUD;
