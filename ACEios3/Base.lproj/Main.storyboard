@@ -266,10 +266,10 @@
                         <subviews>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IK6-Ku-on1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="IK6-Ku-on1" firstAttribute="top" secondItem="9Nb-E9-A6I" secondAttribute="bottom" id="3WC-4o-Jh1"/>
                             <constraint firstItem="IK6-Ku-on1" firstAttribute="leading" secondItem="h5h-Lw-rXI" secondAttribute="leadingMargin" constant="-20" id="Bqn-el-PDH"/>
@@ -450,10 +450,10 @@ Notre Dame, IN 46556</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4I-Ks-6jV">
-                                <rect key="frame" x="16" y="495" width="343" height="45"/>
+                                <rect key="frame" x="16" y="512" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="kwr-WM-iYi"/>
+                                    <constraint firstAttribute="height" constant="45" id="iqw-7z-PsM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Application Checklist">
@@ -464,10 +464,10 @@ Notre Dame, IN 46556</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01d-iK-u4Z">
-                                <rect key="frame" x="16" y="557" width="343" height="45"/>
+                                <rect key="frame" x="16" y="565" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="DME-sS-jxm"/>
+                                    <constraint firstAttribute="height" constant="45" id="AAx-GY-x8b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Apply Now!">
@@ -478,9 +478,9 @@ Notre Dame, IN 46556</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply to ACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra5-DV-h6u">
-                                <rect key="frame" x="16" y="20" width="343" height="55"/>
+                                <rect key="frame" x="16" y="20" width="343" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="s7u-bA-ydS"/>
+                                    <constraint firstAttribute="height" constant="45" id="wvp-T5-eXK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
                                 <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -488,9 +488,9 @@ Notre Dame, IN 46556</string>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
-                                <rect key="frame" x="16" y="396" width="343" height="91"/>
+                                <rect key="frame" x="16" y="413" width="343" height="91"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="91" id="fwN-9F-o3R"/>
+                                    <constraint firstAttribute="height" constant="91" id="CG7-FT-7UU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -498,7 +498,7 @@ Notre Dame, IN 46556</string>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-9H-17h">
-                                <rect key="frame" x="104" y="372" width="167" height="30"/>
+                                <rect key="frame" x="104" y="375" width="167" height="30"/>
                                 <state key="normal" title="see locations -&gt;">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -509,21 +509,21 @@ Notre Dame, IN 46556</string>
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="1Dx-8i-8UM"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="DYr-9H-17h" secondAttribute="bottom" constant="93" id="4cN-sc-sh5"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="Bhu-mm-xa4"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="CNF-hZ-Pfs"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="Ifp-MR-uqH"/>
-                            <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="17" id="KSJ-wc-VvE"/>
-                            <constraint firstItem="DYr-9H-17h" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" constant="88" id="Phj-tv-e0X"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="Prd-Or-DCF"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="4kR-G6-oP8" secondAttribute="trailing" id="Sfn-4X-sCz"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" id="agb-s7-4ZM"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="bSc-Bj-jvg"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="4kR-G6-oP8" secondAttribute="bottom" constant="8" symbolic="YES" id="e04-wW-FAF"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="4kR-G6-oP8" secondAttribute="leading" id="hha-wi-paf"/>
-                            <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="16" id="skL-Rw-xyX"/>
-                            <constraint firstItem="DYr-9H-17h" firstAttribute="centerX" secondItem="4kR-G6-oP8" secondAttribute="centerX" id="wLK-pq-6Ji"/>
+                            <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="2iB-B3-qvn"/>
+                            <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="8" symbolic="YES" id="2iB-jj-Y2U"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="7GL-DT-DEc"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="centerX" secondItem="4kR-G6-oP8" secondAttribute="centerX" id="Ifq-7H-F2J"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" id="KLA-Qe-Az2"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="4kR-G6-oP8" secondAttribute="bottom" constant="8" symbolic="YES" id="LDI-hr-Gu6"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="cjq-iD-rhJ"/>
+                            <constraint firstItem="4kR-G6-oP8" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="h5k-em-9vV"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="4kR-G6-oP8" secondAttribute="trailing" id="i0F-Z8-x5V"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="4kR-G6-oP8" secondAttribute="leading" id="i2h-8b-eK1"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="mzh-ee-HSH"/>
+                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="tyj-sO-kJk"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" constant="88" id="uLk-OI-yFq"/>
+                            <constraint firstItem="4kR-G6-oP8" firstAttribute="top" secondItem="DYr-9H-17h" secondAttribute="bottom" constant="8" symbolic="YES" id="wkQ-lR-8Gl"/>
+                            <constraint firstItem="4kR-G6-oP8" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="yUD-dy-Xwk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Am9-9i-1YG"/>
@@ -760,8 +760,8 @@ Notre Dame, IN 46556</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newsletter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i49-uG-mUE">
-                                <rect key="frame" x="16" y="28" width="343" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Newsletter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i49-uG-mUE">
+                                <rect key="frame" x="16" y="28" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="2kU-0M-CLS"/>
                                 </constraints>
@@ -827,12 +827,10 @@ Notre Dame, IN 46556</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im3-Ts-1oE">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im3-Ts-1oE">
                                 <rect key="frame" x="16" y="565" width="343" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="NGS-2m-pfJ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Spiritual Resources">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -841,28 +839,10 @@ Notre Dame, IN 46556</string>
                                     <action selector="spiritualityResourcesPressed:" destination="MuV-Vb-uqh" eventType="touchUpInside" id="681-F2-ZHr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace_app_holding_hands.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-II-rff">
-                                <rect key="frame" x="18" y="127" width="339" height="203"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="203" id="shl-Et-Z2a"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirituality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-qh-XVI">
-                                <rect key="frame" x="16" y="64" width="343" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="08U-hh-hrd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
-                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d6-4x-bj6">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d6-4x-bj6">
                                 <rect key="frame" x="16" y="512" width="343" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="y56-69-Qub"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Weekly Spiritual Reflection">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -871,27 +851,20 @@ Notre Dame, IN 46556</string>
                                     <action selector="weeklySpiritualReflectionPressed:" destination="MuV-Vb-uqh" eventType="touchUpInside" id="75S-Ht-ElJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spirituality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-qh-XVI">
+                                <rect key="frame" x="16" y="64" width="343" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                <color key="textColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="2d6-4x-bj6" firstAttribute="leading" secondItem="Im3-Ts-1oE" secondAttribute="leading" id="10S-cs-zZP"/>
-                            <constraint firstItem="2d6-4x-bj6" firstAttribute="trailing" secondItem="Im3-Ts-1oE" secondAttribute="trailing" id="1x5-pM-Ned"/>
-                            <constraint firstItem="ujc-II-rff" firstAttribute="leading" secondItem="DsQ-5H-tDK" secondAttribute="leadingMargin" constant="2" id="GER-gm-xql"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="trailing" secondItem="DsQ-5H-tDK" secondAttribute="trailingMargin" id="OgS-9G-RDF"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="2d6-4x-bj6" secondAttribute="leading" id="TPc-Jj-0qi"/>
-                            <constraint firstItem="Im3-Ts-1oE" firstAttribute="top" secondItem="2d6-4x-bj6" secondAttribute="bottom" constant="8" symbolic="YES" id="e1F-yR-J7e"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="DsQ-5H-tDK" secondAttribute="leadingMargin" id="eK2-L6-veE"/>
-                            <constraint firstItem="Rgf-2f-A0A" firstAttribute="top" secondItem="Im3-Ts-1oE" secondAttribute="bottom" constant="8" symbolic="YES" id="hyb-5y-SPA"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="trailing" secondItem="2d6-4x-bj6" secondAttribute="trailing" id="lnH-Hl-S7B"/>
-                            <constraint firstItem="ujc-II-rff" firstAttribute="top" secondItem="Nzh-qh-XVI" secondAttribute="bottom" constant="8" symbolic="YES" id="ojP-Vz-skI"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="top" secondItem="zJq-tg-CAF" secondAttribute="bottom" id="sgc-Sb-Fz3"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="centerX" secondItem="ujc-II-rff" secondAttribute="centerX" id="x1x-B5-nSd"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UoH-fu-b8h"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="spiritualityImageView" destination="ujc-II-rff" id="ReV-Gu-YFx"/>
                         <segue destination="S53-gn-DBM" kind="show" identifier="viewSpiritualReflection" id="mVd-r6-Jat"/>
                     </connections>
                 </viewController>
@@ -927,7 +900,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c3s-Eg-afU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="first" selectedImage="second" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dZB-LB-xey">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dZB-LB-xey">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -947,7 +920,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Qs-a9-wMj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Apply" image="second" id="c6z-7Y-XuC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6I-1Q-EBP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v6I-1Q-EBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -966,7 +939,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ens-uP-gtc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Connect" image="first" id="QUd-TM-UnD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tiy-gG-fAY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Tiy-gG-fAY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -985,7 +958,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fb6-qx-j2T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Spirituality" image="second" id="NOI-lJ-sEj"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cng-I7-ZhE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cng-I7-ZhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1001,7 +974,6 @@ Notre Dame, IN 46556</string>
     </scenes>
     <resources>
         <image name="ace_app_community.JPG" width="4256" height="2832"/>
-        <image name="ace_app_holding_hands.JPG" width="4256" height="2832"/>
         <image name="ace_logo_color_PNG.png" width="405" height="405"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
