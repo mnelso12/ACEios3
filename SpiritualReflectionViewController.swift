@@ -24,6 +24,7 @@ class SpiritualReflectionViewController: UIViewController {
 
         //setBackgroundImage(imageNamed: "basilica.jpg")
         self.webView.loadHTMLString(self.weeklyRefHTML, baseURL: nil)
+        self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
         //setTextViewFrame()
     }
     

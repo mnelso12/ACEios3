@@ -13,6 +13,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var blogNews: UISegmentedControl! // segmented control
     
+    var htmlString = " " // html string that is sent to the blog/news view controller called SecondViewController.swift
+    
     var isBlog = true // whether or not table view is blog (vs. is news)
     var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
     
@@ -395,10 +397,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             i+=1
                         }
                         
+                        let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro';}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1>" + (blogContent as String) + "</div>"
                         
-                        let parsedHTML = self.parseBlogHTML(html: blogContent)
+                        self.htmlString = blogContentWithStyle
                         
-                        self.selectedBlogContent = parsedHTML
+                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
+                        
+                        //self.selectedBlogContent = parsedHTML
 
                         
                     }catch {
@@ -569,9 +574,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             i+=1
                         }
                         
-                        let parsedHTML = self.parseBlogHTML(html: blogContent)
                         
-                        self.selectedBlogContent = parsedHTML
+                        let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro';} h4 {font-family:'GalaxiePolaris-Medium'; color:gray; text-align: left;}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1><h4>" + self.selectedBlogAuthor + "</h4>" + (blogContent as String) + "</div>"
+                        
+                        self.htmlString = blogContentWithStyle
+                        
+                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
+                        
+                        //self.selectedBlogContent = parsedHTML
                         
                     }catch {
                         print("Error with Json: \(error)")
@@ -594,11 +604,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print("in prepare for segue...")
 
         let destinationVC = segue.destination as! SecondViewController
-        destinationVC.blogTitleString = self.selectedBlogTitle
-        destinationVC.blogContentString = self.selectedBlogContent
-        destinationVC.blogDateString = makeDatePretty(oldDate: self.selectedBlogDate)
-        destinationVC.blogAuthorString = self.selectedBlogAuthor
-        destinationVC.imgUrlString = self.selectedImgUrl
+        //destinationVC.blogTitleString = self.selectedBlogTitle
+        //destinationVC.blogContentString = self.selectedBlogContent
+        //destinationVC.blogDateString = makeDatePretty(oldDate: self.selectedBlogDate)
+        //destinationVC.blogAuthorString = self.selectedBlogAuthor
+        //destinationVC.imgUrlString = self.selectedImgUrl
+        destinationVC.htmlString = self.htmlString
         
         self.activityView.removeFromSuperview()
     }

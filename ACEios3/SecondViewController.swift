@@ -11,32 +11,40 @@ import Foundation
 
 class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDelegate {
     
-    var blogTitleString:String! = "Blog Title"
-    var blogContentString:String! = "Blog Content"
-    var blogDateString:String! = "1-1-17"
-    var blogAuthorString:String! = "Author"
-    var imgUrlString:String! = "blahhh"
+    var htmlString: String!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var webView: UIWebView!
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var blogTitle: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var blogTextView: UITextView!
+    //var blogTitleString:String! = "Blog Title"
+    //var blogContentString:String! = "Blog Content"
+    //var blogDateString:String! = "1-1-17"
+    //var blogAuthorString:String! = "Author"
+    //var imgUrlString:String! = "blahhh"
+    
+    //@IBOutlet weak var scrollView: UIScrollView!
+    
+    //@IBOutlet weak var imageView: UIImageView!
+    //@IBOutlet weak var blogTitle: UILabel!
+    //@IBOutlet weak var authorLabel: UILabel!
+    //@IBOutlet weak var dateLabel: UILabel!
+    //@IBOutlet weak var blogTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.blogTextView.delegate = self
-        self.scrollView.delegate = self
+        self.webView.loadHTMLString(self.htmlString, baseURL: nil)
+        self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
+        
+        
+        //self.blogTextView.delegate = self
+        //self.scrollView.delegate = self
         //self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 15, 65);
         
-        self.blogTextView.backgroundColor = UIColor.red
-        self.scrollView.backgroundColor = UIColor.yellow
+        //self.blogTextView.backgroundColor = UIColor.red
+        //self.scrollView.backgroundColor = UIColor.yellow
         
-        self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
+        //self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
         
         // 5s: 320, 65
         // 6s: 375, 15
@@ -49,6 +57,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         //self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+self.blogTextView.frame.height)
         
         // update ui elements with strings passed from home view controller
+        /*
         self.blogTitle.text = self.blogTitleString
         self.blogTextView.text = self.blogContentString
         self.dateLabel.text = self.blogDateString
@@ -63,7 +72,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         setImage(urlStr: self.imgUrlString)
         
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
-        
+        */
     }
     
     // disables horizontal scrolling
@@ -84,19 +93,19 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         self.positionImageView()
         self.positionLabels()
         
-        let contentSize = self.blogTextView.sizeThatFits(self.self.blogTextView.bounds.size)
-        var frame = self.blogTextView.frame
-        frame.size.height = contentSize.height
+        //let contentSize = self.blogTextView.sizeThatFits(self.self.blogTextView.bounds.size)
+        //var frame = self.blogTextView.frame
+        //frame.size.height = contentSize.height
         
         //frame.size.width = self.scrollView.frame.width-20 // added this
         
-        self.blogTextView.frame = frame
+        //self.blogTextView.frame = frame
         
-        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.blogTextView, attribute: .height, relatedBy: .equal, toItem: self.blogTextView, attribute: .width, multiplier: self.blogTextView.bounds.height/blogTextView.bounds.width, constant: 1)
-        self.blogTextView.addConstraint(aspectRatioTextViewConstraint)
+        //let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.blogTextView, attribute: .height, relatedBy: .equal, toItem: self.blogTextView, attribute: .width, multiplier: self.blogTextView.bounds.height/blogTextView.bounds.width, constant: 1)
+        //self.blogTextView.addConstraint(aspectRatioTextViewConstraint)
         
         // sets scrollView height to fit textView and stuff. Math could be better here TODO
-        self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+self.blogTextView.frame.height)
+        //self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+self.blogTextView.frame.height)
         //self.scrollView.contentSize = CGSize(width: self.view.frame.width, height:self.blogTextView.frame.height + 200)
     }
 
@@ -108,25 +117,25 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
     func positionImageView() {
         // set image width to screen width
         let screenSize: CGRect = UIScreen.main.bounds
-        self.imageView.frame = CGRect(x: 0, y: -50, width: screenSize.width, height: 200)
+        //self.imageView.frame = CGRect(x: 0, y: -50, width: screenSize.width, height: 200)
     }
     
     func positionLabels() {
         let screenSize: CGRect = UIScreen.main.bounds
-        self.blogTitle.frame = CGRect(x: 20, y: 180, width: screenSize.width - 40, height: 80)
+        //self.blogTitle.frame = CGRect(x: 20, y: 180, width: screenSize.width - 40, height: 80)
     }
 
 
     func setImage(urlStr: String) {
         if (urlStr == "" || urlStr == " ") {
-            imageView.image = UIImage(named: "ace_logo_color_PNG.png")
+            //imageView.image = UIImage(named: "ace_logo_color_PNG.png")
         }
         else {
             let url = URL(string: urlStr)
         
             //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
             if let data = try? Data(contentsOf: url!){
-                imageView.image = UIImage(data: data)
+                //imageView.image = UIImage(data: data)
             }
         }
         
