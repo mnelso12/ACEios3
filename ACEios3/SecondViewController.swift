@@ -32,6 +32,10 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         self.blogTextView.delegate = self
         self.scrollView.delegate = self
         //self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 15, 65);
+        
+        self.blogTextView.backgroundColor = UIColor.red
+        self.scrollView.backgroundColor = UIColor.yellow
+        
         self.blogTextView.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
         
         // 5s: 320, 65
@@ -93,6 +97,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         
         // sets scrollView height to fit textView and stuff. Math could be better here TODO
         self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+self.blogTextView.frame.height)
+        //self.scrollView.contentSize = CGSize(width: self.view.frame.width, height:self.blogTextView.frame.height + 200)
     }
 
     override func didReceiveMemoryWarning() {
