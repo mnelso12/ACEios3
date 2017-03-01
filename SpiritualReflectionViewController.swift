@@ -11,19 +11,24 @@ import UIKit
 class SpiritualReflectionViewController: UIViewController {
 
     var weeklyRef:String! = ""
+    var weeklyRefHTML:String! = ""
+    @IBOutlet weak var webView: UIWebView!
     
     //@IBOutlet weak var textView: UITextView!
     
-    var textView: UITextView!
+    //var textView: UITextView!
     //var reflectionText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setBackgroundImage(imageNamed: "basilica.jpg")
-        setTextViewFrame()
+        //setBackgroundImage(imageNamed: "basilica.jpg")
+        self.webView.loadHTMLString(self.weeklyRefHTML, baseURL: nil)
+        //setTextViewFrame()
     }
     
+    
+    /*
     func setTextViewFrame() {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width;
@@ -41,6 +46,7 @@ class SpiritualReflectionViewController: UIViewController {
         
         self.view.addSubview( textView )
     }
+ 
     
     func setBackgroundImage(imageNamed:String) {
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -54,7 +60,7 @@ class SpiritualReflectionViewController: UIViewController {
         
     }
 
-
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

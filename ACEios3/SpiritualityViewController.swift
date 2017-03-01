@@ -14,6 +14,7 @@ class SpiritualityViewController: UIViewController {
     
     let apikey = "3009947f4086c85e7b735f4b4222e514-us2"
     var weeklyRef = " "
+    var weeklyRefHTML = " "
     let numReflectionIDsLoaded = "1" // should be one as long as we only care about the first most recent refletion
     var thisWeeksReflectionID = "-1"
     
@@ -124,8 +125,11 @@ class SpiritualityViewController: UIViewController {
                             let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                             //print(json)
                             
-                            let plainText = json["plain_text"] as! String?
-                            self.parseJSONforSpiritualReflection(json: plainText!)
+                            //let plainText = json["plain_text"] as! String?
+                            //self.parseJSONforSpiritualReflection(json: plainText!)
+                            let refHTML = json["html"] as! String?
+                            self.weeklyRefHTML = refHTML!
+                            self.nowSegue()
                             
                             
                         }catch {
@@ -202,7 +206,8 @@ class SpiritualityViewController: UIViewController {
         print("in prepare for segue...")
         
         let destinationVC = segue.destination as! SpiritualReflectionViewController
-        destinationVC.weeklyRef = self.weeklyRef
+        //destinationVC.weeklyRef = self.weeklyRef
+        destinationVC.weeklyRefHTML = self.weeklyRefHTML
         
         self.activityView.removeFromSuperview()
     }
