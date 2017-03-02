@@ -40,6 +40,7 @@
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
 		23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B41AC31E3FE643009A0F7A /* news-icon-19.png */; };
 		23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 23CEEADD1E66962D0086F035 /* blogNewsStyle.css */; };
+		23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */; };
 		23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C31E4AEBA900119327 /* gray-pattern.png */; };
 		23E018C61E4AECBF00119327 /* bluePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C51E4AECBF00119327 /* bluePattern.png */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
 		23CEEADD1E66962D0086F035 /* blogNewsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = blogNewsStyle.css; sourceTree = "<group>"; };
+		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
 		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
 		595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACEios3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */,
 				2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */,
 				239DABD11E5182D40018D556 /* LocationTableViewCell.swift */,
+				23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */,
 				231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */,
 				231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */,
 				231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */,
@@ -360,6 +363,7 @@
 				23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */,
 				231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */,
 				231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */,
+				23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */,
 				236CF9081E32BD19005DD95A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

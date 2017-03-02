@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64222111340F1682FA08F8A9A64605EC"
-               BuildableName = "Pods_ACEios3.framework"
-               BlueprintName = "Pods-ACEios3"
+               BlueprintIdentifier = "BA453546C51032641C49CACBC22725EE"
+               BuildableName = "Font_Awesome_Swift.framework"
+               BlueprintName = "Font-Awesome-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "64222111340F1682FA08F8A9A64605EC"
-            BuildableName = "Pods_ACEios3.framework"
-            BlueprintName = "Pods-ACEios3"
+            BlueprintIdentifier = "BA453546C51032641C49CACBC22725EE"
+            BuildableName = "Font_Awesome_Swift.framework"
+            BlueprintName = "Font-Awesome-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

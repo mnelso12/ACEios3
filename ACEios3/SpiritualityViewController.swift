@@ -154,13 +154,15 @@ class SpiritualityViewController: UIViewController {
                         do{
                             
                             let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
-                            //print(json)
+                            print("look for Spiritual Reflection div:", json)
                             
-                            //let plainText = json["plain_text"] as! String?
-                            //self.parseJSONforSpiritualReflection(json: plainText!)
-                            let refHTML = json["html"] as! String?
-                            self.weeklyRefHTML = refHTML!
-                            self.nowSegue()
+                            let plainText = json["plain_text"] as! String?
+                            self.parseJSONforSpiritualReflection(json: plainText!)
+
+                            
+                            //let refHTML = json["html"] as! String?
+                            //self.weeklyRefHTML = refHTML!
+                            //self.nowSegue()
                             
                             
                         }catch {
@@ -193,14 +195,14 @@ class SpiritualityViewController: UIViewController {
                     isPartOfSpiritalReflection = true
                 }
                             }
-            else if (json[index] == "=") {
+            else if (json[index] == "P") {
                 
                 let start = json.index(json.startIndex, offsetBy: indexInt+1)
-                let end = json.index(json.startIndex, offsetBy: indexInt+11)
+                let end = json.index(json.startIndex, offsetBy: indexInt+15)
                 let range = start..<end
 
                 
-                if (json.substring(with: range) == "==========") { // check if this is a line break separator thing, we dont want the stuff after this
+                if (json.substring(with: range) == "rayer Calendar") { // check if this is a line break separator thing, we dont want the stuff after this
                     isPartOfSpiritalReflection = false
                 }
 
@@ -237,8 +239,8 @@ class SpiritualityViewController: UIViewController {
         print("in prepare for segue...")
         
         let destinationVC = segue.destination as! SpiritualReflectionViewController
-        //destinationVC.weeklyRef = self.weeklyRef
-        destinationVC.weeklyRefHTML = self.weeklyRefHTML
+        destinationVC.weeklyRef = self.weeklyRef
+        //destinationVC.weeklyRefHTML = self.weeklyRefHTML
         
         self.activityView.removeFromSuperview()
     }

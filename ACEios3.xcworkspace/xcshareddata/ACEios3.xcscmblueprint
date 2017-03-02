@@ -5,11 +5,13 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "0E148C237069F4D677AB0B7EC837A967EC06209E" : 9223372036854775807,
+    "380DE2E23767FE670A5A853AE5F5C5A9C1D1A42B" : 9223372036854775807,
     "14592B9EB820B4C921C8D173CB3EA77F13458DD6" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "289CA2B2-2031-49B2-B92A-5735B018A5BB",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "0E148C237069F4D677AB0B7EC837A967EC06209E" : "ACEios3\/",
+    "380DE2E23767FE670A5A853AE5F5C5A9C1D1A42B" : "..\/..\/Development\/VCD3\/portfolio\/html5up-prologue",
     "14592B9EB820B4C921C8D173CB3EA77F13458DD6" : "ACEapp\/myApp\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ACEios3",
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mnelso12\/ACEapp.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14592B9EB820B4C921C8D173CB3EA77F13458DD6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mnelso12\/VCD3portfolio.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "380DE2E23767FE670A5A853AE5F5C5A9C1D1A42B"
     }
   ]
 }

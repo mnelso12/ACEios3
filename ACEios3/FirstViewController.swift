@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -44,8 +45,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-    
+
         
         blogNews.isEnabled = false // enabled when blogs and news are loaded
         
@@ -61,11 +61,21 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         getMostRecentNews()
         
         styleLoadingIcon()
+        setTabBarIcons()
         
         let tempImageView = UIImageView(image: UIImage(named: "bluePattern.png"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView;
         self.tableView.tableFooterView = UIView() // this gets rid of the annoying cell separator lines that appear in the table view before the cells are populated with data
+
+    }
+    
+    func setTabBarIcons() {
+        tabBarController?.tabBar.items?.first?.setFAIcon(icon: .FAHome)
+        tabBarController?.tabBar.items?[1].setFAIcon(icon: .FAHeart)
+        tabBarController?.tabBar.items?[2].setFAIcon(icon: .FANewspaperO)
+        tabBarController?.tabBar.items?[3].setFAIcon(icon: .FAGlobe)
+        tabBarController?.tabBar.items?[4].setFAIcon(icon: .FAUsers)
 
     }
     

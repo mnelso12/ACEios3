@@ -11,8 +11,8 @@ import UIKit
 class SpiritualReflectionViewController: UIViewController {
 
     var weeklyRef:String! = ""
-    var weeklyRefHTML:String! = ""
-    @IBOutlet weak var webView: UIWebView!
+    //var weeklyRefHTML:String! = ""
+    //@IBOutlet weak var webView: UIWebView!
     
     //@IBOutlet weak var textView: UITextView!
     
@@ -22,17 +22,17 @@ class SpiritualReflectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        self.webView.loadHTMLString(self.weeklyRefHTML, baseURL: nil)
-        self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
+        
+        //self.webView.loadHTMLString(self.weeklyRefHTML, baseURL: nil)
+        //self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
         
         //setBackgroundImage(imageNamed: "basilica.jpg")
-        //setTextViewFrame()
+        setTextViewFrame()
     }
     
     
-    /*
+    
     func setTextViewFrame() {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width;
@@ -51,7 +51,7 @@ class SpiritualReflectionViewController: UIViewController {
         self.view.addSubview( textView )
     }
  
-    
+ /*
     func setBackgroundImage(imageNamed:String) {
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "basilica.jpg")?.draw(in: self.view.bounds)
@@ -63,8 +63,8 @@ class SpiritualReflectionViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: image)
         
     }
-
 */
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

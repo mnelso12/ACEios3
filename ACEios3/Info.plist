@@ -30,6 +30,7 @@
 		<string>PolarisCondensed-Medium.otf</string>
 		<string>GalaxiePolaris-Medium.otf</string>
 		<string>GaramondPremrPro.otf</string>
+		<string>fontawesome-webfont.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

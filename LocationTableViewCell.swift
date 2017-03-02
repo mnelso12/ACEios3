@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
 class LocationTableViewCell: UITableViewCell {
 
@@ -30,6 +31,7 @@ class LocationTableViewCell: UITableViewCell {
         self.locationImageView.layer.cornerRadius = 5
         self.locationImageView.clipsToBounds = true
         
+        self.seeOnlineButton.setFAIcon(icon: .FAExternalLinkSquare, iconSize: 20, forState: .normal)
         self.seeOnlineButton.isHidden = true
         //self.expandedView.isHidden = true
     }

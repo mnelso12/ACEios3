@@ -17,6 +17,7 @@ PODS:
   - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - Font-Awesome-Swift (1.6.1)
   - ImageSlideshow (1.1.0):
     - ImageSlideshow/Core (= 1.1.0)
   - ImageSlideshow/AFURL (1.1.0):
@@ -38,6 +39,7 @@ PODS:
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - Font-Awesome-Swift (~> 1.6.1)
   - ImageSlideshow
   - ImageSlideshow/AFURL
   - ImageSlideshow/Alamofire
@@ -48,10 +50,11 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Font-Awesome-Swift: 70ab020f6749d7048bb49807c3e78b702d78afca
   ImageSlideshow: 99addbef1b718272598a07036270e819d03abc17
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: e3447989c555fdb1373177446a705cc856ea2b58
+PODFILE CHECKSUM: 5e76a6b0b6e27e6d095df5543f2ca88fdefeee68
 
 COCOAPODS: 1.2.0

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/FirstViewController.swift"
-            timestampString = "510042233.193517"
+            timestampString = "510116595.218322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "605"
-            endingLineNumber = "605"
+            startingLineNumber = "615"
+            endingLineNumber = "615"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/FirstViewController.swift"
-            timestampString = "510039160.787781"
+            timestampString = "510116595.218322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "FirstViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/FirstViewController.swift"
-            timestampString = "510039943.17948"
+            timestampString = "510116595.218322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "405"
-            endingLineNumber = "405"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
             landmarkName = "getNews(newsID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/FirstViewController.swift"
-            timestampString = "510039943.17948"
+            timestampString = "510116595.218322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "401"
-            endingLineNumber = "401"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "getNews(newsID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/FirstViewController.swift"
-            timestampString = "510039915.867107"
+            timestampString = "510116595.218322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "getNews(newsID:)"
             landmarkType = "7">
          </BreakpointContent>

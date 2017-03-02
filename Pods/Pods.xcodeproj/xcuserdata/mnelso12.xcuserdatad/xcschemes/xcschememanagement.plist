@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Font-Awesome-Swift-Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ImageSlideshow-ImageSlideshow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F28707DAF85256360AAA492F0D49FEF</key>
+		<key>5BCBF841DCC0D644D048EE0D9607473F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BCBF841DCC0D644D048EE0D9607473F</key>
+		<key>64222111340F1682FA08F8A9A64605EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9735AA72928D41DB06EA697E23930C72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A96AAA68F325ED1CDCBD820D86701ED0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA453546C51032641C49CACBC22725EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
