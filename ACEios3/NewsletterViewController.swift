@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class NewsletterViewController: UIViewController {
     
     let apikey = "3009947f4086c85e7b735f4b4222e514-us2"
     let numNewsletterIDsLoaded = "1" // should be one as long as we only care about the first most recent newsletter
-    
-    var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
 
     @IBOutlet weak var webView: UIWebView!
     
@@ -25,16 +24,7 @@ class NewsletterViewController: UIViewController {
         self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
         
         // start loading indicator
-        self.styleLoadingIcon()
-        activityView.startAnimating()
-        self.view.addSubview(activityView)
-    }
-    
-    func styleLoadingIcon() {
-        // is already declared as class variable
-        activityView.center = self.view.center
-        activityView.color = UIColor.black
-        activityView.backgroundColor = UIColor.white
+        self.view.makeToastActivity(.center)
     }
     
     func getMostRecentNewsletterID() {
@@ -126,7 +116,7 @@ class NewsletterViewController: UIViewController {
                         let htmlString = json["html"] as! String?
                         
                         self.webView.loadHTMLString(htmlString!, baseURL: nil)
-                        self.activityView.removeFromSuperview() // now blog and news content are loaded, stop loading indicator
+                        self.view.hideToastActivity()
                         
                         //let plainText = json["plain_text"] as! String?
                         //print("newsletter plain text:",plainText)

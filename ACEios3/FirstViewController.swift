@@ -8,6 +8,7 @@
 
 import UIKit
 import Font_Awesome_Swift
+import Toast_Swift
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,8 +18,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var htmlString = " " // html string that is sent to the blog/news view controller called SecondViewController.swift
     
     var isBlog = true // whether or not table view is blog (vs. is news)
-    var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
-    
+
     // blog data arrays
     var blogTitles = [String]() // array of blog titles that fill thel table view
     var detailsArr = [String]() // array of detail labels (gray text below the title of the table view cell)
@@ -53,14 +53,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         
         // start loading indicator while blogs and news are loading
-        activityView.startAnimating()
-        self.view.addSubview(activityView)
+        self.view.makeToastActivity(.center)
         
         // load blogs into table view
         getMostRecentBlogs()
         getMostRecentNews()
         
-        styleLoadingIcon()
         setTabBarIcons()
         
         let tempImageView = UIImageView(image: UIImage(named: "bluePattern.png"))
@@ -163,16 +161,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         // start loading indicator
-        activityView.startAnimating()
-        self.view.addSubview(activityView)
+        self.view.makeToastActivity(.center)
 
-    }
-    
-    func styleLoadingIcon() {
-        // is already declared as class variable
-        activityView.center = self.view.center
-        activityView.color = UIColor.black
-        activityView.backgroundColor = UIColor.white
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -321,7 +311,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         self.tableView.reloadData() // update table view with blog data
                         self.newsIsReady = true
                         self.blogNews.isEnabled = true // now enable blog/news switch because theres content in both
-                        self.activityView.removeFromSuperview() // now blog and news content are loaded, stop loading indicator
+                        //self.activityView.removeFromSuperview() // now blog and news content are loaded, stop loading indicator
+                        self.view.hideToastActivity()
                         
                     }catch {
                         print("Error with Json: \(error)")
@@ -614,14 +605,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print("in prepare for segue...")
 
         let destinationVC = segue.destination as! SecondViewController
-        //destinationVC.blogTitleString = self.selectedBlogTitle
-        //destinationVC.blogContentString = self.selectedBlogContent
-        //destinationVC.blogDateString = makeDatePretty(oldDate: self.selectedBlogDate)
-        //destinationVC.blogAuthorString = self.selectedBlogAuthor
-        //destinationVC.imgUrlString = self.selectedImgUrl
         destinationVC.htmlString = self.htmlString
-        
-        self.activityView.removeFromSuperview()
+
+        self.view.hideToastActivity()
     }
 
 

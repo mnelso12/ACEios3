@@ -19,9 +19,6 @@ class SpiritualityViewController: UIViewController {
     let numReflectionIDsLoaded = "1" // should be one as long as we only care about the first most recent refletion
     var thisWeeksReflectionID = "-1"
     
-    var activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge) // loading icon
-    
-    
     @IBOutlet var slideshow: ImageSlideshow!
     
     let localSource = [ImageSource(imageString: "ace_logo_color_PNG.png")!, ImageSource(imageString: "gray-pattern.png")!, ImageSource(imageString: "bluePattern.png")!, ImageSource(imageString: "ace_app_community.JPG")!]
@@ -35,9 +32,6 @@ class SpiritualityViewController: UIViewController {
 
         //self.spiritualityImageView.layer.cornerRadius = 5
         //self.spiritualityImageView.clipsToBounds = true
-        
-        self.styleLoadingIcon()
-        
         
         
         slideshow.backgroundColor = UIColor.white
@@ -60,14 +54,6 @@ class SpiritualityViewController: UIViewController {
     
     func didTap() {
         slideshow.presentFullScreenController(from: self)
-    }
-    
-    
-    func styleLoadingIcon() {
-        // is already declared as class variable
-        activityView.center = self.view.center
-        activityView.color = UIColor.black
-        activityView.backgroundColor = UIColor.white
     }
     
     func getThisWeeksSpiritualReflectionID() {
@@ -229,8 +215,7 @@ class SpiritualityViewController: UIViewController {
     
     
     @IBAction func weeklySpiritualReflectionPressed(_ sender: Any) {
-        activityView.startAnimating()
-        self.view.addSubview(activityView)
+        self.view.makeToastActivity(.center)
         
         getThisWeeksSpiritualReflectionID()
     }
@@ -242,7 +227,7 @@ class SpiritualityViewController: UIViewController {
         destinationVC.weeklyRef = self.weeklyRef
         //destinationVC.weeklyRefHTML = self.weeklyRefHTML
         
-        self.activityView.removeFromSuperview()
+        self.view.hideToastActivity()
     }
 
     
