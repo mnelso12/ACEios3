@@ -34,9 +34,11 @@ PODS:
     - ImageSlideshow/Core
     - SDWebImage (~> 3.7)
   - Kingfisher (3.5.0)
+  - MapboxGeocoder.swift (0.6.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
   - Font-Awesome-Swift (~> 1.6.1)
@@ -45,6 +47,8 @@ DEPENDENCIES:
   - ImageSlideshow/Alamofire
   - ImageSlideshow/Kingfisher
   - ImageSlideshow/SDWebImage
+  - MapboxGeocoder.swift (~> 0.6)
+  - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -53,8 +57,10 @@ SPEC CHECKSUMS:
   Font-Awesome-Swift: 70ab020f6749d7048bb49807c3e78b702d78afca
   ImageSlideshow: 99addbef1b718272598a07036270e819d03abc17
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
+  MapboxGeocoder.swift: dd6783c5262b4ebb1cf5f2662b56cea94a90f67d
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 5e76a6b0b6e27e6d095df5543f2ca88fdefeee68
+PODFILE CHECKSUM: e1f401c6721a8abbac01531e3273d5c1017c6bf2
 
 COCOAPODS: 1.2.0

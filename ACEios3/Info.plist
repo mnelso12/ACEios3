@@ -54,5 +54,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiYnN0YWxjdXAiLCJhIjoiU1VNWC1vayJ9.dKT17UcqoGPkcyfBTIEQUA</string>
 </dict>
 </plist>

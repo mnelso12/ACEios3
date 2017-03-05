@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MapboxGeocoder.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ACEios3.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,15 +59,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toast-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5BCBF841DCC0D644D048EE0D9607473F</key>
+		<key>0C6DA1C53CCFE50159CD0DAE71B0AF93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64222111340F1682FA08F8A9A64605EC</key>
+		<key>5BCBF841DCC0D644D048EE0D9607473F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,6 +97,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A753B242AF4EE6737040A2FDC1D5DCDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A96AAA68F325ED1CDCBD820D86701ED0</key>
 		<dict>
 			<key>primary</key>
@@ -98,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3B0D303D1E2FEEE382F99CB69B2053C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

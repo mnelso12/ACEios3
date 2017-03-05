@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ACEios3/SpiritualityViewController.swift"
-            timestampString = "510049734.163395"
+            timestampString = "510444144.820267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "SpiritualityViewController"
             landmarkType = "3">
          </BreakpointContent>
