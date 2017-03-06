@@ -31,18 +31,31 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
     
     // RLP - Remick Leadership Program
     var rlpTitles = ["1. Application Type and Term", "2. Personal Information", "3. Test Scores", "4. Academic History", "5. Additional Information", "6. Recommendations", "7. Downloadable Forms", "8. Uploads", "9. Signature", "10. Review", ""]
-    var rlpDesc = ["Under \"Applicant type,\" select \"Degree.\" Next to \"Do you plan to attend full time?\" select \"Yes.\" In the dropdown under \"Program Applying To:\" select \"ACE Remick Leadership - M.A.\n\n Please node: Candidates are not eligible to apply to both the ACE Teaching Fellows Program and the Remick Leadership Program. These are two separate programs for teachers in different phases of their careers. ACE Teaching Fellows is for recent college graduates with little to no previous teaching experience, whereas Remick Leadership Program is for current educators and leaders seeking further formation and their Masters in Educational Leadership degree. NOTE: Full-time employment in a Catholic school is a requirement for acceptance into the Remick Leadership Program. The Remick Leadership Program is an \"M.A.\" program while the ACE Teaching Fellows Program is an \"M.Ed.\" Please make sure you're applying to the currect ACE program before you continue.\n\n Provide the name of your (arch)diocese. (You might have to refresh the page for these boxes to show up at first).\n Your internship site is the Catholic school in which you are currently employed (or plan on being employed in the Fall of 2017).\n Provide the address for the internship site.\n Please be as specific as possible when completing your position information (i.e., put \"6/7/8 Language Arts\" instead of just \"Teacher\").\n Next to \"Admission Term\" select \"Summer 2017.\"\n The Remick Leadership Program is a cohort-based program, so you do not need to select a faculty advisor.\n\n If you've previously been enrolled at Notre Dame, complete the appropriate section. If you're applying to any other programs at Notre Dame, please indicate that in the appropriate section.",
+    var rlpDesc = ["Under \"Applicant type,\" select \"Degree.\" Next to \"Do you plan to attend full time?\" select \"Yes.\" In the dropdown under \"Program Applying To:\" select \"ACE Remick Leadership - M.A.\"\n\nPlease note: Candidates are not eligible to apply to both the ACE Teaching Fellows Program and the Remick Leadership Program. These are two separate programs for teachers in different phases of their careers. ACE Teaching Fellows is for recent college graduates with little to no previous teaching experience, whereas Remick Leadership Program is for current educators and leaders seeking further formation and their Masters in Educational Leadership degree. NOTE: Full-time employment in a Catholic school is a requirement for acceptance into the Remick Leadership Program. The Remick Leadership Program is an \"M.A.\" program while the ACE Teaching Fellows Program is an \"M.Ed.\" Please make sure you're applying to the currect ACE program before you continue.\n\n Provide the name of your (arch)diocese. (You might have to refresh the page for these boxes to show up at first).\n\nYour internship site is the Catholic school in which you are currently employed (or plan on being employed in the Fall of 2017).\n Provide the address for the internship site.\n\nPlease be as specific as possible when completing your position information (i.e., put \"6/7/8 Language Arts\" instead of just \"Teacher\").\n\nNext to \"Admission Term\" select \"Summer 2017.\"\n\nThe Remick Leadership Program is a cohort-based program, so you do not need to select a faculty advisor.\n\nIf you've previously been enrolled at Notre Dame, complete the appropriate section. If you're applying to any other programs at Notre Dame, please indicate that in the appropriate section.",
         "Complete all of the information in the \"Personal Information\" section.",
         "The Remick Leadership Program only requires the GRE. All applicants are required to submit GRE scores taken within the last 5 years. Notre Dame's insitution code is \"1841.\" Once you have completed the GRE, add the test and date by clicking \"Add Test\" on the page. Log into the ETS website (www.ets.org), and take a screenshot of your scores, and upload that image by clicking \"Browse...\" on the right.",
         "As the instructions state, official transcripts are not required until admission to the program is offered, but we do need copies. These are usually available online. Please submit copies of transcripts for all undergraduate and graduate institutions you have attended.",
         "Complete the \"Additional Information\" page.",
-        "You are required to have three recommendations:\n\t 1. From your principal or direct supervisor at your school/diocese\n\t 2. A colleague who can speak to your professional strengths\n\t 3. An academic or other professional reference (i.e. a former professor, pastor at your school, etc.)\n\n Note: While a letter of recommendation is not required from your superintendent, they do need to endorse your participation in the program. Upon completion of your application, we will be in touch with your superintendent or other appropriate diocesan administrators/religious superiors to confirm your endorsement.",
+        "You are required to have three recommendations:\n\n1. From your principal or direct supervisor at your school/diocese\n\n2. A colleague who can speak to your professional strengths\n\n3. An academic or other professional reference (i.e. a former professor, pastor at your school, etc.)\n\n Note: While a letter of recommendation is not required from your superintendent, they do need to endorse your participation in the program. Upon completion of your application, we will be in touch with your superintendent or other appropriate diocesan administrators/religious superiors to confirm your endorsement.",
         "Download the \"ACE M.A.\" supplement from this page and follow the directions in that document. IMPORTANT: The \"ACE M.Ed.\" supplement contains directions for a different program. To apply for the Remick Leadership Program, please make sure you have the \"ACE M.A.\" supplement.\n\nYou will upload your completed supplement form in the \"Uploads\" section.",
         "The Remick Leadership Program does not require a Writing Sample. Upload your Resume or CV in the appropriate section. For the \"Statement of Intent,\" please upload a document responding to the following prompt:\n\n Briefly (250 words or less) explain why you feel called to become a Catholic school leader.\n\n Under \"Additional Documents,\" upload your completed supplement under \"Document 1.\" Upload your high-quality headshot under \"Document 2.\"",
         "Input your electronic signature.",
         "Here you will be able to see what parts of hte application you have completed. You may save your progress at any time. Review and confirm that you have completed all parts of the application and submit when complete.\n\nIf you have any questions at any time during the application, feel free to call or email April Garcia, a faculty member and recruiter at agarcia9@nd.edu or 574-631-9309.",
         ""]
     
+    let enlTitles = ["1. Background Information", "2. Demographics", "3. Academic History", "4. Teaching Information", "5. School Information", "6. Short Answer Questions", "7. Commitment Acknowledgement", "8. Principal Recommendation", "9. Official Transcripts", "10. Principal Recommendation Form completed by a School Administrator", "11. Tuition Assistance Form", ""]
+    let enlDesc = ["Name\nContact information",
+                   "Gender and ethnicity\nLanguage proficiencies (if applicable)",
+                   "Undergraduate degree and G.P.A\nGraduate degree and G.P.A (if applicable)",
+                   "Subjects taught\nGrade level\nTeaching experience\nTeaching license (if applicable)\nNote: a copy of license must be uploaded\nResume \n\nNote: a current resume or C.V. must be uploaded",
+                   "Contact information\nEnrollment\nPercentage of English language learners\nLatino population growth in recent years\nOther ESL/ENL/ELL teachers on staff\nPrincipal information",
+                   "(500 words or less)\n\nNote: short answer responses are best prepared ahead of time and cut and pasted into the application\n\n1. Explain your experience teaching English language learners\n\n2. Explain why you would like to participate in the English as a New Language Program\n\n3. Make the case for why ENL/ESL resources are needed at your school",
+                   "Knowledge of and commitment to the terms of the ENL program",
+                   "Principal recommender contact information\n\nNote: You must ask your principal (or the one person who can speak to your teaching and professional background, if you are a sitting principal) to complete the online principal recommendation form",
+                   "Official university transcripts should be mailed directly to:\n\nJennifer Dees\n107 Carole Sander Hall\nNotre Dame, IN 46556",
+                   "(completed online)",
+                   "(optional; completed online)",
+                   ""]
     
     let cellReuseIdentifier = "applyChecklistCell"
     
@@ -82,10 +95,13 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if (self.segmentedControl.selectedSegmentIndex == 0) {
-            return tfTitles.count + 1 // added dummy row to the end for extra space at the bottom of the table view
+            return tfTitles.count // added dummy row to the end for extra space at the bottom of the table view
         }
-        else if (self.segmentedControl.selectedSegmentIndex == 0) {
-            return rlpTitles.count + 1 // added dummy row to the end for extra space at the bottom of the table view
+        else if (self.segmentedControl.selectedSegmentIndex == 1) {
+            return rlpTitles.count // added dummy row to the end for extra space at the bottom of the table view
+        }
+        else if (self.segmentedControl.selectedSegmentIndex == 2) {
+            return enlTitles.count // added dummy row to the end for extra space at the bottom of the table view
         }
         return 11
 
@@ -110,6 +126,10 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
         else if (self.segmentedControl.selectedSegmentIndex == 1) {
             cell.descLabel.text = rlpDesc[indexPath.section]
             cell.titleLabel.text = rlpTitles[indexPath.section]
+        }
+        else if (self.segmentedControl.selectedSegmentIndex == 2) {
+            cell.descLabel.text = enlDesc[indexPath.section]
+            cell.titleLabel.text = enlTitles[indexPath.section]
         }
         
         return cell
