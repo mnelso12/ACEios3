@@ -603,6 +603,9 @@ Notre Dame, IN 46556</string>
                                     <segment title="?"/>
                                 </segments>
                                 <color key="tintColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changedSwitchView:" destination="EL5-MA-oLR" eventType="valueChanged" id="qva-BO-2NS"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
