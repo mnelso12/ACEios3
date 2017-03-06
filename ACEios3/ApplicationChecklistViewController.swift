@@ -11,10 +11,11 @@ import UIKit
 class ApplicationChecklistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var countriesinEurope = ["France","Spain","Germany"]
-    var countriesinAsia = ["Japan","China","India"]
-    var countriesInSouthAmerica = ["Argentia","Brasil","Chile"]
+    //var countriesinEurope = ["France","Spain","Germany"]
+    //var countriesinAsia = ["Japan","China","India"]
+    //var countriesInSouthAmerica = ["Argentia","Brasil","Chile"]
     
     var titles = ["1. Application Type and Term", "2. Personal Information", "3. Test Scores", "4. Academic History", "5. Additional Information", "6. Reference Letters", "7. Downloadable Forms", "8. Uploads", "9. Signature", "10. Review", ""]
     var desc = ["Under \"Applicant type,\" select \"Degree.\" ACE Teaching Fellows is a full-time, degreeseeking program. Please select \"ACE Teaching Fellows - M.Ed.\" The admission term for this cohort is: Summer 2017. Because ACE Teaching Fellows is a cohort-based program, you do not need to select a faculty advisor. If you’ve previously been enrolled at Notre Dame, complete the appropriate section. If you are applying to any other programs at Notre Dame, please indicate that in the appropriate section.", "Complete the personal information page. Please enter your Skype username, as this may be used in interviews later on.",
