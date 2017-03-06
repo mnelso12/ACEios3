@@ -25,7 +25,9 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
         
         print("view width:", self.view.frame.width)
         
+        
     }
+
     
     // disables horizontal scrolling
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

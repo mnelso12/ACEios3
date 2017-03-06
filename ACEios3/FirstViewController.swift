@@ -173,18 +173,35 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // parse the html stuff to get rid of tags and to find the img url source
     func parseBlogHTML(html: String) -> String {
         var returnStr = " "
-        var isTag = false
+        //var isTag = false
         var isWidgetkit = false
-        var tagCount = 0
+        //var tagCount = 0
         var indexInt = 0
-        var startOfImgIndex = 0
-        var startOfNBSPIndex = 0
-        var imgUrl = ""
-        var isImgUrl = false
-        var finalImgUrl = ""
+        //var startOfImgIndex = 0
+        //var startOfNBSPIndex = 0
+        //var imgUrl = ""
+        //var isImgUrl = false
+        //var finalImgUrl = ""
 
          for index in html.characters.indices {
+            if (html[index] == "[") { // could be start of [widgetkit id=...]
+                let start = html.index(html.startIndex, offsetBy: indexInt+1)
+                let end = html.index(html.startIndex, offsetBy: indexInt+10)
+                let range = start..<end
+                if (html.substring(with: range) == "widgetkit") { // check if this is "widgetkit"
+                    isWidgetkit = true
+                }
+            }
+            else if ((html[index] == "]") && (isWidgetkit == true)) { // end of "[widgetkit id=...]"
+                isWidgetkit = false
+            }
+            else if (isWidgetkit == false) { // just normal html
+                returnStr.append(html[index])
+                //startOfNBSPIndex = 0
+            }
+
             
+            /*
             if (html[index] == "<") {
                 isTag = true
                 
@@ -234,10 +251,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     imgUrl.append(html[index])
                 }
             }
+ */
             
             indexInt += 1
          }
-    
+    /*
         for i in imgUrl.characters.indices {
             if (imgUrl[i] == "\"") {
                 break
@@ -246,10 +264,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 finalImgUrl.append(imgUrl[i])
             }
         }
+ */
         
-        print("total tags:", tagCount)
-        print("img url:", finalImgUrl)
-        self.selectedImgUrl = finalImgUrl
+        //print("total tags:", tagCount)
+        //print("img url:", finalImgUrl)
+        //self.selectedImgUrl = finalImgUrl
         return returnStr
     }
 
@@ -400,7 +419,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro';}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1>" + (blogContent as String) + "</div>"
                         
-                        self.htmlString = blogContentWithStyle
+                        self.htmlString = self.parseBlogHTML(html:blogContentWithStyle) // gets rid of widgetkit tags
                         
                         //let parsedHTML = self.parseBlogHTML(html: blogContent)
                         
@@ -578,7 +597,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro';} h4 {font-family:'GalaxiePolaris-Medium'; color:gray; text-align: left;}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1><h4>" + self.selectedBlogAuthor + "</h4>" + (blogContent as String) + "</div>"
                         
-                        self.htmlString = blogContentWithStyle
+                        //self.htmlString = blogContentWithStyle
+                        self.htmlString = self.parseBlogHTML(html:blogContentWithStyle) // gets rid of widgetkit tags
                         
                         //let parsedHTML = self.parseBlogHTML(html: blogContent)
                         
