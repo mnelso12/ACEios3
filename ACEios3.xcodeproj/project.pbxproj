@@ -11,6 +11,8 @@
 		231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */; };
 		231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */; };
 		231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */; };
+		231FA1F31E6F14CE0010D78F /* biloxi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 231FA1F11E6F14CE0010D78F /* biloxi.jpg */; };
+		231FA1F41E6F14CE0010D78F /* batonrouge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 231FA1F21E6F14CE0010D78F /* batonrouge.jpg */; };
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
 		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
 		23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23593BF61E56A3C3008B39CE /* basilica.jpg */; };
@@ -84,9 +86,11 @@
 		231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GalaxiePolaris-Medium.otf"; path = "../../../Downloads/GalaxiePolaris-Medium.otf"; sourceTree = "<group>"; };
 		231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GaramondPremrPro.otf; path = ../../../Downloads/GaramondPremrPro.otf; sourceTree = "<group>"; };
 		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
+		231FA1F11E6F14CE0010D78F /* biloxi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = biloxi.jpg; path = ACEios3/biloxi.jpg; sourceTree = "<group>"; };
+		231FA1F21E6F14CE0010D78F /* batonrouge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = batonrouge.jpg; path = ACEios3/batonrouge.jpg; sourceTree = "<group>"; };
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
 		234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
-		23593BF61E56A3C3008B39CE /* basilica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basilica.jpg; path = ../../../../Downloads/basilica.jpg; sourceTree = "<group>"; };
+		23593BF61E56A3C3008B39CE /* basilica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basilica.jpg; path = ../../../Downloads/basilica.jpg; sourceTree = "<group>"; };
 		235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		2362209F1E65E10000E6236A /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../../Downloads/mapbox-ios-sdk-3.4.2-dynamic/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		23653ACF1E49912F00529652 /* SpiritualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualityViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 		236CF9241E32BD1A005DD95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_whitetext_PNG.png; path = ../../../Downloads/ace_logo_color_whitetext_PNG.png; sourceTree = "<group>"; };
 		237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-11-04 at 2.00.33 AM.png"; path = "../../../../Desktop/Screen Shot 2016-11-04 at 2.00.33 AM.png"; sourceTree = "<group>"; };
-		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
+		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
 		237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "4 Advocates Leaders Fixed version.jpg"; path = "../../../../Downloads/4 Advocates Leaders Fixed version.jpg"; sourceTree = "<group>"; };
 		2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_holding_hands.JPG; path = ../../../../Downloads/ace_app_holding_hands.JPG; sourceTree = "<group>"; };
 		2395173F1E517926003604AE /* ace_app_community.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_community.JPG; path = ../../../Downloads/ace_app_community.JPG; sourceTree = "<group>"; };
@@ -182,6 +186,10 @@
 				2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */,
 				231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */,
 				2395173F1E517926003604AE /* ace_app_community.JPG */,
+				231FA1F11E6F14CE0010D78F /* biloxi.jpg */,
+				231FA1F21E6F14CE0010D78F /* batonrouge.jpg */,
+				23593BF61E56A3C3008B39CE /* basilica.jpg */,
+				237886521E383C3200E238A2 /* spirituality.jpg */,
 				23B41AC31E3FE643009A0F7A /* news-icon-19.png */,
 				236CF8FF1E32BD19005DD95A /* ACEios3 */,
 				236CF9161E32BD1A005DD95A /* ACEios3Tests */,
@@ -212,7 +220,6 @@
 				23CEEADD1E66962D0086F035 /* blogNewsStyle.css */,
 				236CF9061E32BD19005DD95A /* Main.storyboard */,
 				23F698511E6CC67B00C42EAA /* MapViewController.swift */,
-				23593BF61E56A3C3008B39CE /* basilica.jpg */,
 				239517411E517F50003604AE /* TFLocationsViewController.swift */,
 				234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */,
 				235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */,
@@ -221,7 +228,6 @@
 				232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */,
 				237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */,
 				23653ACF1E49912F00529652 /* SpiritualityViewController.swift */,
-				237886521E383C3200E238A2 /* spirituality.jpg */,
 				236CF9091E32BD19005DD95A /* Assets.xcassets */,
 				236CF90B1E32BD19005DD95A /* LaunchScreen.storyboard */,
 				237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */,
@@ -378,10 +384,12 @@
 				237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */,
 				23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */,
 				2395173E1E5173D8003604AE /* ace_app_holding_hands.JPG in Resources */,
+				231FA1F31E6F14CE0010D78F /* biloxi.jpg in Resources */,
 				23E018C61E4AECBF00119327 /* bluePattern.png in Resources */,
 				231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */,
 				23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */,
 				237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */,
+				231FA1F41E6F14CE0010D78F /* batonrouge.jpg in Resources */,
 				231D77DD1E4F9C26001DC24E /* PolarisCondensed-Medium.otf in Resources */,
 				239517401E517926003604AE /* ace_app_community.JPG in Resources */,
 				23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */,

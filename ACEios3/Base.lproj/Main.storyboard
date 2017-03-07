@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRn-gN-o2T" id="nCQ-HF-735">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-1T-jkd">
@@ -443,7 +443,7 @@ Notre Dame, IN 46556</string>
                                 <rect key="frame" x="16" y="512" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="bpt-PE-3db"/>
+                                    <constraint firstAttribute="height" constant="45" id="9PC-SI-UHM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                 <state key="normal" title="Application Checklist">
@@ -457,79 +457,88 @@ Notre Dame, IN 46556</string>
                                 <rect key="frame" x="16" y="565" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="isZ-E7-r4P"/>
+                                    <constraint firstAttribute="height" constant="45" id="9Tc-Yl-glc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="Learn More">
+                                <state key="normal" title="Serve with ACE">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="applyNowPressed:" destination="ltW-TS-er2" eventType="touchUpInside" id="4zh-Sa-hVb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply to ACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra5-DV-h6u">
-                                <rect key="frame" x="16" y="333" width="343" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-Wh-oLK">
+                                <rect key="frame" x="16" y="66" width="343" height="237"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="RoT-fo-QLd" kind="show" id="Nn8-14-ilA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-9H-17h">
+                                <rect key="frame" x="16" y="311" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="czu-M9-SiX"/>
+                                    <constraint firstAttribute="height" constant="45" id="QsI-rX-AnQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                <state key="normal" title="Where We Serve"/>
+                                <connections>
+                                    <segue destination="btm-VX-rjZ" kind="show" id="0Nu-dQ-P60"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbb-KV-G3V">
+                                <rect key="frame" x="16" y="364" width="343" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
+                                        <rect key="frame" x="0.0" y="45" width="343" height="51"/>
+                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4kR-G6-oP8" firstAttribute="centerY" secondItem="lbb-KV-G3V" secondAttribute="centerY" id="1XO-w0-ABF"/>
+                                    <constraint firstAttribute="trailing" secondItem="4kR-G6-oP8" secondAttribute="trailing" id="OBa-am-Vme"/>
+                                    <constraint firstItem="4kR-G6-oP8" firstAttribute="leading" secondItem="lbb-KV-G3V" secondAttribute="leading" id="ODj-uB-s4o"/>
+                                    <constraint firstItem="4kR-G6-oP8" firstAttribute="centerX" secondItem="lbb-KV-G3V" secondAttribute="centerX" id="i0e-TP-nsZ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-7o-vKe">
+                                <rect key="frame" x="16" y="20" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="YTY-ds-0Bf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
                                 <color key="textColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
-                                <rect key="frame" x="16" y="413" width="343" height="91"/>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <color key="textColor" red="0.058823529409999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-Wh-oLK">
-                                <rect key="frame" x="132" y="134" width="111" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="EU8-3O-Vtt"/>
-                                    <constraint firstAttribute="width" constant="111" id="JAg-v5-eX3"/>
-                                </constraints>
-                                <state key="normal" title="Map">
-                                    <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RoT-fo-QLd" kind="show" id="Nn8-14-ilA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-9H-17h">
-                                <rect key="frame" x="104" y="251" width="167" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="WVy-yu-Vj4"/>
-                                </constraints>
-                                <state key="normal" title="see locations -&gt;">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="btm-VX-rjZ" kind="show" id="0Nu-dQ-P60"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="8" symbolic="YES" id="1Sq-9R-lhX"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="26f-I9-nE6"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="top" secondItem="DYr-9H-17h" secondAttribute="bottom" constant="52" id="2I5-L6-q5e"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="top" secondItem="Ra5-DV-h6u" secondAttribute="bottom" constant="35" id="6MB-Vf-fKk"/>
-                            <constraint firstItem="DYr-9H-17h" firstAttribute="top" secondItem="0nJ-Wh-oLK" secondAttribute="bottom" constant="87" id="7r3-cN-DVe"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="LVN-c2-2sz"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="MXH-IG-t0F"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="leading" secondItem="4kR-G6-oP8" secondAttribute="leading" id="SpV-Uf-h4k"/>
-                            <constraint firstItem="4kR-G6-oP8" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="VKt-Nd-Wwd"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="WI6-x7-437"/>
-                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="4kR-G6-oP8" secondAttribute="bottom" constant="8" symbolic="YES" id="Wl5-MA-2Vx"/>
-                            <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="aZR-3Y-RRl"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" constant="114" id="cwH-Mq-h4A"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="centerX" secondItem="DYr-9H-17h" secondAttribute="centerX" id="hKz-JS-oUs"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="k6w-cj-raW"/>
-                            <constraint firstItem="Ra5-DV-h6u" firstAttribute="trailing" secondItem="4kR-G6-oP8" secondAttribute="trailing" id="nJs-62-yGQ"/>
-                            <constraint firstItem="DYr-9H-17h" firstAttribute="centerX" secondItem="Ra5-DV-h6u" secondAttribute="centerX" id="sVT-vy-ZFn"/>
-                            <constraint firstItem="DYr-9H-17h" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" constant="88" id="yDh-A7-NUU"/>
+                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="trailing" secondItem="DYr-9H-17h" secondAttribute="trailing" id="2nT-f2-riR"/>
+                            <constraint firstItem="lbb-KV-G3V" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="3z4-0L-bMA"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="4MU-1k-M4w"/>
+                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="9C1-D5-okL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PrV-7o-vKe" secondAttribute="trailing" id="J9j-Jz-qMF"/>
+                            <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="Nx3-Ul-wXd"/>
+                            <constraint firstItem="lbb-KV-G3V" firstAttribute="top" secondItem="DYr-9H-17h" secondAttribute="bottom" constant="8" symbolic="YES" id="UoF-7Q-0sF"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="leading" secondItem="lbb-KV-G3V" secondAttribute="leading" id="YoA-m5-RuQ"/>
+                            <constraint firstItem="lbb-KV-G3V" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="b4e-By-pwJ"/>
+                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="leading" secondItem="DYr-9H-17h" secondAttribute="leading" id="cZV-V1-ycY"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="cpm-GV-icr"/>
+                            <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="8" symbolic="YES" id="ezc-r5-vfj"/>
+                            <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="lbb-KV-G3V" secondAttribute="bottom" constant="8" symbolic="YES" id="gxA-m8-Wqn"/>
+                            <constraint firstItem="PrV-7o-vKe" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" constant="-45" id="h9l-LL-5pT"/>
+                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="top" secondItem="PrV-7o-vKe" secondAttribute="bottom" constant="1" id="rtz-vm-JXT"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="centerY" secondItem="i4d-ye-dXY" secondAttribute="centerY" id="sZw-uK-97e"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="trailing" secondItem="lbb-KV-G3V" secondAttribute="trailing" id="ths-gQ-dUn"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="top" secondItem="0nJ-Wh-oLK" secondAttribute="bottom" constant="8" symbolic="YES" id="vWf-si-lnk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PrV-7o-vKe" secondAttribute="leading" id="x47-tp-qdo"/>
+                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="yxY-pa-I76"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Am9-9i-1YG"/>
@@ -559,7 +568,7 @@ Notre Dame, IN 46556</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jR4-Hi-9Me" id="CzW-aK-I9K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-cI-YBa">
@@ -654,7 +663,7 @@ Notre Dame, IN 46556</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ASY-ly-DZj" id="zCX-zt-FUs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCl-qJ-SO1">
@@ -997,7 +1006,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c3s-Eg-afU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="first" selectedImage="second" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dZB-LB-xey">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dZB-LB-xey">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.068273326499999995" green="0.1118909731" blue="0.33914262820000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1017,7 +1026,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Qs-a9-wMj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Serve" image="second" id="c6z-7Y-XuC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6I-1Q-EBP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v6I-1Q-EBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1036,7 +1045,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ens-uP-gtc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Connect" image="first" id="QUd-TM-UnD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tiy-gG-fAY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Tiy-gG-fAY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1055,7 +1064,7 @@ Notre Dame, IN 46556</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fb6-qx-j2T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Spirituality" image="second" id="NOI-lJ-sEj"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cng-I7-ZhE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cng-I7-ZhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
