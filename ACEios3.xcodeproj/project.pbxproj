@@ -11,8 +11,7 @@
 		231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */; };
 		231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */; };
 		231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */; };
-		231FA1F31E6F14CE0010D78F /* biloxi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 231FA1F11E6F14CE0010D78F /* biloxi.jpg */; };
-		231FA1F41E6F14CE0010D78F /* batonrouge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 231FA1F21E6F14CE0010D78F /* batonrouge.jpg */; };
+		232449961E6F423A00B199C2 /* communityPhotos in Resources */ = {isa = PBXBuildFile; fileRef = 232449951E6F423A00B199C2 /* communityPhotos */; };
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
 		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
 		23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23593BF61E56A3C3008B39CE /* basilica.jpg */; };
@@ -82,21 +81,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PolarisCondensed-Medium.otf"; path = "../../../Downloads/PolarisCondensed-Medium.otf"; sourceTree = "<group>"; };
-		231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GalaxiePolaris-Medium.otf"; path = "../../../Downloads/GalaxiePolaris-Medium.otf"; sourceTree = "<group>"; };
-		231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GaramondPremrPro.otf; path = ../../../Downloads/GaramondPremrPro.otf; sourceTree = "<group>"; };
-		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
-		231FA1F11E6F14CE0010D78F /* biloxi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = biloxi.jpg; path = ACEios3/biloxi.jpg; sourceTree = "<group>"; };
-		231FA1F21E6F14CE0010D78F /* batonrouge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = batonrouge.jpg; path = ACEios3/batonrouge.jpg; sourceTree = "<group>"; };
+		231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PolarisCondensed-Medium.otf"; path = "../../../../Downloads/PolarisCondensed-Medium.otf"; sourceTree = "<group>"; };
+		231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GalaxiePolaris-Medium.otf"; path = "../../../../Downloads/GalaxiePolaris-Medium.otf"; sourceTree = "<group>"; };
+		231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GaramondPremrPro.otf; path = ../../../../Downloads/GaramondPremrPro.otf; sourceTree = "<group>"; };
+		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
+		232449951E6F423A00B199C2 /* communityPhotos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = communityPhotos; sourceTree = "<group>"; };
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
 		234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
-		23593BF61E56A3C3008B39CE /* basilica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basilica.jpg; path = ../../../Downloads/basilica.jpg; sourceTree = "<group>"; };
+		23593BF61E56A3C3008B39CE /* basilica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basilica.jpg; path = ../../../../Downloads/basilica.jpg; sourceTree = "<group>"; };
 		235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		2362209F1E65E10000E6236A /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../../Downloads/mapbox-ios-sdk-3.4.2-dynamic/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		23653ACF1E49912F00529652 /* SpiritualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualityViewController.swift; sourceTree = "<group>"; };
 		23653AD11E49948600529652 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
-		2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
-		236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualReflectionViewController.swift; sourceTree = "<group>"; };
+		2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsViewController.swift; path = ../ContactUsViewController.swift; sourceTree = "<group>"; };
+		236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpiritualReflectionViewController.swift; path = ../SpiritualReflectionViewController.swift; sourceTree = "<group>"; };
 		236CF8FD1E32BD19005DD95A /* ACEios3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEios3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236CF9001E32BD19005DD95A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236CF9021E32BD19005DD95A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -111,21 +109,21 @@
 		236CF91E1E32BD1A005DD95A /* ACEios3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACEios3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		236CF9221E32BD1A005DD95A /* ACEios3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACEios3UITests.swift; sourceTree = "<group>"; };
 		236CF9241E32BD1A005DD95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_whitetext_PNG.png; path = ../../../Downloads/ace_logo_color_whitetext_PNG.png; sourceTree = "<group>"; };
+		2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_whitetext_PNG.png; path = ../../../../Downloads/ace_logo_color_whitetext_PNG.png; sourceTree = "<group>"; };
 		237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-11-04 at 2.00.33 AM.png"; path = "../../../../Desktop/Screen Shot 2016-11-04 at 2.00.33 AM.png"; sourceTree = "<group>"; };
-		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
+		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
 		237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "4 Advocates Leaders Fixed version.jpg"; path = "../../../../Downloads/4 Advocates Leaders Fixed version.jpg"; sourceTree = "<group>"; };
 		2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_holding_hands.JPG; path = ../../../../Downloads/ace_app_holding_hands.JPG; sourceTree = "<group>"; };
-		2395173F1E517926003604AE /* ace_app_community.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_community.JPG; path = ../../../Downloads/ace_app_community.JPG; sourceTree = "<group>"; };
+		2395173F1E517926003604AE /* ace_app_community.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_community.JPG; path = ../../../../Downloads/ace_app_community.JPG; sourceTree = "<group>"; };
 		239517411E517F50003604AE /* TFLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFLocationsViewController.swift; sourceTree = "<group>"; };
-		239DABD11E5182D40018D556 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		239DABD11E5182D40018D556 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewCell.swift; path = ../LocationTableViewCell.swift; sourceTree = "<group>"; };
 		23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
-		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
-		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
+		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogTableViewCell.swift; path = ../BlogTableViewCell.swift; sourceTree = "<group>"; };
+		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
 		23CEEADD1E66962D0086F035 /* blogNewsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = blogNewsStyle.css; sourceTree = "<group>"; };
-		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
-		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
+		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
+		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
 		23F6984C1E6CC52A00C42EAA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		23F698511E6CC67B00C42EAA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACEios3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +158,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		232449971E6F452100B199C2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23653AD11E49948600529652 /* ApplyViewController.swift */,
+				2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */,
+				236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */,
+				23F698511E6CC67B00C42EAA /* MapViewController.swift */,
+				239517411E517F50003604AE /* TFLocationsViewController.swift */,
+				234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */,
+				235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */,
+				232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */,
+				23653ACF1E49912F00529652 /* SpiritualityViewController.swift */,
+				236CF9041E32BD19005DD95A /* SecondViewController.swift */,
+				236CF9021E32BD19005DD95A /* FirstViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		232449981E6F456400B199C2 /* CustomTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */,
+				23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */,
+				239DABD11E5182D40018D556 /* LocationTableViewCell.swift */,
+			);
+			name = CustomTableViewCells;
+			sourceTree = "<group>";
+		};
+		232449991E6F45B100B199C2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */,
+				237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */,
+				23593BF61E56A3C3008B39CE /* basilica.jpg */,
+				237886521E383C3200E238A2 /* spirituality.jpg */,
+				23B41AC31E3FE643009A0F7A /* news-icon-19.png */,
+				23E018C51E4AECBF00119327 /* bluePattern.png */,
+				23E018C31E4AEBA900119327 /* gray-pattern.png */,
+				231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */,
+				2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */,
+				2395173F1E517926003604AE /* ace_app_community.JPG */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		2324499A1E6F45CD00B199C2 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */,
+				231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */,
+				231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */,
+				23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		2324499B1E6F45DC00B199C2 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				236CF9061E32BD19005DD95A /* Main.storyboard */,
+				236CF90B1E32BD19005DD95A /* LaunchScreen.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
 		2362209E1E65E10000E6236A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,25 +235,8 @@
 		236CF8F41E32BD19005DD95A = {
 			isa = PBXGroup;
 			children = (
+				232449951E6F423A00B199C2 /* communityPhotos */,
 				23F6984C1E6CC52A00C42EAA /* Mapbox.framework */,
-				236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */,
-				2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */,
-				239DABD11E5182D40018D556 /* LocationTableViewCell.swift */,
-				23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */,
-				231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */,
-				231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */,
-				231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */,
-				23E018C51E4AECBF00119327 /* bluePattern.png */,
-				23E018C31E4AEBA900119327 /* gray-pattern.png */,
-				23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */,
-				2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */,
-				231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */,
-				2395173F1E517926003604AE /* ace_app_community.JPG */,
-				231FA1F11E6F14CE0010D78F /* biloxi.jpg */,
-				231FA1F21E6F14CE0010D78F /* batonrouge.jpg */,
-				23593BF61E56A3C3008B39CE /* basilica.jpg */,
-				237886521E383C3200E238A2 /* spirituality.jpg */,
-				23B41AC31E3FE643009A0F7A /* news-icon-19.png */,
 				236CF8FF1E32BD19005DD95A /* ACEios3 */,
 				236CF9161E32BD1A005DD95A /* ACEios3Tests */,
 				236CF9211E32BD1A005DD95A /* ACEios3UITests */,
@@ -213,24 +259,15 @@
 		236CF8FF1E32BD19005DD95A /* ACEios3 */ = {
 			isa = PBXGroup;
 			children = (
-				2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */,
+				2324499B1E6F45DC00B199C2 /* storyboards */,
+				2324499A1E6F45CD00B199C2 /* fonts */,
+				232449991E6F45B100B199C2 /* images */,
+				232449981E6F456400B199C2 /* CustomTableViewCells */,
+				232449971E6F452100B199C2 /* ViewControllers */,
 				236CF9001E32BD19005DD95A /* AppDelegate.swift */,
-				236CF9021E32BD19005DD95A /* FirstViewController.swift */,
-				236CF9041E32BD19005DD95A /* SecondViewController.swift */,
 				23CEEADD1E66962D0086F035 /* blogNewsStyle.css */,
-				236CF9061E32BD19005DD95A /* Main.storyboard */,
-				23F698511E6CC67B00C42EAA /* MapViewController.swift */,
-				239517411E517F50003604AE /* TFLocationsViewController.swift */,
-				234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */,
-				235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */,
-				23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */,
-				23653AD11E49948600529652 /* ApplyViewController.swift */,
-				232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */,
 				237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */,
-				23653ACF1E49912F00529652 /* SpiritualityViewController.swift */,
 				236CF9091E32BD19005DD95A /* Assets.xcassets */,
-				236CF90B1E32BD19005DD95A /* LaunchScreen.storyboard */,
-				237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */,
 				236CF90E1E32BD19005DD95A /* Info.plist */,
 			);
 			path = ACEios3;
@@ -381,15 +418,14 @@
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
 				23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */,
 				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
+				232449961E6F423A00B199C2 /* communityPhotos in Resources */,
 				237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */,
 				23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */,
 				2395173E1E5173D8003604AE /* ace_app_holding_hands.JPG in Resources */,
-				231FA1F31E6F14CE0010D78F /* biloxi.jpg in Resources */,
 				23E018C61E4AECBF00119327 /* bluePattern.png in Resources */,
 				231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */,
 				23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */,
 				237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */,
-				231FA1F41E6F14CE0010D78F /* batonrouge.jpg in Resources */,
 				231D77DD1E4F9C26001DC24E /* PolarisCondensed-Medium.otf in Resources */,
 				239517401E517926003604AE /* ace_app_community.JPG in Resources */,
 				23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */,

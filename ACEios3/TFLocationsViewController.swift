@@ -27,7 +27,7 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
 
     let diocese = ["Archdiocese of Atlanta", "Diocese of Austin", "Diocese of Baton Rouge", "Diocese of Biloxi", "Diocese of Brownsville", "Archdiocese of Chicago", "Diocese of Corpus Cristi", "Diocese of Dallas", "Archdiocese of Denver", "Diocese of Fort Worth", "Archdiocese of Indianapolis", "Diocese of St. Augustine", "Archdiocese of Los Angeles", "Archdiocese of Los Angeles", "Diocese of Memphis", "Diocese of Brownsville", "Archdiocese of Mobile", "Archdiocese of New Orleans", "Archdiocese of New York", "Diocese of Oakland", "Archdiocese of Oklahoma City", "Diocese of Peoria", "Diocese of Phoenix", "Diocese of Richmond", "Diocese of Sacramento", "Archdiocese of San Antonio", "Diocese of San Jose", "Diocese of Orange", "Diocese of St. Petersburg", "Diocese of St. Petersburg", "Diocese of Tucson", "Diocese of Tulsa", "Archdiocese of Washington D.C."]
     
-   let images = ["biloxi.jpg", "batonrouge.jpg"]
+   let images = ["atlanta.jpg", "austin.jpg", "batonrouge.jpg", "biloxi.jpg", "brownsville.jpg", "chicago.jpg", "corpuschristi.jpg", "dallas.jpg", "denver.jpg", "fortworth.jpg", "indianapolis.jpg", "jacksonville.jpg", "losangeleseast.jpg", "losangelessouthcentral.jpg", "memphis.jpg", "mission.jpg", "mobile.jpg", "neworleans.jpg", "newyork.jpg", "oakland.jpg", "oklahomacity.jpg", "peoria.jpg", "phoenix.jpg", "richmond.jpg", "sacramento.jpg", "sanantonio.jpg", "sanjose.jpg", "santaana.jpg", "stpetersburg.jpg", "tampa.jpg", "tucson.jpg", "tulsa.jpg", "washingtondc.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +73,9 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
             cell.locationImageView.contentMode = UIViewContentMode.scaleAspectFit;
         }
  */
+        let imageName =  "communityPhotos/" + self.images[indexPath.row]
         cell.locationImageView.contentMode = UIViewContentMode.scaleAspectFit
-        cell.locationImageView.image = UIImage(named: "biloxi.jpg")
+        cell.locationImageView.image = UIImage(named: imageName)
         
         cell.seeOnlineButton.tag = indexPath.row
         

@@ -491,7 +491,7 @@ Notre Dame, IN 46556</string>
                                 <rect key="frame" x="16" y="364" width="343" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
-                                        <rect key="frame" x="0.0" y="45" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="343" height="40"/>
                                         <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -705,7 +705,7 @@ Notre Dame, IN 46556</string>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ace_app_community.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="gJQ-JQ-3Rd">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJQ-JQ-3Rd">
                                                             <rect key="frame" x="8" y="8" width="129" height="141"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="141" id="YAG-1D-PJl"/>
@@ -1079,7 +1079,6 @@ Notre Dame, IN 46556</string>
         </scene>
     </scenes>
     <resources>
-        <image name="ace_app_community.JPG" width="4256" height="2832"/>
         <image name="ace_logo_color_PNG.png" width="405" height="405"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>

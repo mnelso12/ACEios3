@@ -19,6 +19,7 @@ class LocationTableViewCell: UITableViewCell {
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var seeOnlineButton: UIButton!
     @IBOutlet weak var expandedView: UIView!
+    @IBOutlet weak var realImageView: UIImageView!
 
 
     
