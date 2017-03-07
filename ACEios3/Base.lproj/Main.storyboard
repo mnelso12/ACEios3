@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRn-gN-o2T" id="nCQ-HF-735">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-1T-jkd">
@@ -209,7 +209,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lww-ng-Cay">
-                                <rect key="frame" x="16" y="72" width="343" height="55"/>
+                                <rect key="frame" x="16" y="-17" width="343" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="7PV-bT-7lj"/>
                                 </constraints>
@@ -235,7 +235,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lww-ng-Cay" firstAttribute="top" secondItem="3vN-TL-qTT" secondAttribute="bottom" constant="8" symbolic="YES" id="1yV-sB-NZl"/>
+                            <constraint firstItem="lww-ng-Cay" firstAttribute="top" secondItem="3vN-TL-qTT" secondAttribute="bottom" constant="-37" id="1yV-sB-NZl"/>
                             <constraint firstItem="lww-ng-Cay" firstAttribute="leading" secondItem="8zK-Ss-b4l" secondAttribute="leadingMargin" id="72C-FT-LYN"/>
                             <constraint firstItem="h8W-Ae-YmL" firstAttribute="top" secondItem="DOI-Kz-LzC" secondAttribute="bottom" constant="8" symbolic="YES" id="CVI-qw-e4J"/>
                             <constraint firstItem="lww-ng-Cay" firstAttribute="trailing" secondItem="8zK-Ss-b4l" secondAttribute="trailingMargin" id="FJ8-a2-FZ1"/>
@@ -250,6 +250,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g20-mf-Dd7"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sj-zZ-Ido" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -468,7 +469,7 @@ Notre Dame, IN 46556</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-Wh-oLK">
-                                <rect key="frame" x="16" y="66" width="343" height="237"/>
+                                <rect key="frame" x="16" y="73" width="343" height="230"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Map"/>
                                 <connections>
@@ -491,7 +492,7 @@ Notre Dame, IN 46556</string>
                                 <rect key="frame" x="16" y="364" width="343" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
-                                        <rect key="frame" x="0.0" y="50.5" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="45" width="343" height="51"/>
                                         <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -532,8 +533,8 @@ Notre Dame, IN 46556</string>
                             <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="cpm-GV-icr"/>
                             <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="8" symbolic="YES" id="ezc-r5-vfj"/>
                             <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="lbb-KV-G3V" secondAttribute="bottom" constant="8" symbolic="YES" id="gxA-m8-Wqn"/>
-                            <constraint firstItem="PrV-7o-vKe" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" constant="-45" id="h9l-LL-5pT"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="top" secondItem="PrV-7o-vKe" secondAttribute="bottom" constant="1" id="rtz-vm-JXT"/>
+                            <constraint firstItem="PrV-7o-vKe" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" constant="-37" id="h9l-LL-5pT"/>
+                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="top" secondItem="PrV-7o-vKe" secondAttribute="bottom" constant="8" id="rtz-vm-JXT"/>
                             <constraint firstItem="DYr-9H-17h" firstAttribute="centerY" secondItem="i4d-ye-dXY" secondAttribute="centerY" id="sZw-uK-97e"/>
                             <constraint firstItem="DYr-9H-17h" firstAttribute="trailing" secondItem="lbb-KV-G3V" secondAttribute="trailing" id="ths-gQ-dUn"/>
                             <constraint firstItem="DYr-9H-17h" firstAttribute="top" secondItem="0nJ-Wh-oLK" secondAttribute="bottom" constant="8" symbolic="YES" id="vWf-si-lnk"/>
@@ -561,14 +562,14 @@ Notre Dame, IN 46556</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-3j-pZP">
-                                <rect key="frame" x="0.0" y="56" width="375" height="562"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="508"/>
                                 <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="applyChecklistCell" rowHeight="200" id="jR4-Hi-9Me" customClass="ApplicationTableViewCell" customModule="ACEios3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jR4-Hi-9Me" id="CzW-aK-I9K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-cI-YBa">
@@ -615,26 +616,36 @@ Notre Dame, IN 46556</string>
                                     <segment title="TF"/>
                                     <segment title="RLP"/>
                                     <segment title="ENL"/>
-                                    <segment title="?"/>
+                                    <segment title="PIE"/>
                                 </segments>
                                 <color key="tintColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="changedSwitchView:" destination="EL5-MA-oLR" eventType="valueChanged" id="qva-BO-2NS"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-Kb-EOK">
+                                <rect key="frame" x="16" y="64" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="20"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Gci-3j-pZP" firstAttribute="leading" secondItem="dKJ-XF-5bA" secondAttribute="leading" id="0Sq-Lt-O0g"/>
+                            <constraint firstItem="Gci-3j-pZP" firstAttribute="top" secondItem="jaY-Kb-EOK" secondAttribute="bottom" constant="16" id="4k7-r2-zXZ"/>
+                            <constraint firstItem="jaY-Kb-EOK" firstAttribute="top" secondItem="q6k-tR-hYB" secondAttribute="bottom" constant="16" id="8mT-lP-1Pu"/>
                             <constraint firstItem="q6k-tR-hYB" firstAttribute="leading" secondItem="dKJ-XF-5bA" secondAttribute="leadingMargin" id="DnK-5I-IlU"/>
                             <constraint firstItem="q6k-tR-hYB" firstAttribute="top" secondItem="lBs-Eq-lGb" secondAttribute="bottom" id="I2c-c4-z3Z"/>
                             <constraint firstAttribute="trailing" secondItem="Gci-3j-pZP" secondAttribute="trailing" id="REH-9O-6B6"/>
-                            <constraint firstItem="Gci-3j-pZP" firstAttribute="top" secondItem="q6k-tR-hYB" secondAttribute="bottom" constant="8" symbolic="YES" id="V3w-1G-IJ6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jaY-Kb-EOK" secondAttribute="leading" id="Ygq-Po-nUS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jaY-Kb-EOK" secondAttribute="trailing" id="eif-xN-CZ0"/>
                             <constraint firstItem="q6k-tR-hYB" firstAttribute="centerX" secondItem="Gci-3j-pZP" secondAttribute="centerX" id="n4q-O3-ll8"/>
                             <constraint firstItem="Gci-3j-pZP" firstAttribute="bottom" secondItem="Bnb-CW-n2U" secondAttribute="top" id="nPi-uv-dg4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="programTitleLabel" destination="jaY-Kb-EOK" id="Oyr-8L-e6m"/>
                         <outlet property="segmentedControl" destination="q6k-tR-hYB" id="XUB-ly-BBr"/>
                         <outlet property="tableView" destination="Gci-3j-pZP" id="5b7-Sy-Hqh"/>
                     </connections>
@@ -663,7 +674,7 @@ Notre Dame, IN 46556</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ASY-ly-DZj" id="zCX-zt-FUs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCl-qJ-SO1">
@@ -862,7 +873,7 @@ Notre Dame, IN 46556</string>
                                     <constraint firstAttribute="height" constant="45" id="GJg-pL-NKP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="Sign Up For The Newsletter">
+                                <state key="normal" title="Sign Up for the Newsletter">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -936,11 +947,11 @@ Notre Dame, IN 46556</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTk-RZ-mAk" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                <rect key="frame" x="16" y="83" width="343" height="421"/>
+                                <rect key="frame" x="16" y="46" width="343" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirituality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-qh-XVI">
-                                <rect key="frame" x="16" y="20" width="343" height="55"/>
+                                <rect key="frame" x="16" y="-17" width="343" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="7cb-cz-eKL"/>
                                 </constraints>
@@ -962,7 +973,7 @@ Notre Dame, IN 46556</string>
                             <constraint firstItem="xTk-RZ-mAk" firstAttribute="leading" secondItem="2d6-4x-bj6" secondAttribute="leading" id="W2u-Nl-uEl"/>
                             <constraint firstItem="Nzh-qh-XVI" firstAttribute="leading" secondItem="DsQ-5H-tDK" secondAttribute="leadingMargin" id="XJx-yD-Q6h"/>
                             <constraint firstItem="Im3-Ts-1oE" firstAttribute="top" secondItem="2d6-4x-bj6" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4m-c4-VT9"/>
-                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="top" secondItem="zJq-tg-CAF" secondAttribute="bottom" id="bWO-tE-pVH"/>
+                            <constraint firstItem="Nzh-qh-XVI" firstAttribute="top" secondItem="zJq-tg-CAF" secondAttribute="bottom" constant="-37" id="bWO-tE-pVH"/>
                             <constraint firstItem="xTk-RZ-mAk" firstAttribute="trailing" secondItem="2d6-4x-bj6" secondAttribute="trailing" id="oZ3-kB-qTZ"/>
                             <constraint firstItem="2d6-4x-bj6" firstAttribute="leading" secondItem="Im3-Ts-1oE" secondAttribute="leading" id="xs4-Vt-jTv"/>
                         </constraints>

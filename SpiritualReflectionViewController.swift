@@ -13,7 +13,6 @@ class SpiritualReflectionViewController: UIViewController {
     var weeklyRef:String! = ""
     //var weeklyRefHTML:String! = ""
     //@IBOutlet weak var webView: UIWebView!
-    
     //@IBOutlet weak var textView: UITextView!
     
     //var textView: UITextView!

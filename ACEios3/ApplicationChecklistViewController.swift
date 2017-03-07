@@ -12,10 +12,13 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var programTitleLabel: UILabel!
     
     //var countriesinEurope = ["France","Spain","Germany"]
     //var countriesinAsia = ["Japan","China","India"]
     //var countriesInSouthAmerica = ["Argentia","Brasil","Chile"]
+    
+    let programs = ["Teaching Fellows", "Remick Leadership Program", "English as a New Language", "Program for Inclusive Education"]
     
     // TF - Teaching Fellows
     var tfTitles = ["1. Application Type and Term", "2. Personal Information", "3. Test Scores", "4. Academic History", "5. Additional Information", "6. Reference Letters", "7. Downloadable Forms", "8. Uploads", "9. Signature", "10. Review", ""]
@@ -86,6 +89,7 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
 
     @IBAction func changedSwitchView(_ sender: Any) {
         print(self.segmentedControl.selectedSegmentIndex)
+        self.programTitleLabel.text = self.programs[self.segmentedControl.selectedSegmentIndex]
         self.tableView.reloadData()
     }
     
