@@ -47,7 +47,9 @@ class LocationTableViewCell: UITableViewCell {
     }
     
     @IBAction func pressedSeeOnline(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://ace.nd.edu/teach/" + urlPath[self.seeOnlineButton.tag])! as URL)
+        if let url = URL(string: "https://ace.nd.edu/teach/" + urlPath[self.seeOnlineButton.tag]) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
    
 }

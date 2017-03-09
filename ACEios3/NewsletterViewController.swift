@@ -140,7 +140,9 @@ class NewsletterViewController: UIViewController {
     }
     
     @IBAction func signUpForNewsletter(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "http://ace.us2.list-manage.com/subscribe?u=5999fc41ff424155ced84575a&id=f881afc9ef")! as URL)
+        if let url = URL(string: "http://ace.us2.list-manage.com/subscribe?u=5999fc41ff424155ced84575a&id=f881afc9ef") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
 
     /*

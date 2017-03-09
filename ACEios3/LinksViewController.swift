@@ -37,7 +37,7 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         let greenColor = UIColor(red: 0.0, green: 0.52, blue: 0.247, alpha: 1.0)
-        let blueColor = UIColor(red: 0.0, green: 0.411, blue: 0.667, alpha: 1.0)
+        //let blueColor = UIColor(red: 0.0, green: 0.411, blue: 0.667, alpha: 1.0)
         
         if (indexPath.row == 0) {
             cell.imageView.setFAIconWithName(icon: .FAFacebook, textColor: greenColor)
@@ -114,11 +114,15 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     @IBAction func nominateLeaderPressed(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://nd.qualtrics.com/jfe/form/SV_5tCq3aDJR0jfzmt")! as URL)
+        if let url = URL(string: "https://nd.qualtrics.com/jfe/form/SV_5tCq3aDJR0jfzmt") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
 
     @IBAction func pressedJobBoard(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://ace.nd.edu/job-board")! as URL)
+        if let url = URL(string: "https://ace.nd.edu/job-board") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     /*
