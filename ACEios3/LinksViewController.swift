@@ -26,7 +26,7 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     // make a cell for each cell index path
@@ -60,6 +60,9 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
         else if (indexPath.row == 6) {
             cell.imageView.setFAIconWithName(icon: .FAYoutubePlay, textColor: greenColor)
         }
+        else if (indexPath.row == 7) {
+            cell.imageView.setFAIconWithName(icon: .FAEnvelope, textColor: greenColor)
+        }
         
         return cell
     }
@@ -69,6 +72,40 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        
+        var url = " "
+        if (indexPath.row == 0) { // facebook
+            url = "https://www.facebook.com/AllianceforCatholicEducation"
+        }
+        else if (indexPath.row == 1) { // twitter
+            url = "https://twitter.com/aceatnd"
+        }
+        else if (indexPath.row == 2) { // linkedin
+            url = "https://www.linkedin.com/groups/3774382/profile"
+        }
+        else if (indexPath.row == 3) { // pinterest
+            url = "https://www.pinterest.com/aceatnd/"
+        }
+        else if (indexPath.row == 4) { // instagram
+            url = "https://www.instagram.com/aceatnd/"
+        }
+        else if (indexPath.row == 5) { // vimeo
+            url = "https://vimeo.com/aceatnd/"
+        }
+        else if (indexPath.row == 6) { // youtube
+            url = "https://www.youtube.com/user/ACEatND"
+        }
+        else if (indexPath.row == 7) { // email
+            let email = "ace.1@nd.edu"
+            if let url = URL(string: "mailto:\(email)") {
+                UIApplication.shared.open(url)
+            }
+            return
+        }
+        
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
 
     override func didReceiveMemoryWarning() {
