@@ -33,7 +33,7 @@ class LocationTableViewCell: UITableViewCell {
         self.locationImageView.clipsToBounds = true
         
         self.seeOnlineButton.setFAIcon(icon: .FAExternalLinkSquare, iconSize: 20, forState: .normal)
-        self.seeOnlineButton.isHidden = true
+        //self.seeOnlineButton.isHidden = true
         //self.expandedView.isHidden = true
     }
 

@@ -9,6 +9,7 @@
 import UIKit
 import Mapbox
 import MapboxGeocoder
+import MapboxStatic
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
 
@@ -22,12 +23,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         mapView.delegate = self
         
+        
         let point = MGLPointAnnotation()
         point.coordinate = CLLocationCoordinate2D(latitude: 45.52258, longitude: -122.6732)
         point.title = "Voodoo Doughnut"
         point.subtitle = "22 SW 3rd Avenue Portland Oregon, U.S.A."
         mapView.addAnnotation(point)
-    
+        
     }
 
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {

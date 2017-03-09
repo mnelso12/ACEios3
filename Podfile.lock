@@ -35,6 +35,7 @@ PODS:
     - SDWebImage (~> 3.7)
   - Kingfisher (3.5.0)
   - MapboxGeocoder.swift (0.6.0)
+  - MapboxStatic.swift (0.7.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - ImageSlideshow/Kingfisher
   - ImageSlideshow/SDWebImage
   - MapboxGeocoder.swift (~> 0.6)
+  - MapboxStatic.swift (~> 0.7)
   - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
@@ -58,9 +60,10 @@ SPEC CHECKSUMS:
   ImageSlideshow: 99addbef1b718272598a07036270e819d03abc17
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   MapboxGeocoder.swift: dd6783c5262b4ebb1cf5f2662b56cea94a90f67d
+  MapboxStatic.swift: 4c5c7553ba47146de42a5f19928996797edfebc0
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: e1f401c6721a8abbac01531e3273d5c1017c6bf2
+PODFILE CHECKSUM: 5f2926a4a413e125f757a514f961be26de206954
 
 COCOAPODS: 1.2.0

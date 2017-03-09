@@ -4,6 +4,7 @@ use_frameworks!
 target 'ACEios3' do
 	pod 'Font-Awesome-Swift', '~> 1.6.1'
 	pod 'Toast-Swift', '~> 2.0.0'
+	pod 'MapboxStatic.swift', '~> 0.7'
 	pod 'MapboxGeocoder.swift', '~> 0.6'
     pod "ImageSlideshow"
     pod "ImageSlideshow/AFURL"

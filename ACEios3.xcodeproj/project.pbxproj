@@ -11,6 +11,8 @@
 		231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */; };
 		231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */; };
 		231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */; };
+		231DD9311E70D6D9009F33A4 /* ContactUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DD9301E70D6D9009F33A4 /* ContactUsTableViewController.swift */; };
+		231DD9331E70D706009F33A4 /* ContactUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DD9321E70D706009F33A4 /* ContactUsTableViewCell.swift */; };
 		232449961E6F423A00B199C2 /* communityPhotos in Resources */ = {isa = PBXBuildFile; fileRef = 232449951E6F423A00B199C2 /* communityPhotos */; };
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
 		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
@@ -85,6 +87,8 @@
 		231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GalaxiePolaris-Medium.otf"; path = "../../../../Downloads/GalaxiePolaris-Medium.otf"; sourceTree = "<group>"; };
 		231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GaramondPremrPro.otf; path = ../../../../Downloads/GaramondPremrPro.otf; sourceTree = "<group>"; };
 		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
+		231DD9301E70D6D9009F33A4 /* ContactUsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsTableViewController.swift; sourceTree = "<group>"; };
+		231DD9321E70D706009F33A4 /* ContactUsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsTableViewCell.swift; sourceTree = "<group>"; };
 		232449951E6F423A00B199C2 /* communityPhotos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = communityPhotos; sourceTree = "<group>"; };
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
 		234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				23653AD11E49948600529652 /* ApplyViewController.swift */,
+				231DD9301E70D6D9009F33A4 /* ContactUsTableViewController.swift */,
 				2369C7081E52BF0000755BD3 /* ContactUsViewController.swift */,
 				236A286C1E553ABB00201F10 /* SpiritualReflectionViewController.swift */,
 				23F698511E6CC67B00C42EAA /* MapViewController.swift */,
@@ -179,6 +184,7 @@
 		232449981E6F456400B199C2 /* CustomTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				231DD9321E70D706009F33A4 /* ContactUsTableViewCell.swift */,
 				23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */,
 				23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */,
 				239DABD11E5182D40018D556 /* LocationTableViewCell.swift */,
@@ -518,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231DD9331E70D706009F33A4 /* ContactUsTableViewCell.swift in Sources */,
 				23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */,
 				234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */,
 				232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */,
@@ -526,6 +533,7 @@
 				235FA3FD1E4FC0D6000891BB /* LinksViewController.swift in Sources */,
 				239DABD21E5182D40018D556 /* LocationTableViewCell.swift in Sources */,
 				2369C7091E52BF0000755BD3 /* ContactUsViewController.swift in Sources */,
+				231DD9311E70D6D9009F33A4 /* ContactUsTableViewController.swift in Sources */,
 				23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */,
 				23653AD21E49948600529652 /* ApplyViewController.swift in Sources */,
 				239517421E517F50003604AE /* TFLocationsViewController.swift in Sources */,

@@ -10,14 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="FontAwesome.ttf">
-            <string>FontAwesome</string>
-        </array>
         <array key="GalaxiePolaris-Medium.otf">
             <string>GalaxiePolaris-Medium</string>
         </array>
         <array key="GaramondPremrPro.otf">
             <string>GaramondPremrPro</string>
+        </array>
+        <array key="fontawesome-webfont.ttf">
+            <string>FontAwesome</string>
         </array>
     </customFonts>
     <scenes>
@@ -205,7 +205,7 @@
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cJR-Np-agB" kind="show" identifier="" id="Ibk-fy-LKx"/>
+                                    <segue destination="PrS-ge-q8t" kind="show" id="xEp-mH-hV0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lww-ng-Cay">
@@ -276,157 +276,95 @@
             </objects>
             <point key="canvasLocation" x="3909.5999999999999" y="1715.8920539730136"/>
         </scene>
-        <!--Contact Us View Controller-->
-        <scene sceneID="K6o-hw-UPk">
+        <!--Contact Us Table View Controller-->
+        <scene sceneID="cPB-pU-ys8">
             <objects>
-                <viewController id="cJR-Np-agB" customClass="ContactUsViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PrS-ge-q8t" customClass="ContactUsTableViewController" customModule="ACEios3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xVJ-eG-DGa"/>
-                        <viewControllerLayoutGuide type="bottom" id="NP6-Ew-cdO"/>
+                        <viewControllerLayoutGuide type="top" id="LSg-LL-FIO"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0p-D2-ZYB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Qr-hr-2X1">
+                    <view key="view" contentMode="scaleToFill" id="nIG-tF-M9f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFE-Q3-PdK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4q-vb-dJw">
-                                        <rect key="frame" x="20" y="-64" width="343" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
-                                        <color key="textColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="1" height="-1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We love hearing from you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-FO-YPC">
-                                        <rect key="frame" x="20" y="-7" width="343" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-7J-R2l">
-                                        <rect key="frame" x="196" y="82" width="167" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                        <state key="normal" title="574-631-7052">
-                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact Us!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnE-Kl-Eir">
+                                <rect key="frame" x="31" y="20" width="140" height="30"/>
+                                <fontDescription key="fontDescription" name="GaramondPremrPro" family="Garamond Premier Pro" pointSize="30"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nvn-e9-kQI">
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactUsCell" rowHeight="55" id="poY-go-1gz" customClass="ContactUsTableViewCell" customModule="ACEios3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="poY-go-1gz" id="mk8-qg-6g9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-TC-CRD">
+                                                    <rect key="frame" x="17" y="0.0" width="121" height="49"/>
+                                                    <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                                    <color key="textColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiQ-fy-Jj0">
+                                                    <rect key="frame" x="146" y="10" width="209" height="23"/>
+                                                    <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
+                                                    <color key="textColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1HG-TC-CRD" firstAttribute="centerY" secondItem="mk8-qg-6g9" secondAttribute="centerY" id="8dQ-07-kG1"/>
+                                                <constraint firstItem="1HG-TC-CRD" firstAttribute="leading" secondItem="mk8-qg-6g9" secondAttribute="leadingMargin" constant="12" id="IPy-DP-j1N"/>
+                                                <constraint firstItem="BiQ-fy-Jj0" firstAttribute="leading" secondItem="1HG-TC-CRD" secondAttribute="trailing" id="OQa-ez-ImN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BiQ-fy-Jj0" secondAttribute="trailing" constant="12" id="pQe-m5-XQN"/>
+                                                <constraint firstItem="BiQ-fy-Jj0" firstAttribute="centerY" secondItem="1HG-TC-CRD" secondAttribute="centerY" id="t9i-D0-vTt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <action selector="phonePressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="KTi-XX-IL0"/>
+                                            <outlet property="detailLabel" destination="BiQ-fy-Jj0" id="gER-4A-tFA"/>
+                                            <outlet property="label" destination="1HG-TC-CRD" id="tkZ-9S-q1v"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-VT-asf">
-                                        <rect key="frame" x="196" y="134" width="167" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                        <state key="normal" title="574-631-7939">
-                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-dU-GSa">
-                                        <rect key="frame" x="20" y="79" width="168" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fax:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-aA-4Mv">
-                                        <rect key="frame" x="20" y="131" width="168" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mailing Address:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frm-Ka-795">
-                                        <rect key="frame" x="20" y="183" width="168" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-k9-XWo">
-                                        <rect key="frame" x="20" y="235" width="343" height="91"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Alliance for Catholic Education
-107 Carole Sandner Hall
-Notre Dame, IN 46556</string>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Inquiries:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcy-WW-JmJ">
-                                        <rect key="frame" x="20" y="334" width="168" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technology Support:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca3-yJ-spJ">
-                                        <rect key="frame" x="20" y="386" width="168" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Media Inquiries:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuE-7r-2xY">
-                                        <rect key="frame" x="20" y="438" width="168" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-PL-4tE">
-                                        <rect key="frame" x="196" y="337" width="167" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                        <state key="normal" title="ace.1@nd.edu">
-                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="generalPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="P3J-Yu-KcP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-5b-ZDL">
-                                        <rect key="frame" x="196" y="389" width="167" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                        <state key="normal" title="twill1@nd.edu">
-                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="techPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="Czb-EU-ldT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-vb-U2Q">
-                                        <rect key="frame" x="196" y="441" width="167" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                        <state key="normal" title="thelm1@nd.edu">
-                                            <color key="titleColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="mediaPressed:" destination="cJR-Np-agB" eventType="touchUpInside" id="ygi-kQ-gbu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </scrollView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We love hearing from you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP0-gS-zZf">
+                                <rect key="frame" x="89" y="58" width="196.5" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="dwV-Bh-T5O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rP0-gS-zZf" firstAttribute="centerX" secondItem="nIG-tF-M9f" secondAttribute="centerX" id="2kh-36-0eF"/>
+                            <constraint firstItem="rP0-gS-zZf" firstAttribute="top" secondItem="TnE-Kl-Eir" secondAttribute="bottom" constant="8" symbolic="YES" id="8K5-uf-aVq"/>
+                            <constraint firstItem="rP0-gS-zZf" firstAttribute="centerX" secondItem="Nvn-e9-kQI" secondAttribute="centerX" id="Dpl-69-PKU"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvn-e9-kQI" secondAttribute="trailing" id="E2k-dz-hKr"/>
+                            <constraint firstItem="Nvn-e9-kQI" firstAttribute="top" secondItem="rP0-gS-zZf" secondAttribute="bottom" constant="8" symbolic="YES" id="Eoz-Ns-sUE"/>
+                            <constraint firstItem="Nvn-e9-kQI" firstAttribute="leading" secondItem="nIG-tF-M9f" secondAttribute="leading" id="FjQ-jz-urp"/>
+                            <constraint firstItem="Nvn-e9-kQI" firstAttribute="bottom" secondItem="N0p-D2-ZYB" secondAttribute="top" id="Ibq-Kv-bde"/>
+                            <constraint firstItem="TnE-Kl-Eir" firstAttribute="centerX" secondItem="nIG-tF-M9f" secondAttribute="centerX" id="lRv-8K-FCj"/>
+                            <constraint firstItem="TnE-Kl-Eir" firstAttribute="top" secondItem="LSg-LL-FIO" secondAttribute="bottom" id="prU-gJ-YAg"/>
+                        </constraints>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="faxButton" destination="wNq-VT-asf" id="XN1-PM-DVK"/>
-                        <outlet property="generalInquiriesButton" destination="jH0-PL-4tE" id="Yyv-xO-L7i"/>
-                        <outlet property="mediaInquiriesButton" destination="dg0-vb-U2Q" id="mSj-IB-0yq"/>
-                        <outlet property="phoneButton" destination="UN9-7J-R2l" id="QBX-hp-7fj"/>
-                        <outlet property="techSupportButton" destination="aeF-5b-ZDL" id="CeM-ra-RbG"/>
+                        <outlet property="tableView" destination="Nvn-e9-kQI" id="Urg-vC-ZFd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8f2-wU-qEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6if-08-MRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4805.6000000000004" y="1680.8095952023989"/>
+            <point key="canvasLocation" x="5517.6000000000004" y="1667.3163418290856"/>
         </scene>
         <!--Apply View Controller-->
         <scene sceneID="pbQ-dg-cI4">
@@ -454,28 +392,6 @@ Notre Dame, IN 46556</string>
                                     <segue destination="EL5-MA-oLR" kind="show" id="n3B-qN-tVw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01d-iK-u4Z">
-                                <rect key="frame" x="16" y="565" width="343" height="45"/>
-                                <color key="backgroundColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="9Tc-Yl-glc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="Serve with ACE">
-                                    <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="applyNowPressed:" destination="ltW-TS-er2" eventType="touchUpInside" id="4zh-Sa-hVb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-Wh-oLK">
-                                <rect key="frame" x="16" y="73" width="343" height="230"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Map"/>
-                                <connections>
-                                    <segue destination="RoT-fo-QLd" kind="show" id="Nn8-14-ilA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-9H-17h">
                                 <rect key="frame" x="16" y="311" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.022972120719999999" green="0.46646634619999999" blue="0.35637773659999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -492,7 +408,7 @@ Notre Dame, IN 46556</string>
                                 <rect key="frame" x="16" y="364" width="343" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teaching Fellows Application Deadline: January 24, 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-G6-oP8">
-                                        <rect key="frame" x="0.0" y="45" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="343" height="51"/>
                                         <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.08235294118" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -517,33 +433,53 @@ Notre Dame, IN 46556</string>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-Ok-riX">
+                                <rect key="frame" x="16" y="73" width="343" height="230"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01d-iK-u4Z">
+                                <rect key="frame" x="16" y="565" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9Tc-Yl-glc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
+                                <state key="normal" title="Serve with ACE">
+                                    <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="applyNowPressed:" destination="ltW-TS-er2" eventType="touchUpInside" id="4zh-Sa-hVb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="trailing" secondItem="DYr-9H-17h" secondAttribute="trailing" id="2nT-f2-riR"/>
+                            <constraint firstItem="5Ki-Ok-riX" firstAttribute="width" secondItem="DYr-9H-17h" secondAttribute="width" id="2Pr-wT-ue0"/>
                             <constraint firstItem="lbb-KV-G3V" firstAttribute="leading" secondItem="a4I-Ks-6jV" secondAttribute="leading" id="3z4-0L-bMA"/>
                             <constraint firstItem="a4I-Ks-6jV" firstAttribute="trailing" secondItem="01d-iK-u4Z" secondAttribute="trailing" id="4MU-1k-M4w"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="leading" secondItem="i4d-ye-dXY" secondAttribute="leadingMargin" id="9C1-D5-okL"/>
+                            <constraint firstItem="DYr-9H-17h" firstAttribute="top" secondItem="5Ki-Ok-riX" secondAttribute="bottom" constant="8" id="C7J-kz-jFH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DYr-9H-17h" secondAttribute="trailing" id="CZs-Uf-2hj"/>
+                            <constraint firstItem="5Ki-Ok-riX" firstAttribute="top" secondItem="PrV-7o-vKe" secondAttribute="bottom" constant="8" id="En8-E3-CW1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PrV-7o-vKe" secondAttribute="trailing" id="J9j-Jz-qMF"/>
                             <constraint firstItem="JTi-EJ-axK" firstAttribute="top" secondItem="01d-iK-u4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="Nx3-Ul-wXd"/>
                             <constraint firstItem="lbb-KV-G3V" firstAttribute="top" secondItem="DYr-9H-17h" secondAttribute="bottom" constant="8" symbolic="YES" id="UoF-7Q-0sF"/>
                             <constraint firstItem="DYr-9H-17h" firstAttribute="leading" secondItem="lbb-KV-G3V" secondAttribute="leading" id="YoA-m5-RuQ"/>
                             <constraint firstItem="lbb-KV-G3V" firstAttribute="trailing" secondItem="a4I-Ks-6jV" secondAttribute="trailing" id="b4e-By-pwJ"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="leading" secondItem="DYr-9H-17h" secondAttribute="leading" id="cZV-V1-ycY"/>
                             <constraint firstItem="a4I-Ks-6jV" firstAttribute="leading" secondItem="01d-iK-u4Z" secondAttribute="leading" id="cpm-GV-icr"/>
                             <constraint firstItem="01d-iK-u4Z" firstAttribute="top" secondItem="a4I-Ks-6jV" secondAttribute="bottom" constant="8" symbolic="YES" id="ezc-r5-vfj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Ki-Ok-riX" secondAttribute="trailing" id="g7x-yv-Q9T"/>
                             <constraint firstItem="a4I-Ks-6jV" firstAttribute="top" secondItem="lbb-KV-G3V" secondAttribute="bottom" constant="8" symbolic="YES" id="gxA-m8-Wqn"/>
                             <constraint firstItem="PrV-7o-vKe" firstAttribute="top" secondItem="YZ7-Rz-jKU" secondAttribute="bottom" constant="-37" id="h9l-LL-5pT"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="top" secondItem="PrV-7o-vKe" secondAttribute="bottom" constant="8" id="rtz-vm-JXT"/>
                             <constraint firstItem="DYr-9H-17h" firstAttribute="centerY" secondItem="i4d-ye-dXY" secondAttribute="centerY" id="sZw-uK-97e"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="5Ki-Ok-riX" secondAttribute="leading" id="tDY-hJ-ljv"/>
                             <constraint firstItem="DYr-9H-17h" firstAttribute="trailing" secondItem="lbb-KV-G3V" secondAttribute="trailing" id="ths-gQ-dUn"/>
-                            <constraint firstItem="DYr-9H-17h" firstAttribute="top" secondItem="0nJ-Wh-oLK" secondAttribute="bottom" constant="8" symbolic="YES" id="vWf-si-lnk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PrV-7o-vKe" secondAttribute="leading" id="x47-tp-qdo"/>
-                            <constraint firstItem="0nJ-Wh-oLK" firstAttribute="trailing" secondItem="i4d-ye-dXY" secondAttribute="trailingMargin" id="yxY-pa-I76"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Am9-9i-1YG"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapImageView" destination="5Ki-Ok-riX" id="BSs-qA-alk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEb-kq-Zan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

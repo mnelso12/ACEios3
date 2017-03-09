@@ -417,7 +417,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                             i+=1
                         }
                         
-                        let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro';}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1>" + (blogContent as String) + "</div>"
+                        let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro'; color: #000066;} h4 {font-family:'GalaxiePolaris-Medium'; color:gray; text-align: left;} iframe {width:100%;}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1>" + (blogContent as String) + "</div>"
                         
                         self.htmlString = self.parseBlogHTML(html:blogContentWithStyle) // gets rid of widgetkit tags
                         
@@ -595,7 +595,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         }
                         
                         
-                        let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro';} h4 {font-family:'GalaxiePolaris-Medium'; color:gray; text-align: left;} iframe {width:100%;}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1><h4>" + self.selectedBlogAuthor + "</h4>" + (blogContent as String) + "</div>"
+                        let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro'; color: #000066;} h4 {font-family:'GalaxiePolaris-Medium'; color:gray; text-align: left;} iframe {width:100%;}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1><h4>" + self.selectedBlogAuthor + "</h4>" + (blogContent as String) + "</div>"
                         
                         //self.htmlString = blogContentWithStyle
                         self.htmlString = self.parseBlogHTML(html:blogContentWithStyle) // gets rid of widgetkit tags
