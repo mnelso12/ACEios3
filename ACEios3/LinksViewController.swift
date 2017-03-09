@@ -8,12 +8,67 @@
 
 import UIKit
 
-class LinksViewController: UIViewController {
+class LinksViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let cellReuseIdentifier = "socialMediaCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        //self.collectionView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
+        
+    }
+    
+    // tell the collection view how many cells to make
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    // make a cell for each cell index path
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath as IndexPath) as! SocialMediaCollectionViewCell
+        
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        let greenColor = UIColor(red: 0.0, green: 0.52, blue: 0.247, alpha: 1.0)
+        let blueColor = UIColor(red: 0.0, green: 0.411, blue: 0.667, alpha: 1.0)
+        
+        if (indexPath.row == 0) {
+            cell.imageView.setFAIconWithName(icon: .FAFacebook, textColor: greenColor)
+        }
+        else if (indexPath.row == 1) {
+            cell.imageView.setFAIconWithName(icon: .FATwitter, textColor: greenColor)
+        }
+        else if (indexPath.row == 2) {
+            cell.imageView.setFAIconWithName(icon: .FALinkedin, textColor: greenColor)
+        }
+        else if (indexPath.row == 3) {
+            cell.imageView.setFAIconWithName(icon: .FAPinterest, textColor: greenColor)
+        }
+        else if (indexPath.row == 4) {
+            cell.imageView.setFAIconWithName(icon: .FAInstagram, textColor: greenColor)
+        }
+        else if (indexPath.row == 5) {
+            cell.imageView.setFAIconWithName(icon: .FAVimeo, textColor: greenColor)
+        }
+        else if (indexPath.row == 6) {
+            cell.imageView.setFAIconWithName(icon: .FAYoutubePlay, textColor: greenColor)
+        }
+        
+        return cell
+    }
+    
+    // MARK: - UICollectionViewDelegate protocol
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
     }
 
     override func didReceiveMemoryWarning() {

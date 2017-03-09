@@ -16,6 +16,7 @@
 		232449961E6F423A00B199C2 /* communityPhotos in Resources */ = {isa = PBXBuildFile; fileRef = 232449951E6F423A00B199C2 /* communityPhotos */; };
 		232C285E1E4443C900AA72A5 /* ApplicationChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */; };
 		234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */; };
+		234A38191E711C2D00DE6AC6 /* SocialMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234A38181E711C2D00DE6AC6 /* SocialMediaCollectionViewCell.swift */; };
 		23593BF71E56A3C3008B39CE /* basilica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23593BF61E56A3C3008B39CE /* basilica.jpg */; };
 		235FA3FD1E4FC0D6000891BB /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */; };
 		2360FF4C1E66BB9F0003E277 /* Pods_ACEios3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */; };
@@ -92,6 +93,7 @@
 		232449951E6F423A00B199C2 /* communityPhotos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = communityPhotos; sourceTree = "<group>"; };
 		232C285D1E4443C900AA72A5 /* ApplicationChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationChecklistViewController.swift; sourceTree = "<group>"; };
 		234356F01E4FCCF300C6F146 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
+		234A38181E711C2D00DE6AC6 /* SocialMediaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		23593BF61E56A3C3008B39CE /* basilica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basilica.jpg; path = ../../../../Downloads/basilica.jpg; sourceTree = "<group>"; };
 		235FA3FC1E4FC0D6000891BB /* LinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		2362209F1E65E10000E6236A /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../../Downloads/mapbox-ios-sdk-3.4.2-dynamic/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		236CF8F41E32BD19005DD95A = {
 			isa = PBXGroup;
 			children = (
+				234A38181E711C2D00DE6AC6 /* SocialMediaCollectionViewCell.swift */,
 				232449951E6F423A00B199C2 /* communityPhotos */,
 				23F6984C1E6CC52A00C42EAA /* Mapbox.framework */,
 				236CF8FF1E32BD19005DD95A /* ACEios3 */,
@@ -524,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234A38191E711C2D00DE6AC6 /* SocialMediaCollectionViewCell.swift in Sources */,
 				231DD9331E70D706009F33A4 /* ContactUsTableViewCell.swift in Sources */,
 				23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */,
 				234356F11E4FCCF300C6F146 /* NewsletterViewController.swift in Sources */,
