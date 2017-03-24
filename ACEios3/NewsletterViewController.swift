@@ -26,13 +26,15 @@ class NewsletterViewController: UIViewController {
             print("NO INTERNET")
             noInternetAlert()
         }
+        else {
+            // start loading indicator
+            self.view.makeToastActivity(.center)
+        }
 
         // Do any additional setup after loading the view.
         self.getMostRecentNewsletterID()
         self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
-        
-        // start loading indicator
-        self.view.makeToastActivity(.center)
+
     }
     
     // pressed "okay" in no internet alert view

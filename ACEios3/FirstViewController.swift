@@ -51,15 +51,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if (isInternetAvailable() == false) {
             print("NO INTERNET")
             noInternetAlert()
+            self.view.hideToastActivity()
+        }
+        else { // indicate loading of blog / news
+            // start loading indicator while blogs and news are loading
+            self.view.makeToastActivity(.center)
         }
         
         blogNews.isEnabled = false // enabled when blogs and news are loaded
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        // start loading indicator while blogs and news are loading
-        self.view.makeToastActivity(.center)
+
         
         // load blogs into table view
         getMostRecentBlogs()
@@ -80,6 +83,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print("waiting for internet...")
             if (isInternetAvailable() == true) {
                 print("GOT INTERNET!")
+                self.view.makeToastActivity(.center)
                 
                 // load blogs into table view
                 getMostRecentBlogs()
