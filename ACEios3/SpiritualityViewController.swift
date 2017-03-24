@@ -277,7 +277,9 @@ class SpiritualityViewController: UIViewController {
     }
     
     @IBAction func spiritualityResourcesPressed(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://ace.nd.edu/resources/spiritual-resources")! as URL)
+        if let url = URL(string: "https://ace.nd.edu/resources/spiritual-resources") {
+            UIApplication.shared.open(url, options: [:])
+        }
 
     }
 

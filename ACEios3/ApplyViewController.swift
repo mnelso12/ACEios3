@@ -13,6 +13,7 @@ class ApplyViewController: UIViewController {
 
     
     @IBOutlet weak var mapImageView: UIImageView!
+    @IBOutlet weak var deadlineScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,7 @@ import UIKit
 class LinksViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var imageViewBackground: UIView!
     
     let cellReuseIdentifier = "socialMediaCell"
     
@@ -19,6 +20,8 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
 
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        self.imageViewBackground.backgroundColor = UIColor(patternImage: UIImage(named: "gray-pattern.png")!)
         
         //self.collectionView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
         

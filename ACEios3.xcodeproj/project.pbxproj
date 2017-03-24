@@ -47,6 +47,7 @@
 		23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */; };
 		23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C31E4AEBA900119327 /* gray-pattern.png */; };
 		23E018C61E4AECBF00119327 /* bluePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C51E4AECBF00119327 /* bluePattern.png */; };
+		23EB6E2F1E84EAF700DF1E54 /* aceKids1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */; };
 		23F6984D1E6CC52A00C42EAA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6984C1E6CC52A00C42EAA /* Mapbox.framework */; };
 		23F6984E1E6CC52A00C42EAA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6984C1E6CC52A00C42EAA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23F698521E6CC67B00C42EAA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F698511E6CC67B00C42EAA /* MapViewController.swift */; };
@@ -130,6 +131,7 @@
 		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
 		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
+		23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = aceKids1.JPG; path = ../aceKids1.JPG; sourceTree = "<group>"; };
 		23F6984C1E6CC52A00C42EAA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		23F698511E6CC67B00C42EAA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		595D93A2218DBA7D46DBEA70 /* Pods_ACEios3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACEios3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +199,7 @@
 		232449991E6F45B100B199C2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */,
 				2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */,
 				237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */,
 				23593BF61E56A3C3008B39CE /* basilica.jpg */,
@@ -426,6 +429,7 @@
 				236CF90D1E32BD19005DD95A /* LaunchScreen.storyboard in Resources */,
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
 				23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */,
+				23EB6E2F1E84EAF700DF1E54 /* aceKids1.JPG in Resources */,
 				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
 				232449961E6F423A00B199C2 /* communityPhotos in Resources */,
 				237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */,
