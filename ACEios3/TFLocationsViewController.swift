@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +29,7 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
     
    let images = ["atlanta.jpg", "austin.jpg", "batonrouge.jpg", "biloxi.jpg", "brownsville.jpg", "chicago.jpg", "corpuschristi.jpg", "dallas.jpg", "denver.jpg", "fortworth.jpg", "indianapolis.jpg", "jacksonville.jpg", "losangeleseast.jpg", "losangelessouthcentral.jpg", "memphis.jpg", "mission.jpg", "mobile.jpg", "neworleans.jpg", "newyork.jpg", "oakland.jpg", "oklahomacity.jpg", "peoria.jpg", "phoenix.jpg", "richmond.jpg", "sacramento.jpg", "sanantonio.jpg", "sanjose.jpg", "santaana.jpg", "stpetersburg.jpg", "tampa.jpg", "tucson.jpg", "tulsa.jpg", "washingtondc.jpg"]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,9 +44,9 @@ class TFLocationsViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.backgroundView = tempImageView;
         
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
-        
     }
-
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

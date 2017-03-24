@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Font-Awesome-Swift-Font-Awesome-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,6 +59,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NYTPhotoViewer-NYTPhotoViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NYTPhotoViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ACEios3.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +87,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>35082E8BEC3EEDE147BC30714070496C</key>
+		<key>09E2674ECB6F853EEA89A2F7615302CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>6BDA64940E411E273CE2E3EB0E7C4993</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74285FD60CA7275F2F3B4F30AB462749</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83B5B60C676A8D31829A6AE91CE86A75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,6 +137,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B97720AEDDAEC6569BE907F8D81E7EB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BA453546C51032641C49CACBC22725EE</key>
 		<dict>
 			<key>primary</key>
@@ -122,7 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D92A8CBDD0113C6BD62112E4D63A3A40</key>
+		<key>D85C3D5A275CC39B0CEEC53C5FA8F233</key>
 		<dict>
 			<key>primary</key>
 			<true/>

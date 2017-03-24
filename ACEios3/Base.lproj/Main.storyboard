@@ -534,11 +534,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mapImageView" destination="5Ki-Ok-riX" id="BSs-qA-alk"/>
+                        <segue destination="RoT-fo-QLd" kind="show" identifier="toMapVC" id="8hn-Or-UxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEb-kq-Zan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="886.50674662668678"/>
+            <point key="canvasLocation" x="1868" y="867"/>
         </scene>
         <!--Application Checklist View Controller-->
         <scene sceneID="x1u-PA-ZNw">

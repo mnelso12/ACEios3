@@ -28,6 +28,7 @@ class ApplyViewController: UIViewController {
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         print("map tapped")
+        self.performSegue(withIdentifier: "toMapVC", sender: self)
     }
 
     func makeStaticMap() {

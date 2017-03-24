@@ -7,8 +7,10 @@
 //
 
 import UIKit
-import Font_Awesome_Swift
-import Toast_Swift
+import Font_Awesome_Swift // for icons
+import Toast_Swift // for activity view(s), aka the spinning loading symbol that pops up
+import Foundation // for network check
+import SystemConfiguration // for network check
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,7 +22,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var isBlog = true // whether or not table view is blog (vs. is news)
 
     // blog data arrays
-    var blogTitles = [String]() // array of blog titles that fill thel table view
+    var blogTitles = [String]() // array of blog titles that fill the table view
     var detailsArr = [String]() // array of detail labels (gray text below the title of the table view cell)
     var datesArr = [String]() // array of only the blog dates
     var blogIdArr = [String]() // this is used to ask jBackend for the blog content
@@ -44,8 +46,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
+        
+        // test for network connection
+        if (isInternetAvailable() == false) {
+            print("NO INTERNET")
+            noInternetAlert()
+        }
         
         blogNews.isEnabled = false // enabled when blogs and news are loaded
         
@@ -66,6 +72,22 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.backgroundView = tempImageView;
         self.tableView.tableFooterView = UIView() // this gets rid of the annoying cell separator lines that appear in the table view before the cells are populated with data
 
+    }
+    
+    // pressed "okay" in no internet alert view
+    func pressedOkay() {
+        while(true) {
+            print("waiting for internet...")
+            if (isInternetAvailable() == true) {
+                print("GOT INTERNET!")
+                
+                // load blogs into table view
+                getMostRecentBlogs()
+                getMostRecentNews()
+                
+                break
+            }
+        }
     }
     
     func setTabBarIcons() {
@@ -107,7 +129,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var dateArr = oldDate.characters.split(whereSeparator: { $0 == "-" })
             .map(String.init)
         
-        //let monArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Dececember"]
         let monArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         
         let monthNum = Int(dateArr[0])!
@@ -173,18 +194,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // parse the html stuff to get rid of tags and to find the img url source
     func parseBlogHTML(html: String) -> String {
         var returnStr = " "
-        //var isTag = false
         var isWidgetkit = false
-        //var tagCount = 0
         var indexInt = 0
-        //var startOfImgIndex = 0
-        //var startOfNBSPIndex = 0
-        //var imgUrl = ""
-        //var isImgUrl = false
-        //var finalImgUrl = ""
 
          for index in html.characters.indices {
-            if (html[index] == "[") { // could be start of [widgetkit id=...]
+            if (html[index] == "[") { // could be start of "[widgetkit id=...]"
                 let start = html.index(html.startIndex, offsetBy: indexInt+1)
                 let end = html.index(html.startIndex, offsetBy: indexInt+10)
                 let range = start..<end
@@ -197,78 +211,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             else if (isWidgetkit == false) { // just normal html
                 returnStr.append(html[index])
-                //startOfNBSPIndex = 0
             }
-
-            
-            /*
-            if (html[index] == "<") {
-                isTag = true
-                
-                let start = html.index(html.startIndex, offsetBy: indexInt+1)
-                let end = html.index(html.startIndex, offsetBy: indexInt+4)
-                let pTagEnd = html.index(html.startIndex, offsetBy: indexInt+2)
-                let range = start..<end
-                let pTagRange = start..<pTagEnd
-                if (html.substring(with: range) == "img") { // check if this is "img"
-                    isImgUrl = true
-                    startOfImgIndex = indexInt
-                }
-                else if (html.substring(with: pTagRange) == "p") { // check if this is "p"
-                    returnStr.append("\n")
-                }
-            }
-            else if (html[index] == "&") { // end of tag
-                let start = html.index(html.startIndex, offsetBy: indexInt+1)
-                let end = html.index(html.startIndex, offsetBy: indexInt+6)
-                let range = start..<end
-                if (html.substring(with: range) == "nbsp;") { // check if this is "&nbsp;"
-                    startOfNBSPIndex = indexInt
-                }
-            }
-            else if (html[index] == "[") { // could be start of [widgetkit id=...]
-                let start = html.index(html.startIndex, offsetBy: indexInt+1)
-                let end = html.index(html.startIndex, offsetBy: indexInt+10)
-                let range = start..<end
-                if (html.substring(with: range) == "widgetkit") { // check if this is "widgetkit"
-                    isWidgetkit = true
-                }
-            }
-            else if (html[index] == ">") { // end of tag
-                isTag = false
-                isImgUrl = false
-                tagCount += 1
-            }
-            else if ((html[index] == "]") && (isWidgetkit == true)) { // end of "[widgetkit id=...]"
-                isWidgetkit = false
-            }
-            else if ((isTag == false) && (isWidgetkit == false) && (indexInt > (startOfNBSPIndex + 6))) { // just normal text
-                returnStr.append(html[index])
-                startOfNBSPIndex = 0
-            }
-            else if (isImgUrl == true) { // part of img url string
-                if (indexInt > (startOfImgIndex + 9)) {
-                    imgUrl.append(html[index])
-                }
-            }
- */
-            
             indexInt += 1
          }
-    /*
-        for i in imgUrl.characters.indices {
-            if (imgUrl[i] == "\"") {
-                break
-            }
-            else {
-                finalImgUrl.append(imgUrl[i])
-            }
-        }
- */
-        
-        //print("total tags:", tagCount)
-        //print("img url:", finalImgUrl)
-        //self.selectedImgUrl = finalImgUrl
         return returnStr
     }
 
@@ -298,7 +243,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                         
                         // json content
-                        
                         let elements = json["items"] as! [AnyObject]
                         
                         for element in elements {
@@ -330,7 +274,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         self.tableView.reloadData() // update table view with blog data
                         self.newsIsReady = true
                         self.blogNews.isEnabled = true // now enable blog/news switch because theres content in both
-                        //self.activityView.removeFromSuperview() // now blog and news content are loaded, stop loading indicator
                         self.view.hideToastActivity()
                         
                     }catch {
@@ -368,12 +311,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                         
-                        //print("\n\n\nprinting the info of the news article selected\n")
-                        //print(json)
-                        
                         // title and author
                         self.selectedBlogTitle = json["name"] as! String?
-                        //self.selectedBlogAuthor = "madelyn"
                         
                         // blog content
                         var blogContent:String! = ""
@@ -421,12 +360,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         self.htmlString = self.parseBlogHTML(html:blogContentWithStyle) // gets rid of widgetkit tags
                         
-                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
-                        
-                        //self.selectedBlogContent = parsedHTML
-
-                        
-                    }catch {
+                    } catch {
                         print("Error with Json: \(error)")
                     }
                 }
@@ -511,8 +445,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         task.resume()
-        
-        
     }
     
     
@@ -544,7 +476,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         // title and author
                         self.selectedBlogTitle = json["name"] as! String?
-                        //self.selectedBlogAuthor = "madelyn"
                         
                         // blog content
                         var blogContent:String! = ""
@@ -570,15 +501,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                     }
                                     j += 1
                                 }
-                                
-                                //let data = val["data"] as! [Any]
-                                //print("AUTHOR:")
-                                //print(data)
-
                             }
-                            
-                            //print("element number %i", i)
-                            //print(element)
+
                             
                             if (i==7) {
                                 let val = element.value as! [String:Any]
@@ -597,14 +521,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         let blogContentWithStyle = "<style>img{max-width: 97%; height: auto; text-align: center; margin: 30px; box-shadow: 1px 1px 1px 0px #202020}body {font-family:'GalaxiePolaris-Medium'; padding: 10px;} #stuff{text-align:center;} h1 {font-family:'GaramondPremrPro'; color: #000066;} h4 {font-family:'GalaxiePolaris-Medium'; color:gray; text-align: left;} iframe {width:100%;}</style><h1><div id='stuff'>" + self.selectedBlogTitle + "</h1><h4>" + self.selectedBlogAuthor + "</h4>" + (blogContent as String) + "</div>"
                         
-                        //self.htmlString = blogContentWithStyle
                         self.htmlString = self.parseBlogHTML(html:blogContentWithStyle) // gets rid of widgetkit tags
                         
-                        //let parsedHTML = self.parseBlogHTML(html: blogContent)
-                        
-                        //self.selectedBlogContent = parsedHTML
-                        
-                    }catch {
+                    } catch {
                         print("Error with Json: \(error)")
                     }
                 }
@@ -630,6 +549,34 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.view.hideToastActivity()
     }
 
+    // network check
+    func isInternetAvailable() -> Bool
+    {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
+    
+    // no internet alert
+    func noInternetAlert() {
+        let alert = UIAlertController(title: "No Network Connection", message: "Please connect to the internet and try again.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { action in self.pressedOkay() }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

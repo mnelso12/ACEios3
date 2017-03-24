@@ -11,19 +11,10 @@ import UIKit
 class SpiritualReflectionViewController: UIViewController {
 
     var weeklyRef:String! = ""
-    //var weeklyRefHTML:String! = ""
-    //@IBOutlet weak var webView: UIWebView!
-    //@IBOutlet weak var textView: UITextView!
-    
-    //var textView: UITextView!
-    //var reflectionText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        //self.webView.loadHTMLString(self.weeklyRefHTML, baseURL: nil)
-        //self.webView.backgroundColor = UIColor(patternImage: UIImage(named:"gray-pattern.png")!)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
         
         //setBackgroundImage(imageNamed: "basilica.jpg")

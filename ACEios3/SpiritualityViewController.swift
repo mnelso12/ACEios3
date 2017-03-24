@@ -8,6 +8,9 @@
 
 import UIKit
 import ImageSlideshow
+import Foundation // for network check
+import SystemConfiguration // for network check
+
 
 class SpiritualityViewController: UIViewController {
 
@@ -29,7 +32,7 @@ class SpiritualityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //self.spiritualityImageView.layer.cornerRadius = 5
         //self.spiritualityImageView.clipsToBounds = true
         
@@ -217,7 +220,15 @@ class SpiritualityViewController: UIViewController {
     @IBAction func weeklySpiritualReflectionPressed(_ sender: Any) {
         self.view.makeToastActivity(.center)
         
-        getThisWeeksSpiritualReflectionID()
+        // test for network connection
+        if (isInternetAvailable() == false) {
+            print("NO INTERNET")
+            noInternetAlert()
+            self.view.hideToastActivity()
+        }
+        else { // only segue if there is internet
+            getThisWeeksSpiritualReflectionID()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -225,10 +236,39 @@ class SpiritualityViewController: UIViewController {
         
         let destinationVC = segue.destination as! SpiritualReflectionViewController
         destinationVC.weeklyRef = self.weeklyRef
-        //destinationVC.weeklyRefHTML = self.weeklyRefHTML
         
         self.view.hideToastActivity()
     }
+
+    // network check
+    func isInternetAvailable() -> Bool
+    {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
+    
+    // no internet alert
+    func noInternetAlert() {
+        let alert = UIAlertController(title: "No Network Connection", message: "Please connect to the internet and try again.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
     
     override func didReceiveMemoryWarning() {

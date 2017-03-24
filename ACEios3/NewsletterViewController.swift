@@ -8,16 +8,24 @@
 
 import UIKit
 import Toast_Swift
+import Foundation // for network check
+import SystemConfiguration // for network check
 
 class NewsletterViewController: UIViewController {
     
     let apikey = "3009947f4086c85e7b735f4b4222e514-us2"
-    let numNewsletterIDsLoaded = "1" // should be one as long as we only care about the first most recent newsletter
+    let numNewsletterIDsLoaded = "1" // should be 1 as long as we only care about the first most recent newsletter
 
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // test for network connection
+        if (isInternetAvailable() == false) {
+            print("NO INTERNET")
+            noInternetAlert()
+        }
 
         // Do any additional setup after loading the view.
         self.getMostRecentNewsletterID()
@@ -27,12 +35,25 @@ class NewsletterViewController: UIViewController {
         self.view.makeToastActivity(.center)
     }
     
+    // pressed "okay" in no internet alert view
+    func pressedOkay() {
+        while(true) {
+            print("waiting for internet...")
+            if (isInternetAvailable() == true) {
+                print("GOT INTERNET!")
+                self.getMostRecentNewsletterID()
+                self.view.makeToastActivity(.center) // keep the loading sign until the newsletter appears on the screen
+                break
+            }
+        }
+    }
+    
     func getMostRecentNewsletterID() {
         let urlString = "https://us2.api.mailchimp.com/3.0/campaigns?folder_id=4ca937c85c&sort_dir=DESC&count=" + self.numNewsletterIDsLoaded
         let url = URL(string: urlString)
         let param = "apikey " + self.apikey
         let request = NSMutableURLRequest(url: url!)
-        var id = "" // this weeks id, will be returned at end
+        var id = "" // this week's id, will be returned at end
         
         request.setValue(param, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"
@@ -50,7 +71,7 @@ class NewsletterViewController: UIViewController {
                 
                 if (statusCode == 200) {
                     print("Everyone is fine IN SPIRITUAL REFLECTION, file downloaded successfully.")
-                    do{
+                    do {
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                         print(json)
@@ -69,7 +90,7 @@ class NewsletterViewController: UIViewController {
                         }
                         
                         
-                    }catch {
+                    } catch {
                         print("Error IN SPIRITUALITY with Json: \(error)")
                     }
                 }
@@ -81,6 +102,8 @@ class NewsletterViewController: UIViewController {
     }
 
     func loadThisNewsletter(id: String) {
+        print("attempting to load newsletter")
+        
         
         if (id == "-1") {
             print("Error! Could not load spiritualReflection because didn't find the ID yet")
@@ -108,7 +131,7 @@ class NewsletterViewController: UIViewController {
                 
                 if (statusCode == 200) {
                     print("Everyone is fine, file downloaded successfully.")
-                    do{
+                    do {
                         
                         let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
                         print("HERE",json)
@@ -117,13 +140,8 @@ class NewsletterViewController: UIViewController {
                         
                         self.webView.loadHTMLString(htmlString!, baseURL: nil)
                         self.view.hideToastActivity()
-                        
-                        //let plainText = json["plain_text"] as! String?
-                        //print("newsletter plain text:",plainText)
-                        //self.parseJSONforSpiritualReflection(json: plainText!)
-                        
-                        
-                    }catch {
+
+                    } catch {
                         print("Error with Json: \(error)")
                     }
                 }
@@ -144,15 +162,35 @@ class NewsletterViewController: UIViewController {
             UIApplication.shared.open(url, options: [:])
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // network check
+    func isInternetAvailable() -> Bool
+    {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
     }
-    */
+    
+    // no internet alert
+    func noInternetAlert() {
+        let alert = UIAlertController(title: "No Network Connection", message: "Please connect to the internet and try again.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { action in self.pressedOkay() }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 
 }
