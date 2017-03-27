@@ -39,32 +39,32 @@ class LinksViewController: UIViewController, UICollectionViewDataSource, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath as IndexPath) as! SocialMediaCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        let greenColor = UIColor(red: 0.0, green: 0.52, blue: 0.247, alpha: 1.0)
-        //let blueColor = UIColor(red: 0.0, green: 0.411, blue: 0.667, alpha: 1.0)
+        //let greenColor = UIColor(red: 0.0, green: 0.52, blue: 0.247, alpha: 1.0)
+        let blueColor = UIColor(red: 0.0, green: 0.411, blue: 0.667, alpha: 1.0)
         
         if (indexPath.row == 0) {
-            cell.imageView.setFAIconWithName(icon: .FAFacebook, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FAFacebook, textColor: blueColor)
         }
         else if (indexPath.row == 1) {
-            cell.imageView.setFAIconWithName(icon: .FATwitter, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FATwitter, textColor: blueColor)
         }
         else if (indexPath.row == 2) {
-            cell.imageView.setFAIconWithName(icon: .FALinkedin, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FALinkedin, textColor: blueColor)
         }
         else if (indexPath.row == 3) {
-            cell.imageView.setFAIconWithName(icon: .FAPinterest, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FAPinterest, textColor: blueColor)
         }
         else if (indexPath.row == 4) {
-            cell.imageView.setFAIconWithName(icon: .FAInstagram, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FAInstagram, textColor: blueColor)
         }
         else if (indexPath.row == 5) {
-            cell.imageView.setFAIconWithName(icon: .FAVimeo, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FAVimeo, textColor: blueColor)
         }
         else if (indexPath.row == 6) {
-            cell.imageView.setFAIconWithName(icon: .FAYoutubePlay, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FAYoutubePlay, textColor: blueColor)
         }
         else if (indexPath.row == 7) {
-            cell.imageView.setFAIconWithName(icon: .FAEnvelope, textColor: greenColor)
+            cell.imageView.setFAIconWithName(icon: .FAEnvelope, textColor: blueColor)
         }
         
         return cell

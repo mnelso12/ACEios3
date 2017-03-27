@@ -8,28 +8,33 @@
 
 import UIKit
 import Mapbox
-import MapboxGeocoder
 import MapboxStatic
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
 
     @IBOutlet weak var mapView: MGLMapView!
-    //let geocoder = Geocoder.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
         
         mapView.delegate = self
         
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 37.09,
+                                                 longitude: -95.71),
+                          zoomLevel: 2, animated: false)
         
+        //mapView = MGLMapView(frame: view.bounds)
+        //mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        /*
         let point = MGLPointAnnotation()
         point.coordinate = CLLocationCoordinate2D(latitude: 45.52258, longitude: -122.6732)
         point.title = "Voodoo Doughnut"
         point.subtitle = "22 SW 3rd Avenue Portland Oregon, U.S.A."
         mapView.addAnnotation(point)
- 
+        */
         
         drawPolyline()
     }
@@ -38,17 +43,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         // Parsing GeoJSON can be CPU intensive, do it on a background thread
         
         DispatchQueue.global(qos: .background).async(execute: {
-               // print("GOT HERE")
             
-            // Get the path for example.geojson in the app's bundle
             let jsonPath = Bundle.main.path(forResource: "ace-data", ofType: "geojson")
             let url = URL(fileURLWithPath: jsonPath!)
             
             do {
                 // Convert the file contents to a shape collection feature object
                 let data = try Data(contentsOf: url)
-                print("DATA:", data)
-                
                 let shapeCollectionFeature = try MGLShape(data: data, encoding: String.Encoding.utf8.rawValue) as! MGLShapeCollectionFeature
                 print("shape collection feature geoJson dictionary", shapeCollectionFeature.geoJSONDictionary())
                 
@@ -69,7 +70,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             // Unowned reference to self to prevent retain cycle
                             [unowned self] in
                             self.mapView.addAnnotation(polyline)
-                        
                         })
                     }
                     i += 1
@@ -82,13 +82,30 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         })
         
     }
-
+    
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-        // Always try to show a callout when an annotation is tapped.
         return true
+    }
+    
+    func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        return nil
+    }
+    
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        let infoButton = UIButton(type: .detailDisclosure)
+        infoButton.tintColor = UIColor.blue
+        return infoButton
+    }
+    
+    func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+        // Hide the callout view.
+        mapView.deselectAnnotation(annotation, animated: false)
+        
+        UIAlertView(title: annotation.title!!, message: "A lovely (if touristy) place.", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "OK").show()
     }
 
     
+    /*
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
         // Set the alpha for all shape annotations to 1 (full opacity)
         return 1
@@ -107,9 +124,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
         else
         {
-            return .red
+            return .blue
         }
     }
+ */
     
     
     override func didReceiveMemoryWarning() {
