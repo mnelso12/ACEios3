@@ -44,7 +44,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         DispatchQueue.global(qos: .background).async(execute: {
             
-            let jsonPath = Bundle.main.path(forResource: "ace-data", ofType: "geojson")
+            let jsonPath = Bundle.main.path(forResource: "whereweserve", ofType: "json")
             let url = URL(fileURLWithPath: jsonPath!)
             
             do {
@@ -62,10 +62,33 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         // Optionally set the title of the polyline, which can be used for:
                         //  - Callout view
                         //  - Object identification
+                        
+                        // "programs" = [#TF programs, #Remick Leaders, #ENL teachers, # Notre Dame ACE Academies]
+                        let programs = polyline.attributes["programs"] as! [Int]
+                        print("#TF:", programs[0], "#Remick leaders:", programs[1], "#ENL teachers", programs[2], "#NDAA", programs[3])
+                        var caption:String!
+
+                        // count number of initiatives served in this location
+                        var numInitiativesServed:Int! = 0
+                        for p in programs {
+                            if (p > 0) {
+                                numInitiativesServed = numInitiativesServed + 1
+                            }
+                        }
+                        
+                        if (numInitiativesServed > 1) {
+                            let initiatives = String(numInitiativesServed)
+                            let city = polyline.attributes["city"] as! String
+                            caption = "ACE has " + initiatives + " initiatives serving Catholic schools in " + city
+                        }
+                        else {
+                            caption = "blah"
+                        }
+
                         polyline.title = polyline.attributes["title"] as? String
-                        polyline.subtitle = polyline.attributes["diocese"] as? String
+                        polyline.subtitle = caption
                     
-                        // Add the annotation on the main thread
+                                               // Add the annotation on the main thread
                         DispatchQueue.main.async(execute: {
                             // Unowned reference to self to prevent retain cycle
                             [unowned self] in

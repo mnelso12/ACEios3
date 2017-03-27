@@ -46,6 +46,7 @@
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
 		23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B41AC31E3FE643009A0F7A /* news-icon-19.png */; };
 		23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 23CEEADD1E66962D0086F035 /* blogNewsStyle.css */; };
+		23D228F01E89ABD0008956FC /* whereweserve.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D228EF1E89ABD0008956FC /* whereweserve.json */; };
 		23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */; };
 		23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C31E4AEBA900119327 /* gray-pattern.png */; };
 		23E018C61E4AECBF00119327 /* bluePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C51E4AECBF00119327 /* bluePattern.png */; };
@@ -132,6 +133,7 @@
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogTableViewCell.swift; path = ../BlogTableViewCell.swift; sourceTree = "<group>"; };
 		23B41AC31E3FE643009A0F7A /* news-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news-icon-19.png"; path = "../../../../Desktop/news-icon-19.png"; sourceTree = "<group>"; };
 		23CEEADD1E66962D0086F035 /* blogNewsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = blogNewsStyle.css; sourceTree = "<group>"; };
+		23D228EF1E89ABD0008956FC /* whereweserve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = whereweserve.json; sourceTree = "<group>"; };
 		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
 		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				236CF9061E32BD19005DD95A /* Main.storyboard */,
+				23D228EF1E89ABD0008956FC /* whereweserve.json */,
 				236CF90B1E32BD19005DD95A /* LaunchScreen.storyboard */,
 			);
 			name = storyboards;
@@ -439,6 +442,7 @@
 				236CF90D1E32BD19005DD95A /* LaunchScreen.storyboard in Resources */,
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
 				23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */,
+				23D228F01E89ABD0008956FC /* whereweserve.json in Resources */,
 				23EB6E2F1E84EAF700DF1E54 /* aceKids1.JPG in Resources */,
 				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
 				232449961E6F423A00B199C2 /* communityPhotos in Resources */,

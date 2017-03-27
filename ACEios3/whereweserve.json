@@ -1,0 +1,1741 @@
+{
+  "type":"FeatureCollection",
+  "features":[
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -88.0398912,
+          30.6953657
+        ]
+      },
+      "properties":{
+        "title":"Mobile, AL",
+        "city":"Mobile",
+        "state":"AL",
+        "programs":[
+          1,
+          2,
+          0,
+          0
+        ],
+        "remick-url":"/leadership",
+        "community-url":"/teach/mobile"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -88.9278,
+          30.4119
+        ]
+      },
+      "properties":{
+        "title":"Biloxi, MS",
+        "city":"Biloxi",
+        "state":"MS",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/biloxi"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -112.0740373,
+          33.4483771
+        ]
+      },
+      "properties":{
+        "title":"Phoenix, AZ",
+        "city":"Phoenix",
+        "state":"AZ",
+        "programs":[
+          1,
+          1,
+          0,
+          0
+        ],
+        "enl-url":"/enl",
+        "community-url":"/teach/phoenix"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -110.926479,
+          32.2217429
+        ]
+      },
+      "properties":{
+        "title":"Tucson, AZ",
+        "city":"Tucson",
+        "state":"AZ",
+        "programs":[
+          1,
+          1,
+          0,
+          2
+        ],
+        "ndaa-school-names":[
+          "St. John the Evangelist Catholic School",
+          "Santa Cruz Catholic School"
+        ],
+        "ndaa-websites":[
+          "http://www.stjohntucson.org/",
+          "http://www.santacruztucson.org/"
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership",
+        "community-url":"/teach/tucson"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -118.2436849,
+          34.0522342
+        ]
+      },
+      "properties":{
+        "title":"Los Angeles, CA",
+        "city":"East LA",
+        "city2":"South Central LA",
+        "state":"CA",
+        "programs":[
+          2,
+          5,
+          1,
+          0
+        ],
+        "community-url":"/teach/la-east",
+        "community-url2":"/teach/lasc"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -122.2711137,
+          37.8043637
+        ]
+      },
+      "properties":{
+        "title":"Oakland, CA",
+        "city":"Oakland",
+        "state":"CA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "remick-url":"/leadership",
+        "community-url":"/teach/oakland"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -121.4943996,
+          38.5815719
+        ]
+      },
+      "properties":{
+        "title":"Sacramento, CA",
+        "city":"Sacramento",
+        "state":"CA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/sacramento"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -122.4194155,
+          37.7749295
+        ]
+      },
+      "properties":{
+        "title":"San Francisco, CA",
+        "city":"San Francisco",
+        "state":"CA",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -117.8678338,
+          33.7455731
+        ]
+      },
+      "properties":{
+        "title":"Santa Ana, CA",
+        "city":"Santa Ana",
+        "state":"CA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/santa-ana"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -104.990251,
+          39.7392358
+        ]
+      },
+      "properties":{
+        "title":"Denver, CO",
+        "city":"Denver",
+        "state":"CO",
+        "programs":[
+          1,
+          2,
+          2,
+          0
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership",
+        "community-url":"/teach/denver"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -77.0368707,
+          38.9071923
+        ]
+      },
+      "properties":{
+        "title":"Washington, DC",
+        "city":"Washington",
+        "state":"DC",
+        "programs":[
+          1,
+          1,
+          0,
+          0
+        ],
+        "enl-url":"/enl",
+        "community-url":"/teach/washington-dc"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -81.65565099999999,
+          30.3321838
+        ]
+      },
+      "properties":{
+        "title":"Jacksonville, FL",
+        "city":"Jacksonville",
+        "state":"FL",
+        "programs":[
+          1,
+          1,
+          0,
+          0
+        ],
+        "community-url":"/teach/jacksonville"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -81.3792365,
+          28.5383355
+        ]
+      },
+      "properties":{
+        "title":"Orlando, FL",
+        "city":"Orlando",
+        "state":"FL",
+        "programs":[
+          0,
+          1,
+          0,
+          4
+        ],
+        "ndaa-school-names":[
+          "St. Andrew Catholic School",
+          "Lourdes Academy",
+          "Basilica School of St. Paul",
+          "Holy Redeemer Catholic School"
+        ],
+        "ndaa-websites":[
+          "http://standrewcatholicschool.org/",
+          "http://www.lourdesacademy.net",
+          "http://www.stpaulpanthers.org/",
+          "http://www.hrcschool.com/"
+        ]
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -87.2169149,
+          30.42130899999999
+        ]
+      },
+      "properties":{
+        "title":"Pensacola, FL",
+        "city":"Pensacola",
+        "state":"FL",
+        "programs":[
+          0,
+          1,
+          1,
+          0
+        ],
+        "community-url":"/teach/pensacola"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -82.64,
+          27.773056
+        ]
+      },
+      "properties":{
+        "title":"Saint Petersburg, FL",
+        "city":"Saint Petersburg",
+        "state":"FL",
+        "programs":[
+          1,
+          1,
+          0,
+          0
+        ],
+        "community-url":"/teach/saint-petersburg"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -82.4571776,
+          27.950575
+        ]
+      },
+      "properties":{
+        "title":"Tampa, FL",
+        "city":"Tampa",
+        "state":"FL",
+        "programs":[
+          1,
+          0,
+          0,
+          2
+        ],
+        "ndaa-school-names":[
+          "St. Joseph Catholic School",
+          "Sacred Heart Catholic School"
+        ],
+        "ndaa-websites":[
+          "http://www.stjosephtampa.org",
+          "http://www.sacredheartpinellaspark.org"
+        ],
+        "community-url":"/teach/tampa"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -84.3879824,
+          33.7489954
+        ]
+      },
+      "properties":{
+        "title":"Atlanta, GA",
+        "city":"Atlanta",
+        "state":"GA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/atlanta"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -116.2146068,
+          43.6187102
+        ]
+      },
+      "properties":{
+        "title":"Boise, ID",
+        "city":"Boise",
+        "state":"ID",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -87.6297982,
+          41.8781136
+        ]
+      },
+      "properties":{
+        "title":"Chicago, IL",
+        "city":"Chicago",
+        "state":"IL",
+        "programs":[
+          1,
+          6,
+          2,
+          0
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership",
+        "community-url":"/teach/chicago"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -89.5889864,
+          40.6936488
+        ]
+      },
+      "properties":{
+        "title":"Peoria, IL",
+        "city":"Peoria",
+        "state":"IL",
+        "programs":[
+          1,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl",
+        "community-url":"/teach/peoria"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -86.158068,
+          39.768403
+        ]
+      },
+      "properties":{
+        "title":"Indianapolis, IN",
+        "city":"Indianapolis",
+        "state":"IN",
+        "programs":[
+          1,
+          2,
+          2,
+          5
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership",
+        "community-url":"/teach/indianapolis",
+        "ndaa-school-names":[
+          "Holy Angels Catholic School",
+          "Central Catholic School",
+          "St. Philip Neri Catholic School",
+          "Holy Cross Catholic School",
+          "St. Anthony Catholic School"
+        ],
+        "ndaa-websites":[
+          "http://www.holyangelscatholicschool.org/",
+          "http://centralcatholicindy.org/",
+          "http://stphilipindy.org/",
+          "http://www.holycrossschoolindy.org/",
+          "http://stanthonyindy.org/"
+        ]
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -86.25198979999999,
+          41.6763545
+        ]
+      },
+      "properties":{
+        "title":"South Bend, IN",
+        "city":"South Bend",
+        "state":"IN",
+        "programs":[
+          0,
+          2,
+          1,
+          0
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -91.1403196,
+          30.4582829
+        ]
+      },
+      "properties":{
+        "title":"Baton Rouge, LA",
+        "city":"Baton Rouge",
+        "state":"LA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/baton-rouge"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -90.0715323,
+          29.95106579999999
+        ]
+      },
+      "properties":{
+        "title":"New Orleans, LA",
+        "city":"New Orleans",
+        "state":"LA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/new-orleans"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -86.1089301,
+          42.7875235
+        ]
+      },
+      "properties":{
+        "title":"Holland, MI",
+        "city":"Holland",
+        "state":"MI",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -80.8431267,
+          35.2270869
+        ]
+      },
+      "properties":{
+        "title":"Charlotte, NC",
+        "city":"Charlotte",
+        "state":"NC",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -106.6055534,
+          35.0853336
+        ]
+      },
+      "properties":{
+        "title":"Albuquerque, NM",
+        "city":"Albuquerque",
+        "state":"NM",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -74.0059413,
+          40.7127837
+        ]
+      },
+      "properties":{
+        "title":"New York, NY",
+        "city":"New York",
+        "state":"NY",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -83.55521200000001,
+          41.6639383
+        ]
+      },
+      "properties":{
+        "title":"Toledo, OH",
+        "city":"Toledo",
+        "state":"OH",
+        "programs":[
+          0,
+          1,
+          1,
+          0
+        ],
+        "enl-url":"/enl",
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -97.5164276,
+          35.4675602
+        ]
+      },
+      "properties":{
+        "title":"Oklahoma City, OK",
+        "city":"Oklahoma City",
+        "state":"OK",
+        "programs":[
+          1,
+          2,
+          0,
+          0
+        ],
+        "enl-url":"/enl",
+        "community-url":"/teach/oklahoma-city"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -95.99277500000001,
+          36.1539816
+        ]
+      },
+      "properties":{
+        "title":"Tulsa, OK",
+        "city":"Tulsa",
+        "state":"OK",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "enl-url":"/enl",
+        "community-url":"/teach/tulsa"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -90.0489801,
+          35.1495343
+        ]
+      },
+      "properties":{
+        "title":"Memphis, TN",
+        "city":"Memphis",
+        "state":"TN",
+        "programs":[
+          1,
+          0,
+          2,
+          0
+        ],
+        "remick-url":"/leadership",
+        "community-url":"/teach/memphis"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -97.7430608,
+          30.267153
+        ]
+      },
+      "properties":{
+        "title":"Austin, TX",
+        "city":"Austin",
+        "state":"TX",
+        "programs":[
+          1,
+          1,
+          0,
+          0
+        ],
+        "community-url":"/teach/austin"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -97.4974838,
+          25.9017472
+        ]
+      },
+      "properties":{
+        "title":"Brownsville, TX",
+        "city":"Brownsville",
+        "state":"TX",
+        "programs":[
+          1,
+          1,
+          0,
+          0
+        ],
+        "community-url":"/teach/brownsville"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -97.39638099999999,
+          27.8005828
+        ]
+      },
+      "properties":{
+        "title":"Corpus Christi, TX",
+        "city":"Corpus Christi",
+        "state":"TX",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/corpus-christi"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -97.3307658,
+          32.7554883
+        ]
+      },
+      "properties":{
+        "title":"Fort Worth, TX",
+        "city":"Fort Worth",
+        "state":"TX",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/fort-worth"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -96.79698789999999,
+          32.7766642
+        ]
+      },
+      "properties":{
+        "title":"Dallas, TX",
+        "city":"Dallas",
+        "state":"TX",
+        "programs":[
+          1,
+          4,
+          1,
+          0
+        ],
+        "remick-url":"/leadership",
+        "community-url":"/teach/dallas"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -98.32529319999999,
+          26.2159066
+        ]
+      },
+      "properties":{
+        "title":"Mission, TX",
+        "city":"Mission",
+        "state":"TX",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/mission"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -98.49362819999999,
+          29.4241219
+        ]
+      },
+      "properties":{
+        "title":"San Antonio, TX",
+        "city":"San Antonio",
+        "state":"TX",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/san-antonio"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -121.8863,
+          37.3382
+        ]
+      },
+      "properties":{
+        "title":"San Jose, CA",
+        "city":"San Jose",
+        "state":"CA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/san-jose"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -77.4360481,
+          37.5407246
+        ]
+      },
+      "properties":{
+        "title":"Richmond, VA",
+        "city":"Richmond",
+        "state":"VA",
+        "programs":[
+          1,
+          0,
+          0,
+          0
+        ],
+        "community-url":"/teach/richmond"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -122.3320708,
+          47.6062095
+        ]
+      },
+      "properties":{
+        "title":"Seattle, WA",
+        "city":"Seattle",
+        "state":"WA",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":[
+          -87.9064736,
+          43.0389025
+        ]
+      },
+      "properties":{
+        "title":"Milwaukee, WI",
+        "city":"Milwaukee",
+        "state":"WI",
+        "programs":[
+          0,
+          1,
+          1,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+        {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -121.2907796,
+            37.9577016
+          ]
+        },
+      "properties": {
+        "title":"Stockton, CA",
+        "city":"Stockton",
+        "state":"CA",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -117.2897652,
+            34.1083449
+          ]
+        },
+      "properties": {
+        "title":"San Bernadino, CA",
+        "city":"San Bernadino",
+        "state":"CA",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -121.2722194,
+            38.1341477
+          ]
+        },
+      "properties": {
+        "title":"Lodi, CA",
+        "city":"Lodi",
+        "state":"CA",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -81.0228331,
+            29.2108147
+          ]
+        },
+      "properties": {
+        "title":"Daytona Beach, FL",
+        "city":"Daytona Beach",
+        "state":"FL",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -82.4342632,
+            27.0997775
+          ]
+        },
+      "properties": {
+        "title":"Venice, FL",
+        "city":"Venice",
+        "state":"FL",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -83.624201,
+            32.6130007
+          ]
+        },
+      "properties": {
+        "title":"Warner Robins, GA",
+        "city":"Warner Robins",
+        "state":"GA",
+        "programs":[
+          0,
+          2,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -81.09983419999999,
+            32.0835407
+          ]
+        },
+      "properties": {
+        "title":"Savannah, GA",
+        "city":"Savannah",
+        "state":"GA",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -87.3464271,
+            41.5933696
+          ]
+        },
+      "properties": {
+        "title":"Gary, IN",
+        "city":"Gary",
+        "state":"IN",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -76.98969749999999,
+            38.8034468
+          ]
+        },
+      "properties": {
+        "title":"Oxon Hill, MD",
+        "city":"Oxon Hill",
+        "state":"MD",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -77.0763669,
+            39.0256651
+          ]
+        },
+      "properties": {
+        "title":"Kensignton, MD",
+        "city":"Kensignton",
+        "state":"MD",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -74.1502007,
+            40.5795317
+          ]
+        },
+      "properties": {
+        "title":"Staten Island, NY",
+        "city":"Staten Island",
+        "state":"NY",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -91.6663523,
+            44.0553908
+          ]
+        },
+      "properties": {
+        "title":"Winona, MN",
+        "city":"Winona",
+        "state":"MN",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -89.2137254,
+            43.1836046
+          ]
+        },
+      "properties": {
+        "title":"Sun Prarie, WI",
+        "city":"Sun Prarie",
+        "state":"WI",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -71.1550451,
+            41.7014912
+          ]
+        },
+      "properties": {
+        "title":"Fall River, MA",
+        "city":"Fall River",
+        "state":"MA",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -73.86542949999999,
+            40.8370495
+          ]
+        },
+      "properties": {
+        "title":"Bronx, NY",
+        "city":"Bronx",
+        "state":"NY",
+        "programs":[
+          0,
+          2,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -123.0867536,
+            44.0520691
+          ]
+        },
+      "properties": {
+        "title":"Eugene, OR",
+        "city":"Eugene",
+        "state":"OR",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -81.6943605,
+            41.49932
+          ]
+        },
+      "properties": {
+        "title":"Cleveland, OH",
+        "city":"Cleveland",
+        "state":"OH",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -94.16324039999999,
+            45.5579451
+          ]
+        },
+      "properties": {
+        "title":"St. Cloud, MN",
+        "city":"St. Cloud",
+        "state":"MN",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -83.0457538,
+            42.331427
+          ]
+        },
+      "properties": {
+        "title":"Detroit, MI",
+        "city":"Detroit",
+        "state":"MI",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -97.49561829999999,
+            42.7288884
+          ]
+        },
+      "properties": {
+        "title":"Crofton, NE",
+        "city":"Crofton",
+        "state":"NE",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -77.4291298,
+            39.0066993
+          ]
+        },
+      "properties": {
+        "title":"Sterling, VA",
+        "city":"Sterling",
+        "state":"VA",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+            "coordinates": [
+            -86.7816016,
+            36.1626638
+          ]
+        },
+      "properties": {
+        "title":"Nashville, TN",
+        "city":"Nashville",
+        "state":"TN",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -107.3247762,
+            39.5505376
+          ]
+        },
+      "properties": {
+        "title":"Glenwood Springs, CO",
+        "city":"Glenwood Springs",
+        "state":"CO",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -76.5074542,
+            38.3004029
+          ]
+        },
+      "properties": {
+        "title":"California, MD",
+        "city":"California",
+        "state":"MD",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -111.8910474,
+            40.7607793
+          ]
+        },
+      "properties": {
+        "title":"Salt Lake City, UT",
+        "city":"Salt Lake City",
+        "state":"UT",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -74.6166192,
+            39.3822537
+          ]
+        },
+      "properties": {
+        "title":"Egg Harbor Township, NJ",
+        "city":"Egg Harbor Township",
+        "state":"NJ",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -95.3698028,
+            29.7604267
+          ]
+        },
+      "properties": {
+        "title":"Houston, TX",
+        "city":"Houston",
+        "state":"TX",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -86.0085955,
+            40.0455917
+          ]
+        },
+      "properties": {
+        "title":"Noblesville, IN",
+        "city":"Noblesville",
+        "state":"IN",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -84.8281267,
+            32.5752141
+          ]
+        },
+      "properties": {
+        "title":"Midland, GA",
+        "city":"Midland",
+        "state":"GA",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -96.0422378,
+            41.1544432
+          ]
+        },
+      "properties": {
+        "title":"Papillion, NE",
+        "city":"Papillion",
+        "state":"NE",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -83.9207392,
+            35.9606384
+          ]
+        },
+      "properties": {
+        "title":"Knoxville, TN",
+        "city":"Knoxville",
+        "state":"TN",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -80.05476259999999,
+            37.2934681
+          ]
+        },
+      "properties": {
+        "title":"Salem, VA",
+        "city":"Salem",
+        "state":"VA",
+        "programs":[
+          0,
+          0,
+          1,
+          0
+        ],
+        "enl-url":"/enl"
+      }
+    },
+    {
+      "type":"Feature",
+      "geometry":{
+          "type":"Point",
+          "coordinates": [
+            -80.8431,
+            35.2271
+          ]
+        },
+      "properties": {
+        "title":"Charlotte, NC",
+        "city":"Charlotte",
+        "state":"NC",
+        "programs":[
+          0,
+          1,
+          0,
+          0
+        ],
+        "remick-url":"/leadership"
+      }
+    }
+  ]
+}
+
