@@ -36,6 +36,8 @@
 		237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */; };
 		237886531E383C3200E238A2 /* spirituality.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 237886521E383C3200E238A2 /* spirituality.jpg */; };
 		237886551E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */; };
+		2392B6DB1E885C9D001078E3 /* ace-data.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2392B6DA1E885C9D001078E3 /* ace-data.geojson */; };
+		2392B6DD1E885D14001078E3 /* stations.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2392B6DC1E885D14001078E3 /* stations.geojson */; };
 		2395173E1E5173D8003604AE /* ace_app_holding_hands.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */; };
 		239517401E517926003604AE /* ace_app_community.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2395173F1E517926003604AE /* ace_app_community.JPG */; };
 		239517421E517F50003604AE /* TFLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239517411E517F50003604AE /* TFLocationsViewController.swift */; };
@@ -120,6 +122,8 @@
 		237886501E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-11-04 at 2.00.33 AM.png"; path = "../../../../Desktop/Screen Shot 2016-11-04 at 2.00.33 AM.png"; sourceTree = "<group>"; };
 		237886521E383C3200E238A2 /* spirituality.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spirituality.jpg; path = ../../../../Downloads/spirituality.jpg; sourceTree = "<group>"; };
 		237886541E38442700E238A2 /* 4 Advocates Leaders Fixed version.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "4 Advocates Leaders Fixed version.jpg"; path = "../../../../Downloads/4 Advocates Leaders Fixed version.jpg"; sourceTree = "<group>"; };
+		2392B6DA1E885C9D001078E3 /* ace-data.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ace-data.geojson"; sourceTree = "<group>"; };
+		2392B6DC1E885D14001078E3 /* stations.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stations.geojson; sourceTree = "<group>"; };
 		2395173D1E5173D8003604AE /* ace_app_holding_hands.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_holding_hands.JPG; path = ../../../../Downloads/ace_app_holding_hands.JPG; sourceTree = "<group>"; };
 		2395173F1E517926003604AE /* ace_app_community.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ace_app_community.JPG; path = ../../../../Downloads/ace_app_community.JPG; sourceTree = "<group>"; };
 		239517411E517F50003604AE /* TFLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFLocationsViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 		236CF8FF1E32BD19005DD95A /* ACEios3 */ = {
 			isa = PBXGroup;
 			children = (
+				2392B6DC1E885D14001078E3 /* stations.geojson */,
+				2392B6DA1E885C9D001078E3 /* ace-data.geojson */,
 				2324499B1E6F45DC00B199C2 /* storyboards */,
 				2324499A1E6F45CD00B199C2 /* fonts */,
 				232449991E6F45B100B199C2 /* images */,
@@ -379,6 +385,9 @@
 		236CF8F51E32BD19005DD95A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					GeoJSON,
+				);
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Madelyn Nelson";
@@ -425,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2392B6DD1E885D14001078E3 /* stations.geojson in Resources */,
 				237886531E383C3200E238A2 /* spirituality.jpg in Resources */,
 				236CF90D1E32BD19005DD95A /* LaunchScreen.storyboard in Resources */,
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
@@ -439,6 +449,7 @@
 				231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */,
 				23B41AC41E3FE643009A0F7A /* news-icon-19.png in Resources */,
 				237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */,
+				2392B6DB1E885C9D001078E3 /* ace-data.geojson in Resources */,
 				231D77DD1E4F9C26001DC24E /* PolarisCondensed-Medium.otf in Resources */,
 				239517401E517926003604AE /* ace_app_community.JPG in Resources */,
 				23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */,

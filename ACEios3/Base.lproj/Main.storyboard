@@ -215,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="45" id="DrX-40-8nZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalaxiePolaris-Medium" family="Galaxie Polaris" pointSize="17"/>
-                                <state key="normal" title="Nominate a Leader">
+                                <state key="normal" title="Nominate an Educator">
                                     <color key="titleColor" red="0.99483940059999998" green="1" blue="0.96536412520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -824,27 +824,19 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="546"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YqO-2x-xwS" customClass="MGLMapView">
-                                        <rect key="frame" x="0.0" y="-10" width="375" height="564"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKR-tL-XPG" customClass="MGLMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="546"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="YqO-2x-xwS" secondAttribute="trailing" id="Fuy-SX-Bv9"/>
-                            <constraint firstItem="YqO-2x-xwS" firstAttribute="leading" secondItem="cnN-22-0Iq" secondAttribute="leadingMargin" id="VBf-Zr-jP4"/>
-                            <constraint firstItem="YqO-2x-xwS" firstAttribute="leading" secondItem="cnN-22-0Iq" secondAttribute="leadingMargin" constant="-16" id="YcD-6M-Yy1"/>
-                            <constraint firstItem="zfi-D5-wqg" firstAttribute="top" secondItem="YqO-2x-xwS" secondAttribute="bottom" id="lOx-Qc-gRk"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="YqO-2x-xwS" id="uKr-OV-qgK"/>
+                        <outlet property="mapView" destination="CKR-tL-XPG" id="n2b-YE-npk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Slt-KT-Tu2" userLabel="First Responder" sceneMemberID="firstResponder"/>

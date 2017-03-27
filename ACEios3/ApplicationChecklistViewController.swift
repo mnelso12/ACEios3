@@ -14,10 +14,6 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var programTitleLabel: UILabel!
     
-    //var countriesinEurope = ["France","Spain","Germany"]
-    //var countriesinAsia = ["Japan","China","India"]
-    //var countriesInSouthAmerica = ["Argentia","Brasil","Chile"]
-    
     let programs = ["Teaching Fellows", "Remick Leadership Program", "English as a New Language", "Program for Inclusive Education"]
     
     // TF - Teaching Fellows
@@ -46,6 +42,7 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
         "Here you will be able to see what parts of hte application you have completed. You may save your progress at any time. Review and confirm that you have completed all parts of the application and submit when complete.\n\nIf you have any questions at any time during the application, feel free to call or email April Garcia, a faculty member and recruiter at agarcia9@nd.edu or 574-631-9309.",
         ""]
     
+    // enl - English as a New Language
     let enlTitles = ["1. Background Information", "2. Demographics", "3. Academic History", "4. Teaching Information", "5. School Information", "6. Short Answer Questions", "7. Commitment Acknowledgement", "8. Principal Recommendation", "9. Official Transcripts", "10. Principal Recommendation Form completed by a School Administrator", "11. Tuition Assistance Form", ""]
     let enlDesc = ["Name\nContact information",
                    "Gender and ethnicity\nLanguage proficiencies (if applicable)",
@@ -150,15 +147,4 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

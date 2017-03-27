@@ -13,7 +13,7 @@ class ContactUsTableViewController: UIViewController, UITableViewDelegate, UITab
     let section2Labels = ["General Inquiries", "Technology Support", "Media Inquiries"]
     let section3Labels = ["Teaching Fellows", "Remick Leadership\nProgram", "English as a\nNew Language", "Program for\nInclusive Education", "Program for\nEducational Access", "ACE Interns\nand Ambassadors"]
     
-    let section1 = ["574-631-7052", "574-631-7939", "Alliance for Catholic Education\n107 Carole Sandner Hall\nNotre Dame, IN 46556"]
+    let section1 = ["574-631-7052", "574-631-7939", "107 Carole Sandner Hall\nNotre Dame, IN 46556"]
     let section2 = ["ace1@nd.edu", "twill1@nd.edu", "thelm1@nd.edu"]
     let section3 = ["mpicken1@nd.edu\nmcomunie@nd.edu", "agarcia9@nd.edu", "kwalter5@nd.edu", "lindsaywill@nd.edu\ncbonfiglio@nd.edu", "edaccess@nd.edu", "mcomunie@nd.edu"]
 
