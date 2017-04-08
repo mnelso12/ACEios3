@@ -10,6 +10,14 @@ import UIKit
 import Mapbox
 import MapboxStatic
 
+// MGLPointFeature subclass
+class MyCustomPointAnnotation: MGLPointAnnotation {
+    var isTF: Bool = false
+    var isRLP: Bool = false
+    var isENL: Bool = false
+    var isNDAA: Bool = false
+}
+
 class MapViewController: UIViewController, MGLMapViewDelegate {
 
     @IBOutlet weak var mapView: MGLMapView!
@@ -38,6 +46,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         drawPolyline()
     }
+    
     
     func drawPolyline() {
         // Parsing GeoJSON can be CPU intensive, do it on a background thread
@@ -82,17 +91,42 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             caption = "ACE has " + initiatives + " initiatives serving Catholic schools in " + city
                         }
                         else {
-                            caption = "blah"
+                            caption = "blah" // TODO
                         }
-
-                        polyline.title = polyline.attributes["title"] as? String
-                        polyline.subtitle = caption
+                        
+                        var thisAnnotation = MyCustomPointAnnotation()
+                        
+                        // figure out which flag icon to use
+                        if (programs[0] > 0) { // TF
+                            //polyline.isTF = true
+                            thisAnnotation.isTF = true
+                        }
+                        if (programs[1] > 0) { // RLP
+                            //polyline.isRLP = true
+                            thisAnnotation.isRLP = true
+                        }
+                        if (programs[2] > 0) { // ENL
+                            //polyline.isENL = true
+                            thisAnnotation.isENL = true
+                        }
+                        if (programs[3] > 0) { // NDAA
+                            //polyline.isNDAA = true
+                            thisAnnotation.isNDAA = true
+                        }
+                        
+                        
+                        thisAnnotation.title = polyline.attributes["title"] as? String
+                        thisAnnotation.subtitle = caption
+                        
+                        //polyline.title = polyline.attributes["title"] as? String
+                        //polyline.subtitle = caption
                     
-                                               // Add the annotation on the main thread
+                        // Add the annotation on the main thread
                         DispatchQueue.main.async(execute: {
                             // Unowned reference to self to prevent retain cycle
                             [unowned self] in
-                            self.mapView.addAnnotation(polyline)
+                            //self.mapView.addAnnotation(polyline)
+                            self.mapView.addAnnotation(thisAnnotation)
                         })
                     }
                     i += 1
@@ -104,6 +138,214 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             
         })
         
+    }
+
+    /*
+    func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        
+        print("in image func")
+        var annotationImage = MGLAnnotationImage()
+        
+            
+            var markerImageName:String!
+            
+            // figure out which flag image to use
+            if let thisAnnotation = annotation as? MyCustomPointAnnotation {
+                
+                print("this annotation:", thisAnnotation)
+                
+                if (thisAnnotation.isTF) { // is TF
+                    
+                    if (thisAnnotation.isRLP) { // is RLP
+                        
+                        if (thisAnnotation.isENL) { // is ENL
+                            
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-rlp-enl-ndaa-flag.png" // TF, RLP, ENL, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-rlp-enl-flag.png" // TF, RLP, ENL
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-rlp-ndaa-flag.png" // TF, RLP, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-rlp-flag.png" // TF, RLP
+                            }
+
+                        }
+                    }
+                    else // is not RLP
+                    {
+                        if (thisAnnotation.isENL) { // is ENL
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-enl-ndaa-flag.png" // TF, ENL, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-enl-flag.png" // TF, ENL
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-ndaa-flag.png" // TF, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-flag.png" // TF
+                            }
+                            
+                        }
+                    }
+                }
+                else // is not TF
+                {
+                    if (thisAnnotation.isRLP) { // is RLP
+                        
+                        if (thisAnnotation.isENL) { // is ENL
+                            
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "rlp-enl-ndaa-flag.png" // RLP, ENL, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "rlp-enl-flag.png" // RLP, ENL
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "rlp-ndaa-flag.png" // RLP, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "rlp-flag.png" // RLP
+                            }
+                            
+                        }
+                    }
+                    else // is not RLP
+                    {
+                        if (thisAnnotation.isENL) { // is ENL
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "enl-ndaa-flag.png" // ENL, NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "enl-flag.png" // ENL
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "ndaa-flag.png" // NDAA
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "" // none, return error
+                                print("Error! Did not find any initiatives for this location. Could not set marker image")
+                            }
+                            
+                        }
+                    }
+                }
+
+            
+            // Try to reuse the existing ‘pisa’ annotation image, if it exists.
+            print("image name:", markerImageName)
+            markerImageName = "rlp-enl-flag.png"
+            let image = UIImage(named: markerImageName)!
+            let smallImage = imageResize(image: image, targetSize: CGSize(width: 60, height: 60))
+            annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: markerImageName)
+                
+            //var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "marker")
+            //if annotationImage == nil {
+            //}
+        
+           
+            
+            // The anchor point of an annotation is currently always the center. To
+            // shift the anchor point to the bottom of the annotation, the image
+            // asset includes transparent bottom padding equal to the original image
+            // height.
+            //
+            // To make this padding non-interactive, we create another image object
+            // with a custom alignment rect that excludes the padding.
+            //smallImage = smallImage.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: smallImage.size.height/2, right: 0))
+            
+            // Initialize the ‘pisa’ annotation image with the UIImage we just loaded.
+            //annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: "marker")
+        }
+        
+        return annotationImage
+    }
+ */
+    
+    
+    // This delegate method is where you tell the map to load a view for a specific annotation based on the willUseImage property of the custom subclass.
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        print("in view func")
+        
+        /*
+        if let castAnnotation = annotation as? MyCustomPointAnnotation {
+            if (false) {
+                return nil;
+            }
+        }
+ */
+        
+        // Assign a reuse identifier to be used by both of the annotation views, taking advantage of their similarities.
+        let reuseIdentifier = "reusableDotView"
+        
+        // For better performance, always try to reuse existing annotations.
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+        
+        // If there’s no reusable annotation view available, initialize a new one.
+        if annotationView == nil {
+            annotationView = MGLAnnotationView(reuseIdentifier: reuseIdentifier)
+            annotationView?.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            annotationView?.layer.cornerRadius = (annotationView?.frame.size.width)! / 2
+            annotationView?.layer.borderWidth = 4.0
+            annotationView?.layer.borderColor = UIColor.white.cgColor
+            annotationView!.backgroundColor = UIColor(red:0.03, green:0.80, blue:0.69, alpha:1.0)
+        }
+        
+        return annotationView
+    }
+ 
+    
+    
+    // for scaling down flag images
+    func imageResize(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {

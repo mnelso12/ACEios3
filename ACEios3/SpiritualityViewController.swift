@@ -24,7 +24,7 @@ class SpiritualityViewController: UIViewController {
     
     @IBOutlet var slideshow: ImageSlideshow!
     
-    let localSource = [ImageSource(imageString: "ace_logo_color_PNG.png")!, ImageSource(imageString: "gray-pattern.png")!, ImageSource(imageString: "bluePattern.png")!, ImageSource(imageString: "ace_app_community.JPG")!]
+    let localSource = [ImageSource(imageString: "csw2015Families.jpg")!, ImageSource(imageString: "GuidancePrayer.jpg")!, ImageSource(imageString: "communityprayer.jpg")!, ImageSource(imageString: "studentsprayer.jpg")!, ImageSource(imageString: "prayerforinclusion.png")!]
     //let afNetworkingSource = [AFURLSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
     //let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
     //let sdWebImageSource = [SDWebImageSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
