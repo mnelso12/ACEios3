@@ -226,7 +226,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // news content //////////////////////////////////////////////////////
     
     func getMostRecentNews() {
-        let url = URL(string: "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&app=4&resource=items&category=asdf&limit=10")
+        let url = URL(string: "http://devace.cloudaccess.net/index.php/hidden-endpoint?action=get&module=zoo&app=4&resource=items&category=asdf&limit=10&api_key=DY4V99EUENES3AGQ1T9V")
         
         
         
@@ -294,7 +294,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // get all info from a particular news article given its id - this function is called when news cell is selected
     func getNews(newsID: String) {
-        let urlString = "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&resource=items&app=8&id=" + newsID
+        let urlString = "http://devace.cloudaccess.net/index.php/hidden-endpoint?action=get&module=zoo&resource=items&app=8&api_key=DY4V99EUENES3AGQ1T9V&id=" + newsID
         let url = URL(string: urlString)
         
         
@@ -383,7 +383,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func getMostRecentBlogs() {
         
         
-        let url = URL(string: "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&app=8&resource=items&category=blog&limit=10")
+        let url = URL(string: "http://devace.cloudaccess.net/index.php/hidden-endpoint?action=get&module=zoo&app=8&resource=items&category=blog&limit=10&api_key=DY4V99EUENES3AGQ1T9V")
         
         
         
@@ -454,7 +454,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // get all info from a particular blog given its id - this function is called when blog cell is selected
     func getBlog(blogID: String) {
-        let urlString = "http://devace2.cloudaccess.net/index.php/endpoint?action=get&module=zoo&resource=items&app=8&id=" + blogID
+        let urlString = "http://devace.cloudaccess.net/index.php/hidden-endpoint?action=get&module=zoo&resource=items&api_key=DY4V99EUENES3AGQ1T9V&app=8&id=" + blogID
         let url = URL(string: urlString)
         
         
