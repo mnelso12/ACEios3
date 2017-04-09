@@ -68,19 +68,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 while i < numPoints {
                     
                     if let polyline = shapeCollectionFeature.shapes[i] as? MGLPointFeature {
-                        // Optionally set the title of the polyline, which can be used for:
-                        //  - Callout view
-                        //  - Object identification
-                        
-                        
-
                         
                         // "programs" = [#TF programs, #Remick Leaders, #ENL teachers, # Notre Dame ACE Academies]
                         let programs = polyline.attributes["programs"] as! [Int]
                         //print("#TF:", programs[0], "#Remick leaders:", programs[1], "#ENL teachers", programs[2], "#NDAA", programs[3])
                         var caption:String!
 
-                        // for the number of initiatives displayed in subtitles. I doubt this will ever go above 20 for one location, but feel free to add more if we need to
+                        // for the number of initiatives displayed in subtitles. I doubt this will ever go above 20 for one location, but feel free to make this array longer if we need bigger numbers
                         let numberStrings = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
                         
                         // count number of initiatives served in this location
@@ -91,16 +85,16 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             }
                         }
                         
-                                                // make caption string
+                        // make caption string (aka subtitle)
                         let city = polyline.attributes["city"] as! String
-                        if (numInitiativesServed > 1) {
+                        if (numInitiativesServed > 1) { // multiple initiatives served in one city
                             caption = "ACE has " + numberStrings[numInitiativesServed] + " initiatives serving Catholic schools in " + city
                         }
                         else if (programs[0] >= 1) { // only TF
                             if (programs[0] == 1) { // singular
                                 caption = "ACE has " + numberStrings[programs[0]] + " Teaching Fellows community serving Catholic schools in " + city
                             }
-                            else {
+                            else { // plural
                                 caption = "ACE has " + numberStrings[programs[0]] + " Teaching Fellows communities serving Catholic schools in " + city
                             }
                         }
@@ -161,8 +155,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         thisAnnotation.title = polyline.attributes["title"] as? String
                         thisAnnotation.subtitle = caption
                         
-                        polyline.title = polyline.attributes["title"] as? String
-                        polyline.subtitle = caption
+                        //polyline.title = polyline.attributes["title"] as? String
+                        //polyline.subtitle = caption
                     
                         // Add the annotation on the main thread
                         DispatchQueue.main.async(execute: {
