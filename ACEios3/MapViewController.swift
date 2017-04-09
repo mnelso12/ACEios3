@@ -19,6 +19,14 @@ class MyCustomPointAnnotation: MGLPointAnnotation {
 }
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
+    @IBAction func pressedNDAA(_ sender: Any) {
+    }
+    @IBAction func pressedENL(_ sender: Any) {
+    }
+    @IBAction func pressedRLP(_ sender: Any) {
+    }
+    @IBAction func pressedTF(_ sender: Any) {
+    }
 
     @IBOutlet weak var mapView: MGLMapView!
     
@@ -32,17 +40,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.setCenter(CLLocationCoordinate2D(latitude: 37.09,
                                                  longitude: -95.71),
                           zoomLevel: 2, animated: false)
-        
-        //mapView = MGLMapView(frame: view.bounds)
-        //mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        /*
-        let point = MGLPointAnnotation()
-        point.coordinate = CLLocationCoordinate2D(latitude: 45.52258, longitude: -122.6732)
-        point.title = "Voodoo Doughnut"
-        point.subtitle = "22 SW 3rd Avenue Portland Oregon, U.S.A."
-        mapView.addAnnotation(point)
-        */
         
         drawPolyline()
     }
@@ -297,9 +294,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
  
         }
 
-        
-            //markerImageName = "rlp-enl-flag.png"
-            print("image name:", markerImageName)
+            //print("image name:", markerImageName)
             let image = UIImage(named: markerImageName)!
             let smallImage = imageResize(image: image, targetSize: CGSize(width: 60, height: 60))
             annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: markerImageName)
@@ -309,39 +304,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
  
  
-    
-    /*
-    // This delegate method is where you tell the map to load a view for a specific annotation based on the willUseImage property of the custom subclass.
-    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        print("in view func")
-        
-     
-        if let castAnnotation = annotation as? MyCustomPointAnnotation {
-            if (false) {
-                return nil;
-            }
-        }
- 
-        
-        // Assign a reuse identifier to be used by both of the annotation views, taking advantage of their similarities.
-        let reuseIdentifier = "reusableDotView"
-        
-        // For better performance, always try to reuse existing annotations.
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
-        
-        // If there’s no reusable annotation view available, initialize a new one.
-        if annotationView == nil {
-            annotationView = MGLAnnotationView(reuseIdentifier: reuseIdentifier)
-            annotationView?.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            annotationView?.layer.cornerRadius = (annotationView?.frame.size.width)! / 2
-            annotationView?.layer.borderWidth = 4.0
-            annotationView?.layer.borderColor = UIColor.white.cgColor
-            annotationView!.backgroundColor = UIColor(red:0.03, green:0.80, blue:0.69, alpha:1.0)
-        }
-        
-        return annotationView
-    }
- */
     
     
     // for scaling down flag images
@@ -392,31 +354,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         UIAlertView(title: annotation.title!!, message: "A lovely (if touristy) place.", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "OK").show()
     }
 
-    
-    /*
-    func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
-        // Set the alpha for all shape annotations to 1 (full opacity)
-        return 1
-    }
-    
-    func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        // Set the line width for polyline annotations
-        return 2.0
-    }
-    
-    func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
-        // Give our polyline a unique color by checking for its `title` property
-        if (annotation.title == "Crema to Council Crest" && annotation is MGLPolyline) {
-            // Mapbox cyan
-            return UIColor(red: 59/255, green:178/255, blue:208/255, alpha:1)
-        }
-        else
-        {
-            return .blue
-        }
-    }
- */
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
