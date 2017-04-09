@@ -72,11 +72,17 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         //  - Callout view
                         //  - Object identification
                         
+                        
+
+                        
                         // "programs" = [#TF programs, #Remick Leaders, #ENL teachers, # Notre Dame ACE Academies]
                         let programs = polyline.attributes["programs"] as! [Int]
-                        print("#TF:", programs[0], "#Remick leaders:", programs[1], "#ENL teachers", programs[2], "#NDAA", programs[3])
+                        //print("#TF:", programs[0], "#Remick leaders:", programs[1], "#ENL teachers", programs[2], "#NDAA", programs[3])
                         var caption:String!
 
+                        // for the number of initiatives displayed in subtitles. I doubt this will ever go above 20 for one location, but feel free to add more if we need to
+                        let numberStrings = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+                        
                         // count number of initiatives served in this location
                         var numInitiativesServed:Int! = 0
                         for p in programs {
@@ -85,16 +91,53 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             }
                         }
                         
+                                                // make caption string
+                        let city = polyline.attributes["city"] as! String
                         if (numInitiativesServed > 1) {
-                            let initiatives = String(numInitiativesServed)
-                            let city = polyline.attributes["city"] as! String
-                            caption = "ACE has " + initiatives + " initiatives serving Catholic schools in " + city
+                            caption = "ACE has " + numberStrings[numInitiativesServed] + " initiatives serving Catholic schools in " + city
+                        }
+                        else if (programs[0] >= 1) { // only TF
+                            if (programs[0] == 1) { // singular
+                                caption = "ACE has " + numberStrings[programs[0]] + " Teaching Fellows community serving Catholic schools in " + city
+                            }
+                            else {
+                                caption = "ACE has " + numberStrings[programs[0]] + " Teaching Fellows communities serving Catholic schools in " + city
+                            }
+                        }
+                        else if (programs[1] >= 1) { // only RLP
+                            if (programs[1] == 1) { // singular
+                                caption = "ACE has " + numberStrings[programs[1]] + " Remick leader serving Catholic schools in " + city
+                            }
+                            else { // plural
+                                caption = "ACE has " + numberStrings[programs[1]] + " Remick leaders serving Catholic schools in " + city
+                            }
+                        }
+                        else if (programs[2] >= 1) { // only ENL
+                            if (programs[2] == 1) { // singular
+                                caption = "ACE has " + numberStrings[programs[2]] + " ENL Teacher serving Catholic schools in " + city
+                            }
+                            else { // plural
+                                caption = "ACE has " + numberStrings[programs[2]] + " ENL Teachers serving Catholic schools in " + city
+                            }
+                                                    }
+                        else if (programs[3] >= 1) { // only NDAA
+                            if (programs[3] == 1) { // singular
+                                caption = "ACE has " + numberStrings[programs[3]] + " Notre Dame ACE Academy located in " + city
+                            }
+                            else { // plural
+                                caption = "ACE has " + numberStrings[programs[3]] + " Notre Dame ACE Academies located in " + city
+                            }
                         }
                         else {
-                            caption = "blah" // TODO
+                            caption = "Oops!"
+                            print("ERROR! Found a marker with no TF, RLP, ENL, or NDAA. Could not write a caption for it.")
                         }
+
                         
                         var thisAnnotation = MyCustomPointAnnotation()
+                        thisAnnotation.coordinate = polyline.coordinate
+                        
+                        //thisAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.72305, longitude: 10.396633)
                         
                         // figure out which flag icon to use
                         if (programs[0] > 0) { // TF
@@ -118,8 +161,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         thisAnnotation.title = polyline.attributes["title"] as? String
                         thisAnnotation.subtitle = caption
                         
-                        //polyline.title = polyline.attributes["title"] as? String
-                        //polyline.subtitle = caption
+                        polyline.title = polyline.attributes["title"] as? String
+                        polyline.subtitle = caption
                     
                         // Add the annotation on the main thread
                         DispatchQueue.main.async(execute: {
@@ -140,22 +183,23 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
     }
 
-    /*
+    
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         
         print("in image func")
         var annotationImage = MGLAnnotationImage()
         
             
-            var markerImageName:String!
+            var markerImageName = "" // default is no image
             
             // figure out which flag image to use
+        
             if let thisAnnotation = annotation as? MyCustomPointAnnotation {
                 
                 print("this annotation:", thisAnnotation)
                 
                 if (thisAnnotation.isTF) { // is TF
-                    
+                    print("this point is tf")
                     if (thisAnnotation.isRLP) { // is RLP
                         
                         if (thisAnnotation.isENL) { // is ENL
@@ -206,6 +250,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 }
                 else // is not TF
                 {
+                    print("this point is not tf")
                     if (thisAnnotation.isRLP) { // is RLP
                         
                         if (thisAnnotation.isENL) { // is ENL
@@ -255,50 +300,34 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         }
                     }
                 }
+ 
+        }
 
-            
-            // Try to reuse the existing ‘pisa’ annotation image, if it exists.
+        
+            //markerImageName = "rlp-enl-flag.png"
             print("image name:", markerImageName)
-            markerImageName = "rlp-enl-flag.png"
             let image = UIImage(named: markerImageName)!
             let smallImage = imageResize(image: image, targetSize: CGSize(width: 60, height: 60))
             annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: markerImageName)
-                
-            //var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "marker")
-            //if annotationImage == nil {
-            //}
         
-           
-            
-            // The anchor point of an annotation is currently always the center. To
-            // shift the anchor point to the bottom of the annotation, the image
-            // asset includes transparent bottom padding equal to the original image
-            // height.
-            //
-            // To make this padding non-interactive, we create another image object
-            // with a custom alignment rect that excludes the padding.
-            //smallImage = smallImage.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: smallImage.size.height/2, right: 0))
-            
-            // Initialize the ‘pisa’ annotation image with the UIImage we just loaded.
-            //annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: "marker")
-        }
         
         return annotationImage
     }
- */
+ 
+ 
     
-    
+    /*
     // This delegate method is where you tell the map to load a view for a specific annotation based on the willUseImage property of the custom subclass.
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         print("in view func")
         
-        /*
+     
         if let castAnnotation = annotation as? MyCustomPointAnnotation {
             if (false) {
                 return nil;
             }
         }
- */
+ 
         
         // Assign a reuse identifier to be used by both of the annotation views, taking advantage of their similarities.
         let reuseIdentifier = "reusableDotView"
@@ -318,7 +347,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         return annotationView
     }
- 
+ */
     
     
     // for scaling down flag images
