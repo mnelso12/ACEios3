@@ -19,15 +19,72 @@ class MyCustomPointAnnotation: MGLPointAnnotation {
 }
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
+    
+    // 15 arrays to hold markers of each category (not 16 because every marker has at least one category)
+    var tf_markers = [MyCustomPointAnnotation]()
+    var tf_rlp_markers = [MyCustomPointAnnotation]()
+    var tf_rlp_enl_markers = [MyCustomPointAnnotation]()
+    var tf_rlp_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var tf_rlp_ndaa_markers = [MyCustomPointAnnotation]()
+    var tf_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var tf_enl_markers = [MyCustomPointAnnotation]()
+    var tf_ndaa_markers = [MyCustomPointAnnotation]()
+    var rlp_markers = [MyCustomPointAnnotation]()
+    var rlp_enl_markers = [MyCustomPointAnnotation]()
+    var rlp_ndaa_markers = [MyCustomPointAnnotation]()
+    var rlp_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var enl_markers = [MyCustomPointAnnotation]()
+    var enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var ndaa_markers = [MyCustomPointAnnotation]()
+    
+    var all_markers = [MyCustomPointAnnotation]()
+    var not_tf_markers = [MyCustomPointAnnotation]()
+    var not_tf_rlp_markers = [MyCustomPointAnnotation]()
+    var not_tf_rlp_enl_markers = [MyCustomPointAnnotation]()
+    var not_tf_rlp_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_tf_rlp_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_tf_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_tf_enl_markers = [MyCustomPointAnnotation]()
+    var not_tf_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_rlp_markers = [MyCustomPointAnnotation]()
+    var not_rlp_enl_markers = [MyCustomPointAnnotation]()
+    var not_rlp_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_rlp_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_enl_markers = [MyCustomPointAnnotation]()
+    var not_enl_ndaa_markers = [MyCustomPointAnnotation]()
+    var not_ndaa_markers = [MyCustomPointAnnotation]()
+    
+
+    
+    // filter toggles
+    var tfOn = true
+    var rlpOn = true
+    var enlOn = true
+    var ndaaOn = true
+    
+    // toggle filter handlers
     @IBAction func pressedNDAA(_ sender: Any) {
+        ndaaOn = !ndaaOn
+        clearAllAnnotations()
+        drawCorrectAnnotations()
     }
     @IBAction func pressedENL(_ sender: Any) {
+        enlOn = !enlOn
+        clearAllAnnotations()
+        drawCorrectAnnotations()
     }
     @IBAction func pressedRLP(_ sender: Any) {
+        rlpOn = !rlpOn
+        clearAllAnnotations()
+        drawCorrectAnnotations()
     }
     @IBAction func pressedTF(_ sender: Any) {
+        tfOn = !tfOn
+        clearAllAnnotations()
+        drawCorrectAnnotations()
     }
 
+    
     @IBOutlet weak var mapView: MGLMapView!
     
     override func viewDidLoad() {
@@ -42,6 +99,283 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                           zoomLevel: 2, animated: false)
         
         drawPolyline()
+    }
+    
+    func clearAllAnnotations() {
+        print("clearing all annotations")
+        if mapView.annotations != nil {
+            mapView.removeAnnotations(mapView.annotations!)
+        }
+        else {
+            print("no markers on map anyway")
+        }
+    }
+    
+    func drawCorrectAnnotations() {
+        var useTheseMarkers = [MyCustomPointAnnotation]()
+        
+        /*
+        if (tfOn) {
+            if (rlpOn) {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = all_markers // TF, RLP, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_ndaa_markers // TF, RLP, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_enl_markers // TF, RLP, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_enl_ndaa_markers // TF, RLP
+                    }
+                    
+                }
+            }
+            else {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_rlp_markers // TF, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_rlp_ndaa_markers // TF, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_rlp_enl_markers // TF, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_rlp_enl_ndaa_markers // TF
+                    }
+                    
+                }
+            }
+        }
+        else {
+            if (rlpOn) {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_tf_markers // RLP, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_tf_ndaa_markers // RLP, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_tf_enl_markers // RLP, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_tf_enl_ndaa_markers // RLP
+                    }
+                    
+                }
+            }
+            else {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_tf_rlp_markers // ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = not_tf_rlp_ndaa_markers // ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = not_tf_rlp_enl_markers // NDAA
+                    }
+                    else {
+                        //useTheseMarkers = all_markers
+                        print("no points")
+                        return
+                    }
+                    
+                }
+            }
+        }
+        */
+        
+        if (tfOn) {
+            if (rlpOn) {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_markers + rlp_markers + enl_markers + ndaa_markers // TF, RLP, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_markers + rlp_markers + enl_markers // TF, RLP, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_markers + rlp_markers + ndaa_markers // TF, RLP, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_markers + rlp_markers // TF, RLP
+                    }
+                    
+                }
+            }
+            else {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_markers + enl_markers + ndaa_markers // TF, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_markers + enl_markers // TF, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_markers + ndaa_markers // TF, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_markers // TF
+                    }
+                    
+                }
+            }
+        }
+        else {
+            if (rlpOn) {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = rlp_markers + enl_markers + ndaa_markers // RLP, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = rlp_markers + enl_markers // RLP, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = rlp_markers + ndaa_markers // RLP, NDAA
+                    }
+                    else {
+                        useTheseMarkers = rlp_markers // RLP
+                    }
+                    
+                }
+            }
+            else {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = enl_markers + ndaa_markers // ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = enl_markers // ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = ndaa_markers // NDAA
+                    }
+                    else {
+                        //useTheseMarkers = tf_markers // none
+                        print("Error! No filters selected. Not graphing any points.")
+                        return
+                    }
+                    
+                }
+            }
+        }
+        
+        /*
+        if (tfOn) {
+            if (rlpOn) {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_rlp_enl_ndaa_markers // TF, RLP, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_rlp_enl_markers // TF, RLP, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_rlp_ndaa_markers // TF, RLP, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_rlp_markers // TF, RLP
+                    }
+
+                }
+            }
+            else {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_enl_ndaa_markers // TF, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_enl_markers // TF, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = tf_ndaa_markers // TF, NDAA
+                    }
+                    else {
+                        useTheseMarkers = tf_markers // TF
+                    }
+                    
+                }
+            }
+        }
+        else {
+            if (rlpOn) {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = rlp_enl_ndaa_markers // RLP, ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = rlp_enl_markers // RLP, ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = rlp_ndaa_markers // RLP, NDAA
+                    }
+                    else {
+                        useTheseMarkers = rlp_markers // RLP
+                    }
+                    
+                }
+            }
+            else {
+                if (enlOn) {
+                    if (ndaaOn) {
+                        useTheseMarkers = enl_ndaa_markers // ENL, NDAA
+                    }
+                    else {
+                        useTheseMarkers = enl_markers // ENL
+                    }
+                }
+                else {
+                    if (ndaaOn) {
+                        useTheseMarkers = ndaa_markers // NDAA
+                    }
+                    else {
+                        //useTheseMarkers = tf_markers // none
+                        print("Error! No filters selected. Not graphing any points.")
+                        return
+                    }
+                    
+                }
+            }
+        }
+ */
+ 
+        
+        for m in useTheseMarkers {
+            // Add the annotation on the main thread
+            DispatchQueue.main.async(execute: {
+                [unowned self] in
+                self.mapView.addAnnotation(m)
+            })
+
+        }
     }
     
     
@@ -190,29 +524,43 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 print("this annotation:", thisAnnotation)
                 
                 if (thisAnnotation.isTF) { // is TF
-                    print("this point is tf")
+                    //print("this point is tf")
                     if (thisAnnotation.isRLP) { // is RLP
                         
                         if (thisAnnotation.isENL) { // is ENL
                             
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "acetf-rlp-enl-ndaa-flag.png" // TF, RLP, ENL, NDAA
+                                all_markers.append(thisAnnotation)
+                                tf_markers.append(thisAnnotation)
+                                rlp_markers.append(thisAnnotation)
+                                enl_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "acetf-rlp-enl-flag.png" // TF, RLP, ENL
+                                tf_markers.append(thisAnnotation)
+                                rlp_markers.append(thisAnnotation)
+                                enl_markers.append(thisAnnotation)
                             }
                         }
                         else // is not ENL
                         {
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "acetf-rlp-ndaa-flag.png" // TF, RLP, NDAA
+                                tf_markers.append(thisAnnotation)
+                                rlp_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
+
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "acetf-rlp-flag.png" // TF, RLP
+                                tf_markers.append(thisAnnotation)
+                                rlp_markers.append(thisAnnotation)
                             }
-
+                            
                         }
                     }
                     else // is not RLP
@@ -220,20 +568,28 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         if (thisAnnotation.isENL) { // is ENL
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "acetf-enl-ndaa-flag.png" // TF, ENL, NDAA
+                                tf_markers.append(thisAnnotation)
+                                enl_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "acetf-enl-flag.png" // TF, ENL
+                                tf_markers.append(thisAnnotation)
+                                enl_markers.append(thisAnnotation)
                             }
                         }
                         else // is not ENL
                         {
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "acetf-ndaa-flag.png" // TF, NDAA
+                                tf_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "acetf-flag.png" // TF
+                                tf_markers.append(thisAnnotation)
                             }
                             
                         }
@@ -243,25 +599,32 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 {
                     print("this point is not tf")
                     if (thisAnnotation.isRLP) { // is RLP
-                        
                         if (thisAnnotation.isENL) { // is ENL
                             
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "rlp-enl-ndaa-flag.png" // RLP, ENL, NDAA
+                                rlp_markers.append(thisAnnotation)
+                                enl_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "rlp-enl-flag.png" // RLP, ENL
+                                rlp_markers.append(thisAnnotation)
+                                enl_markers.append(thisAnnotation)
                             }
                         }
                         else // is not ENL
                         {
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "rlp-ndaa-flag.png" // RLP, NDAA
+                                rlp_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "rlp-flag.png" // RLP
+                                rlp_markers.append(thisAnnotation)
                             }
                             
                         }
@@ -271,16 +634,20 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         if (thisAnnotation.isENL) { // is ENL
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "enl-ndaa-flag.png" // ENL, NDAA
+                                enl_markers.append(thisAnnotation)
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
                                 markerImageName = "enl-flag.png" // ENL
+                                enl_markers.append(thisAnnotation)
                             }
                         }
                         else // is not ENL
                         {
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "ndaa-flag.png" // NDAA
+                                ndaa_markers.append(thisAnnotation)
                             }
                             else // is not NDAA
                             {
@@ -291,6 +658,125 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         }
                     }
                 }
+                
+                /*
+                if (thisAnnotation.isTF) { // is TF
+                    //print("this point is tf")
+                    if (thisAnnotation.isRLP) { // is RLP
+                        
+                        if (thisAnnotation.isENL) { // is ENL
+                            
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-rlp-enl-ndaa-flag.png" // TF, RLP, ENL, NDAA
+                                tf_rlp_enl_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-rlp-enl-flag.png" // TF, RLP, ENL
+                                tf_rlp_enl_markers.append(thisAnnotation)
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-rlp-ndaa-flag.png" // TF, RLP, NDAA
+                                tf_rlp_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-rlp-flag.png" // TF, RLP
+                                tf_rlp_markers.append(thisAnnotation)
+                            }
+
+                        }
+                    }
+                    else // is not RLP
+                    {
+                        if (thisAnnotation.isENL) { // is ENL
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-enl-ndaa-flag.png" // TF, ENL, NDAA
+                                tf_enl_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-enl-flag.png" // TF, ENL
+                                tf_enl_markers.append(thisAnnotation)
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "acetf-ndaa-flag.png" // TF, NDAA
+                                tf_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "acetf-flag.png" // TF
+                                tf_markers.append(thisAnnotation)
+                            }
+                            
+                        }
+                    }
+                }
+                else // is not TF
+                {
+                    print("this point is not tf")
+                    if (thisAnnotation.isRLP) { // is RLP
+                        if (thisAnnotation.isENL) { // is ENL
+                            
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "rlp-enl-ndaa-flag.png" // RLP, ENL, NDAA
+                                rlp_enl_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "rlp-enl-flag.png" // RLP, ENL
+                                rlp_enl_markers.append(thisAnnotation)
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "rlp-ndaa-flag.png" // RLP, NDAA
+                                rlp_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "rlp-flag.png" // RLP
+                                rlp_markers.append(thisAnnotation)
+                            }
+                            
+                        }
+                    }
+                    else // is not RLP
+                    {
+                        if (thisAnnotation.isENL) { // is ENL
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "enl-ndaa-flag.png" // ENL, NDAA
+                                enl_ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "enl-flag.png" // ENL
+                                enl_markers.append(thisAnnotation)
+                            }
+                        }
+                        else // is not ENL
+                        {
+                            if (thisAnnotation.isNDAA) { // is NDAA
+                                markerImageName = "ndaa-flag.png" // NDAA
+                                ndaa_markers.append(thisAnnotation)
+                            }
+                            else // is not NDAA
+                            {
+                                markerImageName = "" // none, return error
+                                print("Error! Did not find any initiatives for this location. Could not set marker image")
+                            }
+                            
+                        }
+                    }
+                }
+ */
  
         }
 
