@@ -23,7 +23,7 @@ class LocationTableViewCell: UITableViewCell {
 
 
     
-     let urlPath = ["atlanta", "austin", "baton-rouge", "biloxi", "brownsville", "chicago", "corpus-christi", "dallas", "denver", "fort-worth", "indianapolis", "jacksonville", "la-east", "lasc", "memphis", "mission", "mobile", "new-orleans", "new-york", "oakland", "oklahoma-city", "peoria", "phoenix", "richmond", "sacramento", "san-antonio", "san-jose", "santa-ana", "st-petersburg", "tampa", "tucson", "tulsa", "washington-dc"]
+     let urlPath = ["atlanta", "austin", "baton-rouge", "biloxi", "brownsville", "chicago", "corpus-christi", "dallas", "denver", "fort-worth", "indianapolis", "jacksonville", "la-east", "lasc", "memphis", "mission", "mobile", "new-orleans", "new-york", "oakland", "oklahoma-city", "peoria", "", "phoenix", "richmond", "sacramento", "san-antonio", "san-jose", "santa-ana", "st-petersburg", "", "tampa", "tucson", "tulsa", "washington-dc"]
     
     override func awakeFromNib() {
         super.awakeFromNib()

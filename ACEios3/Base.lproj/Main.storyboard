@@ -11,14 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="FontAwesome.ttf">
+            <string>FontAwesome</string>
+        </array>
         <array key="GalaxiePolaris-Medium.otf">
             <string>GalaxiePolaris-Medium</string>
         </array>
         <array key="GaramondPremrPro.otf">
             <string>GaramondPremrPro</string>
-        </array>
-        <array key="fontawesome-webfont.ttf">
-            <string>FontAwesome</string>
         </array>
     </customFonts>
     <scenes>
@@ -42,11 +42,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRn-gN-o2T" id="nCQ-HF-735">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-1T-jkd">
-                                                    <rect key="frame" x="74" y="8" width="293" height="34"/>
+                                                    <rect key="frame" x="74" y="8" width="293" height="33"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.019607843140000001" green="0.1137254902" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpq-a9-lNn">
-                                                    <rect key="frame" x="74" y="50" width="293" height="22"/>
+                                                    <rect key="frame" x="74" y="49" width="293" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="0Ef-JN-pYN"/>
                                                     </constraints>
@@ -378,7 +378,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="poY-go-1gz" id="mk8-qg-6g9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-TC-CRD">
@@ -582,7 +582,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jR4-Hi-9Me" id="CzW-aK-I9K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-cI-YBa">
@@ -687,7 +687,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ASY-ly-DZj" id="zCX-zt-FUs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCl-qJ-SO1">
