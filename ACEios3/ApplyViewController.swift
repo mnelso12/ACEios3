@@ -52,7 +52,14 @@ class ApplyViewController: UIViewController {
     }
     
     @IBAction func applyNowPressed(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://ace.nd.edu/teach/prospective-applicants/how-to-apply")! as URL)
+        if let url = URL(string: "https://ace.nd.edu/teach/prospective-applicants/how-to-apply") {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url as URL)
+            }
+        }
+
     }
 
 }

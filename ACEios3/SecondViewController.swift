@@ -56,28 +56,30 @@ class SecondViewController: UIViewController, UIScrollViewDelegate, UITextViewDe
     
     func positionImageView() {
         // set image width to screen width
-        let screenSize: CGRect = UIScreen.main.bounds
+        //let screenSize: CGRect = UIScreen.main.bounds
         //self.imageView.frame = CGRect(x: 0, y: -50, width: screenSize.width, height: 200)
     }
     
     func positionLabels() {
-        let screenSize: CGRect = UIScreen.main.bounds
+        //let screenSize: CGRect = UIScreen.main.bounds
         //self.blogTitle.frame = CGRect(x: 20, y: 180, width: screenSize.width - 40, height: 80)
     }
 
 
     func setImage(urlStr: String) {
+        /*
         if (urlStr == "" || urlStr == " ") {
             //imageView.image = UIImage(named: "ace_logo_color_PNG.png")
         }
         else {
-            let url = URL(string: urlStr)
+            //let url = URL(string: urlStr)
         
             //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-            if let data = try? Data(contentsOf: url!){
+            //if let data = try? Data(contentsOf: url!){
                 //imageView.image = UIImage(data: data)
-            }
+            //}
         }
+ */
         
     }
     

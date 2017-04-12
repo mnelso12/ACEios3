@@ -37,6 +37,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var enl_ndaa_markers = [MyCustomPointAnnotation]()
     var ndaa_markers = [MyCustomPointAnnotation]()
     
+    /*
     var all_markers = [MyCustomPointAnnotation]()
     var not_tf_markers = [MyCustomPointAnnotation]()
     var not_tf_rlp_markers = [MyCustomPointAnnotation]()
@@ -53,7 +54,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var not_enl_markers = [MyCustomPointAnnotation]()
     var not_enl_ndaa_markers = [MyCustomPointAnnotation]()
     var not_ndaa_markers = [MyCustomPointAnnotation]()
-    
+    */
 
     
     // filter toggles
@@ -400,6 +401,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                     
                     if let polyline = shapeCollectionFeature.shapes[i] as? MGLPointFeature {
                         
+                        print("polyline info:", polyline)
+                        
                         // "programs" = [#TF programs, #Remick Leaders, #ENL teachers, # Notre Dame ACE Academies]
                         let programs = polyline.attributes["programs"] as! [Int]
                         //print("#TF:", programs[0], "#Remick leaders:", programs[1], "#ENL teachers", programs[2], "#NDAA", programs[3])
@@ -459,7 +462,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         }
 
                         
-                        var thisAnnotation = MyCustomPointAnnotation()
+                        let thisAnnotation = MyCustomPointAnnotation()
                         thisAnnotation.coordinate = polyline.coordinate
                         
                         //thisAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.72305, longitude: 10.396633)
@@ -521,7 +524,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
             if let thisAnnotation = annotation as? MyCustomPointAnnotation {
                 
-                print("this annotation:", thisAnnotation)
+                //print("this annotation:", thisAnnotation)
                 
                 if (thisAnnotation.isTF) { // is TF
                     //print("this point is tf")
@@ -531,7 +534,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             
                             if (thisAnnotation.isNDAA) { // is NDAA
                                 markerImageName = "acetf-rlp-enl-ndaa-flag.png" // TF, RLP, ENL, NDAA
-                                all_markers.append(thisAnnotation)
                                 tf_markers.append(thisAnnotation)
                                 rlp_markers.append(thisAnnotation)
                                 enl_markers.append(thisAnnotation)
@@ -837,7 +839,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         // Hide the callout view.
         mapView.deselectAnnotation(annotation, animated: false)
         
-        UIAlertView(title: annotation.title!!, message: "A lovely (if touristy) place.", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "OK").show()
+        var message = " "
+        var title = " "
+        
+        if annotation is MyCustomPointAnnotation {
+            print("annotation:", annotation)
+            message = annotation.subtitle!!
+            title = annotation.title!!
+        }
+        
+        // do alert view
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Done", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+            print("You pressed OK")
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+
     }
 
     
