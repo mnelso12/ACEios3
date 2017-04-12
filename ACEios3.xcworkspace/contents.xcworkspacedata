@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:aceMapScreenshot.png">
+   </FileRef>
+   <FileRef
       location = "group:ace-data.geojson">
    </FileRef>
    <FileRef

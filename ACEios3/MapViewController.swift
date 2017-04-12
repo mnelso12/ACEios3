@@ -37,25 +37,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var enl_ndaa_markers = [MyCustomPointAnnotation]()
     var ndaa_markers = [MyCustomPointAnnotation]()
     
-    /*
-    var all_markers = [MyCustomPointAnnotation]()
-    var not_tf_markers = [MyCustomPointAnnotation]()
-    var not_tf_rlp_markers = [MyCustomPointAnnotation]()
-    var not_tf_rlp_enl_markers = [MyCustomPointAnnotation]()
-    var not_tf_rlp_enl_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_tf_rlp_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_tf_enl_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_tf_enl_markers = [MyCustomPointAnnotation]()
-    var not_tf_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_rlp_markers = [MyCustomPointAnnotation]()
-    var not_rlp_enl_markers = [MyCustomPointAnnotation]()
-    var not_rlp_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_rlp_enl_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_enl_markers = [MyCustomPointAnnotation]()
-    var not_enl_ndaa_markers = [MyCustomPointAnnotation]()
-    var not_ndaa_markers = [MyCustomPointAnnotation]()
-    */
-
     
     // filter toggles
     var tfOn = true
@@ -115,90 +96,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     func drawCorrectAnnotations() {
         var useTheseMarkers = [MyCustomPointAnnotation]()
         
-        /*
-        if (tfOn) {
-            if (rlpOn) {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = all_markers // TF, RLP, ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_ndaa_markers // TF, RLP, ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_enl_markers // TF, RLP, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_enl_ndaa_markers // TF, RLP
-                    }
-                    
-                }
-            }
-            else {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_rlp_markers // TF, ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_rlp_ndaa_markers // TF, ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_rlp_enl_markers // TF, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_rlp_enl_ndaa_markers // TF
-                    }
-                    
-                }
-            }
-        }
-        else {
-            if (rlpOn) {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_tf_markers // RLP, ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_tf_ndaa_markers // RLP, ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_tf_enl_markers // RLP, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_tf_enl_ndaa_markers // RLP
-                    }
-                    
-                }
-            }
-            else {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_tf_rlp_markers // ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = not_tf_rlp_ndaa_markers // ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = not_tf_rlp_enl_markers // NDAA
-                    }
-                    else {
-                        //useTheseMarkers = all_markers
-                        print("no points")
-                        return
-                    }
-                    
-                }
-            }
-        }
-        */
         
         if (tfOn) {
             if (rlpOn) {
@@ -283,91 +180,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
-        /*
-        if (tfOn) {
-            if (rlpOn) {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = tf_rlp_enl_ndaa_markers // TF, RLP, ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = tf_rlp_enl_markers // TF, RLP, ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = tf_rlp_ndaa_markers // TF, RLP, NDAA
-                    }
-                    else {
-                        useTheseMarkers = tf_rlp_markers // TF, RLP
-                    }
 
-                }
-            }
-            else {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = tf_enl_ndaa_markers // TF, ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = tf_enl_markers // TF, ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = tf_ndaa_markers // TF, NDAA
-                    }
-                    else {
-                        useTheseMarkers = tf_markers // TF
-                    }
-                    
-                }
-            }
-        }
-        else {
-            if (rlpOn) {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = rlp_enl_ndaa_markers // RLP, ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = rlp_enl_markers // RLP, ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = rlp_ndaa_markers // RLP, NDAA
-                    }
-                    else {
-                        useTheseMarkers = rlp_markers // RLP
-                    }
-                    
-                }
-            }
-            else {
-                if (enlOn) {
-                    if (ndaaOn) {
-                        useTheseMarkers = enl_ndaa_markers // ENL, NDAA
-                    }
-                    else {
-                        useTheseMarkers = enl_markers // ENL
-                    }
-                }
-                else {
-                    if (ndaaOn) {
-                        useTheseMarkers = ndaa_markers // NDAA
-                    }
-                    else {
-                        //useTheseMarkers = tf_markers // none
-                        print("Error! No filters selected. Not graphing any points.")
-                        return
-                    }
-                    
-                }
-            }
-        }
- */
- 
         
         for m in useTheseMarkers {
             // Add the annotation on the main thread
@@ -469,34 +282,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         
                         // figure out which flag icon to use
                         if (programs[0] > 0) { // TF
-                            //polyline.isTF = true
                             thisAnnotation.isTF = true
                         }
                         if (programs[1] > 0) { // RLP
-                            //polyline.isRLP = true
                             thisAnnotation.isRLP = true
                         }
                         if (programs[2] > 0) { // ENL
-                            //polyline.isENL = true
                             thisAnnotation.isENL = true
                         }
                         if (programs[3] > 0) { // NDAA
-                            //polyline.isNDAA = true
                             thisAnnotation.isNDAA = true
                         }
                         
                         
                         thisAnnotation.title = polyline.attributes["title"] as? String
                         thisAnnotation.subtitle = caption
-                        
-                        //polyline.title = polyline.attributes["title"] as? String
-                        //polyline.subtitle = caption
-                    
+                     
                         // Add the annotation on the main thread
                         DispatchQueue.main.async(execute: {
                             // Unowned reference to self to prevent retain cycle
                             [unowned self] in
-                            //self.mapView.addAnnotation(polyline)
                             self.mapView.addAnnotation(thisAnnotation)
                         })
                     }
@@ -521,15 +326,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             var markerImageName = "" // default is no image
             
             // figure out which flag image to use
-        
             if let thisAnnotation = annotation as? MyCustomPointAnnotation {
                 
-                //print("this annotation:", thisAnnotation)
-                
                 if (thisAnnotation.isTF) { // is TF
-                    //print("this point is tf")
                     if (thisAnnotation.isRLP) { // is RLP
-                        
                         if (thisAnnotation.isENL) { // is ENL
                             
                             if (thisAnnotation.isNDAA) { // is NDAA
@@ -661,131 +461,12 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                     }
                 }
                 
-                /*
-                if (thisAnnotation.isTF) { // is TF
-                    //print("this point is tf")
-                    if (thisAnnotation.isRLP) { // is RLP
-                        
-                        if (thisAnnotation.isENL) { // is ENL
-                            
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "acetf-rlp-enl-ndaa-flag.png" // TF, RLP, ENL, NDAA
-                                tf_rlp_enl_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "acetf-rlp-enl-flag.png" // TF, RLP, ENL
-                                tf_rlp_enl_markers.append(thisAnnotation)
-                            }
-                        }
-                        else // is not ENL
-                        {
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "acetf-rlp-ndaa-flag.png" // TF, RLP, NDAA
-                                tf_rlp_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "acetf-rlp-flag.png" // TF, RLP
-                                tf_rlp_markers.append(thisAnnotation)
-                            }
-
-                        }
-                    }
-                    else // is not RLP
-                    {
-                        if (thisAnnotation.isENL) { // is ENL
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "acetf-enl-ndaa-flag.png" // TF, ENL, NDAA
-                                tf_enl_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "acetf-enl-flag.png" // TF, ENL
-                                tf_enl_markers.append(thisAnnotation)
-                            }
-                        }
-                        else // is not ENL
-                        {
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "acetf-ndaa-flag.png" // TF, NDAA
-                                tf_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "acetf-flag.png" // TF
-                                tf_markers.append(thisAnnotation)
-                            }
-                            
-                        }
-                    }
-                }
-                else // is not TF
-                {
-                    print("this point is not tf")
-                    if (thisAnnotation.isRLP) { // is RLP
-                        if (thisAnnotation.isENL) { // is ENL
-                            
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "rlp-enl-ndaa-flag.png" // RLP, ENL, NDAA
-                                rlp_enl_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "rlp-enl-flag.png" // RLP, ENL
-                                rlp_enl_markers.append(thisAnnotation)
-                            }
-                        }
-                        else // is not ENL
-                        {
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "rlp-ndaa-flag.png" // RLP, NDAA
-                                rlp_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "rlp-flag.png" // RLP
-                                rlp_markers.append(thisAnnotation)
-                            }
-                            
-                        }
-                    }
-                    else // is not RLP
-                    {
-                        if (thisAnnotation.isENL) { // is ENL
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "enl-ndaa-flag.png" // ENL, NDAA
-                                enl_ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "enl-flag.png" // ENL
-                                enl_markers.append(thisAnnotation)
-                            }
-                        }
-                        else // is not ENL
-                        {
-                            if (thisAnnotation.isNDAA) { // is NDAA
-                                markerImageName = "ndaa-flag.png" // NDAA
-                                ndaa_markers.append(thisAnnotation)
-                            }
-                            else // is not NDAA
-                            {
-                                markerImageName = "" // none, return error
-                                print("Error! Did not find any initiatives for this location. Could not set marker image")
-                            }
-                            
-                        }
-                    }
-                }
- */
  
         }
 
-            //print("image name:", markerImageName)
-            let image = UIImage(named: markerImageName)!
-            let smallImage = imageResize(image: image, targetSize: CGSize(width: 60, height: 60))
-            annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: markerImageName)
+        let image = UIImage(named: markerImageName)!
+        let smallImage = imageResize(image: image, targetSize: CGSize(width: 60, height: 60))
+        annotationImage = MGLAnnotationImage(image: smallImage, reuseIdentifier: markerImageName)
         
         
         return annotationImage
@@ -843,7 +524,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         var title = " "
         
         if annotation is MyCustomPointAnnotation {
-            print("annotation:", annotation)
             message = annotation.subtitle!!
             title = annotation.title!!
         }

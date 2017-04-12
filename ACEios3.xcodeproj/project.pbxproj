@@ -61,6 +61,7 @@
 		23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */; };
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
 		23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 23CEEADD1E66962D0086F035 /* blogNewsStyle.css */; };
+		23D108681E9DC7A5004DCF23 /* aceMapScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 23D108671E9DC7A5004DCF23 /* aceMapScreenshot.png */; };
 		23D228F01E89ABD0008956FC /* whereweserve.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D228EF1E89ABD0008956FC /* whereweserve.json */; };
 		23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */; };
 		23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C31E4AEBA900119327 /* gray-pattern.png */; };
@@ -163,6 +164,7 @@
 		23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogTableViewCell.swift; path = ../BlogTableViewCell.swift; sourceTree = "<group>"; };
 		23CEEADD1E66962D0086F035 /* blogNewsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = blogNewsStyle.css; sourceTree = "<group>"; };
+		23D108671E9DC7A5004DCF23 /* aceMapScreenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aceMapScreenshot.png; sourceTree = "<group>"; };
 		23D228EF1E89ABD0008956FC /* whereweserve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = whereweserve.json; sourceTree = "<group>"; };
 		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		232449991E6F45B100B199C2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				23D108671E9DC7A5004DCF23 /* aceMapScreenshot.png */,
 				23A32B771E99EB5C00869095 /* spiritualityPrayers */,
 				23A32B781E99EB6D00869095 /* mapFlags */,
 				23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */,
@@ -526,6 +529,7 @@
 				2395173E1E5173D8003604AE /* ace_app_holding_hands.JPG in Resources */,
 				23E018C61E4AECBF00119327 /* bluePattern.png in Resources */,
 				231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */,
+				23D108681E9DC7A5004DCF23 /* aceMapScreenshot.png in Resources */,
 				237886511E38265D00E238A2 /* Screen Shot 2016-11-04 at 2.00.33 AM.png in Resources */,
 				2392B6DB1E885C9D001078E3 /* ace-data.geojson in Resources */,
 				231D77DD1E4F9C26001DC24E /* PolarisCondensed-Medium.otf in Resources */,

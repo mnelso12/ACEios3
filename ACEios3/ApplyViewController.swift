@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MapboxStatic
+//import MapboxStatic
 
 class ApplyViewController: UIViewController {
 
@@ -18,7 +18,8 @@ class ApplyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeStaticMap()
+        //makeStaticMap()
+        mapImageView.image = UIImage(named: "aceMapScreenshot.png")
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         mapImageView.isUserInteractionEnabled = true
@@ -32,19 +33,37 @@ class ApplyViewController: UIViewController {
         self.performSegue(withIdentifier: "toMapVC", sender: self)
     }
 
+    /*
     func makeStaticMap() {
+        let geoJSONOverlay: GeoJSON
+        let accessToken = "pk.eyJ1IjoiYnN0YWxjdXAiLCJhIjoiU1VNWC1vayJ9.dKT17UcqoGPkcyfBTIEQUA"
+        
+        do {
+            let geoJSONURL = URL(string: "http://git.io/vCv9U")!
+            let geoJSONString = try String(contentsOf: geoJSONURL, encoding: .utf8)
+            geoJSONOverlay = GeoJSON(objectString: geoJSONString)
+        } catch {
+            print("JK about the geoJSON markers on the static map...")
+        }
+        
         let options = SnapshotOptions(
             mapIdentifiers: ["bstalcup.029b5e12"],
             centerCoordinate: CLLocationCoordinate2D(latitude: 37.09, longitude: -95.71),
             zoomLevel: 3,
-            size: self.mapImageView.bounds.size)
+            size: self.mapImageView.bounds.size
+        )
         let snapshot = Snapshot(
             options: options,
             accessToken: "pk.eyJ1IjoiYnN0YWxjdXAiLCJhIjoiU1VNWC1vayJ9.dKT17UcqoGPkcyfBTIEQUA")
         
-        mapImageView.image = snapshot.image
+        //snapshot.url = ,
+        //url: "https://api.mapbox.com/v4/mapbox.dark/url-https%3A%2F%2Fmapbox.com%2Fimg%2Frocket.png(-76.9,38.9)/-76.9,38.9,15/1000x1000.png?access_token=" + accessToken
+        
+        //mapImageView.image = snapshot.image
+        mapImageView.image = UIImage(named: "aceMapScreenshot.png")
 
     }
+ */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
