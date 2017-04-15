@@ -95,11 +95,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func setTabBarIcons() {
-        tabBarController?.tabBar.items?.first?.setFAIcon(icon: .FAHome)
-        tabBarController?.tabBar.items?[1].setFAIcon(icon: .FAHeart)
-        tabBarController?.tabBar.items?[2].setFAIcon(icon: .FANewspaperO)
-        tabBarController?.tabBar.items?[3].setFAIcon(icon: .FAGlobe)
-        tabBarController?.tabBar.items?[4].setFAIcon(icon: .FAUsers)
+        let selectedColor = UIColor(colorLiteralRed: 12/256, green: 35/256, blue: 63/256, alpha: 1.0) // navy blue
+        let unselectedColor = UIColor(colorLiteralRed: 128/256, green: 128/256, blue: 128/256, alpha: 1.0) // gray
+        
+        tabBarController?.tabBar.items?.first?.setFAIcon(icon: .FAHome, size: nil, textColor:unselectedColor, backgroundColor: .clear, selectedTextColor: selectedColor, selectedBackgroundColor: .clear)
+        tabBarController?.tabBar.items?[1].setFAIcon(icon: .FAHeart, size: nil, textColor: unselectedColor, backgroundColor: .clear, selectedTextColor: selectedColor, selectedBackgroundColor: .clear)
+        tabBarController?.tabBar.items?[2].setFAIcon(icon: .FANewspaperO, size: nil, textColor: unselectedColor, backgroundColor: .clear, selectedTextColor: selectedColor, selectedBackgroundColor: .clear)
+        tabBarController?.tabBar.items?[3].setFAIcon(icon: .FAGlobe, size: nil, textColor: unselectedColor, backgroundColor: .clear, selectedTextColor: selectedColor, selectedBackgroundColor: .clear)
+        tabBarController?.tabBar.items?[4].setFAIcon(icon: .FAUsers, size: nil, textColor: unselectedColor, backgroundColor: .clear, selectedTextColor: selectedColor, selectedBackgroundColor: .clear)
 
     }
     
