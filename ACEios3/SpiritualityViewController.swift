@@ -60,7 +60,7 @@ class SpiritualityViewController: UIViewController {
     }
     
     func getThisWeeksSpiritualReflectionID() {
-        let urlString = "https://us2.api.mailchimp.com/3.0/campaigns?folder_id=be2244f13f&sort_dir=DESC&count=" + self.numReflectionIDsLoaded
+        let urlString = "https://us2.api.mailchimp.com/3.0/campaigns?folder_id=4b62ee60ea&sort_dir=DESC&count=" + self.numReflectionIDsLoaded
         let url = URL(string: urlString)
         let param = "apikey " + self.apikey
         let request = NSMutableURLRequest(url: url!)
@@ -114,6 +114,13 @@ class SpiritualityViewController: UIViewController {
 
     func loadWeeklySpiritualReflection(id: String) {
         
+        print("this week's spiritual ref ID: ", id)
+        
+        // TODO examples of RLP newsletters with the wrong formats for this
+        //let id = "a826eb9722" // weird new Remick Newsletter
+        //let id = "026e83295c" // normal Remick Newsletter
+        //let id = "03fc9eea48" // old Remick Newsletter (this one works)
+        
         if (id == "-1") {
             print("Error! Could not load spiritualReflection because didn't find the ID yet")
             return
@@ -166,6 +173,8 @@ class SpiritualityViewController: UIViewController {
     
     func parseJSONforSpiritualReflection(json:String) {
         
+        print("parsing JSON for spirituality ref:", json)
+        
         var indexInt = 0
         var isPartOfSpiritalReflection = false
         var spiritualReflection = ""
@@ -181,11 +190,12 @@ class SpiritualityViewController: UIViewController {
 
                 
                 if (json.substring(with: range) == "piritual Reflection") { // check if this is "Spiritual Reflection, if so we will append it to our spiritual reflection string"
+                    print("FOUND SPIRITUAL REF!!!")
                     isPartOfSpiritalReflection = true
                 }
-                            }
+            }
             else if (json[index] == "P") {
-                
+            
                 let start = json.index(json.startIndex, offsetBy: indexInt+1)
                 let end = json.index(json.startIndex, offsetBy: indexInt+15)
                 let range = start..<end
@@ -194,7 +204,7 @@ class SpiritualityViewController: UIViewController {
                 if (json.substring(with: range) == "rayer Calendar") { // check if this is a line break separator thing, we dont want the stuff after this
                     isPartOfSpiritalReflection = false
                 }
-
+            
             }
 
             

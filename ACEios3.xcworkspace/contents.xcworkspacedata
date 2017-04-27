@@ -8,9 +8,6 @@
       location = "group:ace-data.geojson">
    </FileRef>
    <FileRef
-      location = "group:stations.geojson">
-   </FileRef>
-   <FileRef
       location = "group:ContactUsTableViewCell.swift">
    </FileRef>
    <FileRef

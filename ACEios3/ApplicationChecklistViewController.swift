@@ -57,6 +57,16 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
                    "(optional; completed online)",
                    ""]
     
+    // pie - Program for Inclusive Education
+    let pieTitles = ["1. Online Application", "2. Teacher license", "3. Current Photo", "4. Principal Recommendation", "5. Scholarship Request"]
+    let pieDesc = ["",
+                   "",
+                   "",
+                   "",
+                   "",
+                   ""]
+    
+
     let cellReuseIdentifier = "applyChecklistCell"
     
     
@@ -104,6 +114,9 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
         else if (self.segmentedControl.selectedSegmentIndex == 2) {
             return enlTitles.count // added dummy row to the end for extra space at the bottom of the table view
         }
+        else if (self.segmentedControl.selectedSegmentIndex == 3) {
+            return pieTitles.count // added dummy row to the end for extra space at the bottom of the table view
+        }
         return 11
 
     }
@@ -132,6 +145,10 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
             cell.descLabel.text = enlDesc[indexPath.section]
             cell.titleLabel.text = enlTitles[indexPath.section]
         }
+        else if (self.segmentedControl.selectedSegmentIndex == 3) {
+            cell.descLabel.text = pieDesc[indexPath.section]
+            cell.titleLabel.text = pieTitles[indexPath.section]
+        }
         
         return cell
         
@@ -140,6 +157,19 @@ class ApplicationChecklistViewController: UIViewController, UITableViewDelegate,
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        
+        /*
+        if (indexPath.row == 1 && self.segmentedControl.selectedSegmentIndex == 3) { // PIE online application link
+            if let url = URL(string: "https://nd.qualtrics.com/jfe/form/SV_4Jifwkgc8KEEQBL") {
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        else if (indexPath.row == 4 && self.segmentedControl.selectedSegmentIndex == 3) { // PIE principal recommendation link
+            if let url = URL(string: "https://nd.qualtrics.com/jfe5/form/SV_bayP0ClxcrgtkZD") {
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+ */
         
     }
 

@@ -15,6 +15,8 @@ class SpiritualReflectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("spiritual ref here: ", weeklyRef)
+        
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0.01, green: 0.16, blue: 0.40, alpha: 1.0)
         
         //setBackgroundImage(imageNamed: "basilica.jpg")
