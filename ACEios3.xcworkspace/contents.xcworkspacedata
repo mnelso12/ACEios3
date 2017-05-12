@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ace_logo_color_whitetext_PNG.png">
+   </FileRef>
+   <FileRef
       location = "group:aceMapScreenshot.png">
    </FileRef>
    <FileRef

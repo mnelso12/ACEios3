@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		231D77DD1E4F9C26001DC24E /* PolarisCondensed-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */; };
-		231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */; };
-		231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */; };
-		231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */; };
 		231DD9311E70D6D9009F33A4 /* ContactUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DD9301E70D6D9009F33A4 /* ContactUsTableViewController.swift */; };
 		231DD9331E70D706009F33A4 /* ContactUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DD9321E70D706009F33A4 /* ContactUsTableViewCell.swift */; };
 		232449961E6F423A00B199C2 /* communityPhotos in Resources */ = {isa = PBXBuildFile; fileRef = 232449951E6F423A00B199C2 /* communityPhotos */; };
@@ -31,7 +27,6 @@
 		236CF90D1E32BD19005DD95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236CF90B1E32BD19005DD95A /* LaunchScreen.storyboard */; };
 		236CF9181E32BD1A005DD95A /* ACEios3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9171E32BD1A005DD95A /* ACEios3Tests.swift */; };
 		236CF9231E32BD1A005DD95A /* ACEios3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF9221E32BD1A005DD95A /* ACEios3UITests.swift */; };
-		2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */; };
 		238ADD631E9968F5004EE7C3 /* GuidancePrayer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 238ADD5E1E9968F5004EE7C3 /* GuidancePrayer.jpg */; };
 		238ADD641E9968F5004EE7C3 /* csw2015Families.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 238ADD5F1E9968F5004EE7C3 /* csw2015Families.jpg */; };
 		238ADD651E9968F5004EE7C3 /* communityprayer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 238ADD601E9968F5004EE7C3 /* communityprayer.jpg */; };
@@ -52,13 +47,19 @@
 		23A32B8D1E99EFFA00869095 /* rlp-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 23A32B821E99EFFA00869095 /* rlp-flag.png */; };
 		23A32B8E1E99EFFA00869095 /* rlp-enl-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 23A32B831E99EFFA00869095 /* rlp-enl-flag.png */; };
 		23A7C3161E4A9DB8005237DC /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */; };
+		23AB43231EC5329D0047C8C5 /* ace_logo_color_300dpi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23AB43221EC5329D0047C8C5 /* ace_logo_color_300dpi.jpg */; };
+		23AB43261EC532C00047C8C5 /* bluePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AB43241EC532C00047C8C5 /* bluePattern.png */; };
+		23AB43271EC532C00047C8C5 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AB43251EC532C00047C8C5 /* gray-pattern.png */; };
+		23AB43291EC532FB0047C8C5 /* ace_logo_color_whitetext_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AB43281EC532FB0047C8C5 /* ace_logo_color_whitetext_PNG.png */; };
+		23AB432E1EC533310047C8C5 /* PolarisCondensed-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23AB432A1EC533310047C8C5 /* PolarisCondensed-Medium.otf */; };
+		23AB432F1EC533310047C8C5 /* GalaxiePolaris-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23AB432B1EC533310047C8C5 /* GalaxiePolaris-Medium.otf */; };
+		23AB43301EC533310047C8C5 /* GaramondPremrPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23AB432C1EC533310047C8C5 /* GaramondPremrPro.otf */; };
+		23AB43311EC533310047C8C5 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23AB432D1EC533310047C8C5 /* fontawesome-webfont.ttf */; };
+		23AB43331EC533AA0047C8C5 /* ace_logo_color_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AB43321EC533AA0047C8C5 /* ace_logo_color_PNG.png */; };
 		23AC3EE51E3A902E00D8DFE9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */; };
 		23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 23CEEADD1E66962D0086F035 /* blogNewsStyle.css */; };
 		23D108681E9DC7A5004DCF23 /* aceMapScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 23D108671E9DC7A5004DCF23 /* aceMapScreenshot.png */; };
 		23D228F01E89ABD0008956FC /* whereweserve.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D228EF1E89ABD0008956FC /* whereweserve.json */; };
-		23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */; };
-		23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C31E4AEBA900119327 /* gray-pattern.png */; };
-		23E018C61E4AECBF00119327 /* bluePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E018C51E4AECBF00119327 /* bluePattern.png */; };
 		23EB6E2F1E84EAF700DF1E54 /* aceKids1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */; };
 		23F6984D1E6CC52A00C42EAA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6984C1E6CC52A00C42EAA /* Mapbox.framework */; };
 		23F6984E1E6CC52A00C42EAA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6984C1E6CC52A00C42EAA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -97,10 +98,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PolarisCondensed-Medium.otf"; path = "../../../../Downloads/PolarisCondensed-Medium.otf"; sourceTree = "<group>"; };
-		231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GalaxiePolaris-Medium.otf"; path = "../../../../Downloads/GalaxiePolaris-Medium.otf"; sourceTree = "<group>"; };
-		231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GaramondPremrPro.otf; path = ../../../../Downloads/GaramondPremrPro.otf; sourceTree = "<group>"; };
-		231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_PNG.png; path = ../../../../Downloads/ace_logo_color_PNG.png; sourceTree = "<group>"; };
 		231DD9301E70D6D9009F33A4 /* ContactUsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsTableViewController.swift; sourceTree = "<group>"; };
 		231DD9321E70D706009F33A4 /* ContactUsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsTableViewCell.swift; sourceTree = "<group>"; };
 		232449951E6F423A00B199C2 /* communityPhotos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = communityPhotos; sourceTree = "<group>"; };
@@ -127,7 +124,6 @@
 		236CF91E1E32BD1A005DD95A /* ACEios3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACEios3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		236CF9221E32BD1A005DD95A /* ACEios3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACEios3UITests.swift; sourceTree = "<group>"; };
 		236CF9241E32BD1A005DD95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ace_logo_color_whitetext_PNG.png; path = ../../../../Downloads/ace_logo_color_whitetext_PNG.png; sourceTree = "<group>"; };
 		238ADD5E1E9968F5004EE7C3 /* GuidancePrayer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GuidancePrayer.jpg; sourceTree = "<group>"; };
 		238ADD5F1E9968F5004EE7C3 /* csw2015Families.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = csw2015Families.jpg; sourceTree = "<group>"; };
 		238ADD601E9968F5004EE7C3 /* communityprayer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = communityprayer.jpg; sourceTree = "<group>"; };
@@ -148,13 +144,19 @@
 		23A32B821E99EFFA00869095 /* rlp-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rlp-flag.png"; sourceTree = "<group>"; };
 		23A32B831E99EFFA00869095 /* rlp-enl-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rlp-enl-flag.png"; sourceTree = "<group>"; };
 		23A7C3151E4A9DB8005237DC /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
+		23AB43221EC5329D0047C8C5 /* ace_logo_color_300dpi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ace_logo_color_300dpi.jpg; sourceTree = "<group>"; };
+		23AB43241EC532C00047C8C5 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluePattern.png; sourceTree = "<group>"; };
+		23AB43251EC532C00047C8C5 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-pattern.png"; sourceTree = "<group>"; };
+		23AB43281EC532FB0047C8C5 /* ace_logo_color_whitetext_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ace_logo_color_whitetext_PNG.png; sourceTree = "<group>"; };
+		23AB432A1EC533310047C8C5 /* PolarisCondensed-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PolarisCondensed-Medium.otf"; sourceTree = "<group>"; };
+		23AB432B1EC533310047C8C5 /* GalaxiePolaris-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GalaxiePolaris-Medium.otf"; sourceTree = "<group>"; };
+		23AB432C1EC533310047C8C5 /* GaramondPremrPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GaramondPremrPro.otf; sourceTree = "<group>"; };
+		23AB432D1EC533310047C8C5 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		23AB43321EC533AA0047C8C5 /* ace_logo_color_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ace_logo_color_PNG.png; sourceTree = "<group>"; };
 		23AC3EE41E3A902E00D8DFE9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogTableViewCell.swift; path = ../BlogTableViewCell.swift; sourceTree = "<group>"; };
 		23CEEADD1E66962D0086F035 /* blogNewsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = blogNewsStyle.css; sourceTree = "<group>"; };
 		23D108671E9DC7A5004DCF23 /* aceMapScreenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aceMapScreenshot.png; sourceTree = "<group>"; };
 		23D228EF1E89ABD0008956FC /* whereweserve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = whereweserve.json; sourceTree = "<group>"; };
-		23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../../Development/VCD3/portfolio/html5up-prologue/assets/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		23E018C31E4AEBA900119327 /* gray-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-pattern.png"; path = "../../ACEapp/myApp/www/assets/gray-pattern.png"; sourceTree = "<group>"; };
-		23E018C51E4AECBF00119327 /* bluePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePattern.png; path = ../../ACEapp/myApp/www/assets/bluePattern.png; sourceTree = "<group>"; };
 		23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = aceKids1.JPG; path = ../aceKids1.JPG; sourceTree = "<group>"; };
 		23F6984C1E6CC52A00C42EAA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		23F698511E6CC67B00C42EAA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -223,11 +225,12 @@
 		232449991E6F45B100B199C2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				23AB43281EC532FB0047C8C5 /* ace_logo_color_whitetext_PNG.png */,
+				23AB43221EC5329D0047C8C5 /* ace_logo_color_300dpi.jpg */,
 				23EB6E2E1E84EAF700DF1E54 /* aceKids1.JPG */,
-				23E018C51E4AECBF00119327 /* bluePattern.png */,
-				23E018C31E4AEBA900119327 /* gray-pattern.png */,
-				231D77E01E4FAA4C001DC24E /* ace_logo_color_PNG.png */,
-				2378864E1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png */,
+				23AB43241EC532C00047C8C5 /* bluePattern.png */,
+				23AB43321EC533AA0047C8C5 /* ace_logo_color_PNG.png */,
+				23AB43251EC532C00047C8C5 /* gray-pattern.png */,
 				23D108671E9DC7A5004DCF23 /* aceMapScreenshot.png */,
 				23A32B771E99EB5C00869095 /* spiritualityPrayers */,
 				23A32B781E99EB6D00869095 /* mapFlags */,
@@ -238,10 +241,10 @@
 		2324499A1E6F45CD00B199C2 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				231D77DC1E4F9C26001DC24E /* GaramondPremrPro.otf */,
-				231D77DB1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf */,
-				231D77DA1E4F9C26001DC24E /* PolarisCondensed-Medium.otf */,
-				23DADE6B1E67A5D5002C6F31 /* fontawesome-webfont.ttf */,
+				23AB432A1EC533310047C8C5 /* PolarisCondensed-Medium.otf */,
+				23AB432B1EC533310047C8C5 /* GalaxiePolaris-Medium.otf */,
+				23AB432C1EC533310047C8C5 /* GaramondPremrPro.otf */,
+				23AB432D1EC533310047C8C5 /* fontawesome-webfont.ttf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -480,37 +483,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AB43311EC533310047C8C5 /* fontawesome-webfont.ttf in Resources */,
 				23A32B8B1E99EFFA00869095 /* acetf-rlp-enl-ndaa-flag.png in Resources */,
 				23A32B8E1E99EFFA00869095 /* rlp-enl-flag.png in Resources */,
 				236CF90D1E32BD19005DD95A /* LaunchScreen.storyboard in Resources */,
+				23AB43331EC533AA0047C8C5 /* ace_logo_color_PNG.png in Resources */,
 				236CF90A1E32BD19005DD95A /* Assets.xcassets in Resources */,
 				23A32B8C1E99EFFA00869095 /* rlp-ndaa-flag.png in Resources */,
-				23E018C41E4AEBA900119327 /* gray-pattern.png in Resources */,
 				238ADD651E9968F5004EE7C3 /* communityprayer.jpg in Resources */,
 				23A32B8D1E99EFFA00869095 /* rlp-flag.png in Resources */,
 				23D228F01E89ABD0008956FC /* whereweserve.json in Resources */,
+				23AB43291EC532FB0047C8C5 /* ace_logo_color_whitetext_PNG.png in Resources */,
+				23AB43261EC532C00047C8C5 /* bluePattern.png in Resources */,
 				238ADD631E9968F5004EE7C3 /* GuidancePrayer.jpg in Resources */,
+				23AB43301EC533310047C8C5 /* GaramondPremrPro.otf in Resources */,
 				23EB6E2F1E84EAF700DF1E54 /* aceKids1.JPG in Resources */,
 				23A32B861E99EFFA00869095 /* acetf-ndaa-flag.png in Resources */,
 				23A32B8A1E99EFFA00869095 /* acetf-rlp-flag.png in Resources */,
-				2378864F1E3822B100E238A2 /* ace_logo_color_whitetext_PNG.png in Resources */,
+				23AB43231EC5329D0047C8C5 /* ace_logo_color_300dpi.jpg in Resources */,
 				23A32B871E99EFFA00869095 /* acetf-flag.png in Resources */,
 				238ADD661E9968F5004EE7C3 /* studentsprayer.jpg in Resources */,
+				23AB432E1EC533310047C8C5 /* PolarisCondensed-Medium.otf in Resources */,
 				23A32B881E99EFFA00869095 /* enl-flag.png in Resources */,
 				232449961E6F423A00B199C2 /* communityPhotos in Resources */,
 				238ADD671E9968F5004EE7C3 /* prayerforinclusion.png in Resources */,
 				23A32B851E99EFFA00869095 /* acetf-enl-flag.png in Resources */,
+				23AB43271EC532C00047C8C5 /* gray-pattern.png in Resources */,
 				238ADD641E9968F5004EE7C3 /* csw2015Families.jpg in Resources */,
-				23E018C61E4AECBF00119327 /* bluePattern.png in Resources */,
-				231D77DE1E4F9C26001DC24E /* GalaxiePolaris-Medium.otf in Resources */,
 				23D108681E9DC7A5004DCF23 /* aceMapScreenshot.png in Resources */,
 				2392B6DB1E885C9D001078E3 /* ace-data.geojson in Resources */,
-				231D77DD1E4F9C26001DC24E /* PolarisCondensed-Medium.otf in Resources */,
+				23AB432F1EC533310047C8C5 /* GalaxiePolaris-Medium.otf in Resources */,
 				23CEEADE1E66962D0086F035 /* blogNewsStyle.css in Resources */,
-				231D77DF1E4F9C26001DC24E /* GaramondPremrPro.otf in Resources */,
-				231D77E11E4FAA4C001DC24E /* ace_logo_color_PNG.png in Resources */,
 				23A32B891E99EFFA00869095 /* acetf-rlp-ndaa-flag.png in Resources */,
-				23DADE6C1E67A5D5002C6F31 /* fontawesome-webfont.ttf in Resources */,
 				23A32B841E99EFFA00869095 /* acetf-rlp-enl-flag.png in Resources */,
 				236CF9081E32BD19005DD95A /* Main.storyboard in Resources */,
 			);
